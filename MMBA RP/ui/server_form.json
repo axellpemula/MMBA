@@ -1,0 +1,189 @@
+{
+  "third_party_server_screen@common.base_screen": {
+    "$screen_animations": [
+      "@server_form.exit_wait"
+    ],
+    "$background_animations": [
+      "@server_form.exit_wait"
+    ],
+    "force_render_below": true,
+    "low_frequency_rendering": true,
+    "load_screen_immediately": true,
+    "render_only_when_topmost": false,
+    "render_game_behind": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "global"
+      }
+    ]
+  },
+  "exit_wait": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.08,
+    "from": [
+      0,
+      0
+    ],
+    "to": [
+      0,
+      0
+    ],
+    "play_event": "screen.exit_pop",
+    "end_event": "screen.exit_end"
+  },
+  "c_custom_form": {
+    "type": "panel",
+    "$title_text": "#title_text",
+    "bindings": [
+      {
+        "binding_name": "#title_text"
+      }
+    ],
+    "controls": [
+      {
+        "stand_color_form@stand_color_common.stand_dialog_form": {
+          "$dialog_content": "stand_color_form.stand_color_form_content",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_custom_form",
+              "source_property_name": "(not ((#title_text - $stand_color_form_tag) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "vanilla_custom_form": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_custom_form",
+              "source_property_name": "((#title_text - $stand_color_form_tag) = #title_text)",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "custom_form@server_form.custom_form": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "c_long_form": {
+    "type": "panel",
+    "bindings": [
+      {
+        "binding_name": "#title_text"
+      }
+    ],
+    "controls": [
+      {
+        "tusk_wheel_form@tusk_wheel.tusk_wheel_root": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $tusk_wheel_form_tag) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_menu_stats_form@player_menu.player_menu_stats_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $player_menu_stats_tag) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_menu_stand_form@player_menu.player_menu_stand_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $player_menu_stand_tag) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "player_menu_codex_form@player_menu.player_menu_codex_screen": {
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(not ((#title_text - $player_menu_codex_tag) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "vanilla_long_form": {
+          "type": "panel",
+          "bindings": [
+            {
+              "binding_type": "view",
+              "source_control_name": "c_long_form",
+              "source_property_name": "(((((#title_text - $tusk_wheel_form_tag) = #title_text) and ((#title_text - $player_menu_stats_tag) = #title_text)) and ((#title_text - $player_menu_stand_tag) = #title_text)) and ((#title_text - $player_menu_codex_tag) = #title_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "long_form@server_form.long_form": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "main_screen_content": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": "$stand_form_area",
+    "min_size": [
+      "100%",
+      190
+    ],
+    "$stand_form_area|default": [
+      "100%",
+      "100%"
+    ],
+    "variables": [
+      {
+        "requires": "$touch",
+        "$stand_form_area": [
+          "100%",
+          "100% - 24px"
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "server_form_factory": {
+          "type": "factory",
+          "control_ids": {
+            "long_form": "@server_form.c_long_form",
+            "custom_form": "@server_form.c_custom_form"
+          }
+        }
+      }
+    ]
+  }
+}
+

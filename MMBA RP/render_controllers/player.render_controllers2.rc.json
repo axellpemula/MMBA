@@ -1,0 +1,39 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.player.first_person2": {
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightArm": "!(variable.gun && query.is_sneaking) && query.property('property:tim_limb') != 1 && query.property('property:tim_limb') != 3"
+        },
+        {
+          "rightSleeve": "!(variable.gun && query.is_sneaking) && query.property('property:tim_limb') != 1 && query.property('property:tim_limb') != 3"
+        },
+        {
+          "leftArm": "!(variable.gun && query.is_sneaking) && query.property('property:tim_limb') < 2"
+        },
+        {
+          "leftSleeve": "!(variable.gun && query.is_sneaking) && query.property('property:tim_limb') < 2"
+        },
+        {
+          "rightLeg": "query.property('property:tim_limb') != 3"
+        },
+        {
+          "leftLeg": "query.property('property:tim_limb') != 3"
+        }
+      ],
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "geometry": "Geometry.kontol",
+      "textures": [
+        "Texture.default"
+      ]
+    }
+  }
+}

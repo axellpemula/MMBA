@@ -1,0 +1,96 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.gun_actions": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{ "gun_tp_nopunch": "v.gun && !v.is_first_person" }
+					],
+					"transitions": [
+						{ "fire_a": "v.gun && q.property('property:gun_shot') != v.gun_shot_seen" },
+						{ "reload_a": "v.gun && q.property('property:gun_reload') != v.gun_reload_seen" }
+					],
+					"blend_transition": 0.05
+				},
+				"fire_a": {
+					"on_entry": ["v.gun_shot_seen = q.property('property:gun_shot');"],
+					"animations": [
+						{ "gun_tp_revolver_fire": "v.revolver && !q.is_sneaking && !v.is_first_person" },
+						{ "gun_tp_revolver_fire_scope": "v.revolver && q.is_sneaking && !v.is_first_person" },
+						{ "gun_tp_shotgun_fire": "v.shotgun && !v.is_first_person" },
+						{ "gun_tp_tommy_fire": "v.tommy && !v.is_first_person" },
+						{ "gun_fp_fire": "v.revolver && !q.is_sneaking && v.is_first_person" },
+						{ "gun_fp_fire_scope": "(v.revolver || v.tommy) && q.is_sneaking && v.is_first_person" },
+						{ "gun_fp_shotgun_fire": "v.shotgun && v.is_first_person" },
+						{ "gun_fp_tommy_fire": "v.tommy && !q.is_sneaking && v.is_first_person" }
+					],
+					"transitions": [
+						{ "default": "!v.gun" },
+						{ "fire_b": "q.property('property:gun_shot') != v.gun_shot_seen" },
+						{ "reload_a": "q.property('property:gun_reload') != v.gun_reload_seen" },
+						{ "default": "q.all_animations_finished" }
+					],
+					"blend_transition": 0.03
+				},
+				"fire_b": {
+					"on_entry": ["v.gun_shot_seen = q.property('property:gun_shot');"],
+					"animations": [
+						{ "gun_tp_revolver_fire": "v.revolver && !q.is_sneaking && !v.is_first_person" },
+						{ "gun_tp_revolver_fire_scope": "v.revolver && q.is_sneaking && !v.is_first_person" },
+						{ "gun_tp_shotgun_fire": "v.shotgun && !v.is_first_person" },
+						{ "gun_tp_tommy_fire": "v.tommy && !v.is_first_person" },
+						{ "gun_fp_fire": "v.revolver && !q.is_sneaking && v.is_first_person" },
+						{ "gun_fp_fire_scope": "(v.revolver || v.tommy) && q.is_sneaking && v.is_first_person" },
+						{ "gun_fp_shotgun_fire": "v.shotgun && v.is_first_person" },
+						{ "gun_fp_tommy_fire": "v.tommy && !q.is_sneaking && v.is_first_person" }
+					],
+					"transitions": [
+						{ "default": "!v.gun" },
+						{ "fire_a": "q.property('property:gun_shot') != v.gun_shot_seen" },
+						{ "reload_a": "q.property('property:gun_reload') != v.gun_reload_seen" },
+						{ "default": "q.all_animations_finished" }
+					],
+					"blend_transition": 0.03
+				},
+				"reload_a": {
+					"on_entry": ["v.gun_reload_seen = q.property('property:gun_reload');"],
+					"animations": [
+						{ "gun_tp_revolver_reload": "v.revolver && !v.is_first_person" },
+						{ "gun_tp_shotgun_reload": "v.shotgun && !v.is_first_person" },
+						{ "gun_tp_tommy_reload": "v.tommy && !v.is_first_person" },
+						{ "gun_fp_round_reload": "v.revolver && v.is_first_person" },
+						{ "gun_fp_shotgun_reload": "v.shotgun && v.is_first_person" },
+						{ "gun_fp_tommy_reload": "v.tommy && v.is_first_person" }
+					],
+					"transitions": [
+						{ "default": "!v.gun" },
+						{ "reload_b": "q.property('property:gun_reload') != v.gun_reload_seen" },
+						{ "fire_a": "q.property('property:gun_shot') != v.gun_shot_seen" },
+						{ "default": "q.all_animations_finished" }
+					],
+					"blend_transition": 0.1
+				},
+				"reload_b": {
+					"on_entry": ["v.gun_reload_seen = q.property('property:gun_reload');"],
+					"animations": [
+						{ "gun_tp_revolver_reload": "v.revolver && !v.is_first_person" },
+						{ "gun_tp_shotgun_reload": "v.shotgun && !v.is_first_person" },
+						{ "gun_tp_tommy_reload": "v.tommy && !v.is_first_person" },
+						{ "gun_fp_round_reload": "v.revolver && v.is_first_person" },
+						{ "gun_fp_shotgun_reload": "v.shotgun && v.is_first_person" },
+						{ "gun_fp_tommy_reload": "v.tommy && v.is_first_person" }
+					],
+					"transitions": [
+						{ "default": "!v.gun" },
+						{ "reload_a": "q.property('property:gun_reload') != v.gun_reload_seen" },
+						{ "fire_a": "q.property('property:gun_shot') != v.gun_shot_seen" },
+						{ "default": "q.all_animations_finished" }
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

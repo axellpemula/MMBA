@@ -1,0 +1,97 @@
+{
+  "format_version": "1.15.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "jjba:steelball",
+      "runtime_identifier": "minecraft:arrow",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "property:stopped": {
+          "type": "int",
+          "range": [0, 1],
+          "default": 0,
+          "client_sync": true
+        },
+        "property:charged": {
+          "type": "int",
+          "range": [0, 1],
+          "default": 0,
+          "client_sync": true
+        },
+        "property:wrecking": {
+          "type": "int",
+          "range": [0, 3],
+          "default": 0,
+          "client_sync": true
+        },
+        "property:trail": {
+          "type": "int",
+          "range": [0, 1],
+          "default": 1,
+          "client_sync": true
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [
+          "real",
+          "projectile",
+          "damage",
+          "atk"
+        ]
+      },
+      "minecraft:collision_box": {
+        "width": 0.35,
+        "height": 0.35
+      },
+      "minecraft:health": {
+        "value": 1000,
+        "max": 1000
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/none.json"
+      },
+      "minecraft:nameable": {
+        "always_show": false
+      },
+      "minecraft:persistent": {},
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      }
+    },
+    "component_groups": {
+      "jjba:despawn": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "events": {
+      "ts:stop": {
+        "set_property": {
+          "property:stopped": 1
+        }
+      },
+      "ts:resume": {
+        "set_property": {
+          "property:stopped": 0
+        }
+      },
+      "jjba:despawn": {
+        "add": {
+          "component_groups": [
+            "jjba:despawn"
+          ]
+        }
+      }
+    }
+  }
+}

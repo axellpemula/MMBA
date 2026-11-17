@@ -1,0 +1,107 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.mandom": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "mandom_default"
+          ],
+          "transitions": [
+            {
+              "windup": "query.property('property:attack') > 0"
+            },
+            {
+              "idle": "variable.stand"
+            },
+            {
+              "revolver": "query.get_equipped_item_name(0) == 'revolver'"
+            }
+          ],
+          "blend_transition": 0.25,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "mandom_idle"
+          ],
+          "transitions": [
+            {
+              "windup": "query.property('property:attack') > 0"
+            },
+            {
+              "revolver": "query.get_equipped_item_name(0) == 'revolver'"
+            },
+            {
+              "default": "!variable.stand && query.get_equipped_item_name(0) != 'revolver'"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        },
+        "revolver": {
+          "animations": [
+            "mandom_revolver"
+          ],
+          "transitions": [
+            {
+              "windup": "query.property('property:attack') > 0"
+            },
+            {
+              "idle": "variable.stand"
+            },
+            {
+              "default": "!variable.stand && query.get_equipped_item_name(0) != 'revolver'"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        },
+        "windup": {
+          "animations": [
+            "mandom_idle",
+            "mandom_tp_watch_wind"
+          ],
+          "transitions": [
+            {
+              "idle": "query.property('property:attack') <= 0 && variable.stand"
+            },
+            {
+              "revolver": "query.property('property:attack') <= 0 && !variable.stand && query.get_equipped_item_name(0) == 'revolver'"
+            },
+            {
+              "default": "query.property('property:attack') <= 0 && !variable.stand && query.get_equipped_item_name(0) != 'revolver'"
+            }
+          ],
+          "blend_transition": 0.12,
+          "blend_via_shortest_path": true
+        }
+      }
+    },
+    "controller.animation.mandom_fpp": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "windup": "query.property('property:attack') > 0"
+            }
+          ],
+          "blend_transition": 0.1
+        },
+        "windup": {
+          "animations": [
+            "mandom_fp_watch_wind"
+          ],
+          "transitions": [
+            {
+              "default": "query.property('property:attack') <= 0"
+            }
+          ],
+          "blend_transition": 0.1
+        }
+      }
+    }
+  }
+}

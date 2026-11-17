@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.xvoid_impact_white": {
+      "geometry": "Geometry.white",
+      "materials": [{ "*": "Material.white" }],
+      "textures": ["Texture.white"],
+      "ignore_lighting": true
+    },
+    "controller.render.xvoid_impact_black": {
+      "geometry": "Geometry.black",
+      "materials": [{ "*": "Material.black" }],
+      "textures": ["Texture.black"],
+      "ignore_lighting": true
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.mandom_watch": {
+      "geometry": "Geometry.mandom_watch",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.mandom_watch"
+      ]
+    },
+    "controller.render.mandom_watch_fpp": {
+      "geometry": "Geometry.mandom_watch_fpp",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.mandom_watch"
+      ]
+    }
+  }
+}

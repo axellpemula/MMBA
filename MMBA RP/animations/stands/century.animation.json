@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.century.default": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"century_body": {
+					"scale": 0
+				},
+				"century_head": {
+					"scale": 0
+				},
+				"century_leftArm": {
+					"scale": 0
+				},
+				"century_rightArm": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.century.summon": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25
+		},
+		"animation.century.idle": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"century_body": {
+					"scale": 1
+				},
+				"century_head": {
+					"scale": 1
+				},
+				"century_leftArm": {
+					"scale": 1
+				},
+				"century_rightArm": {
+					"scale": 1
+				}
+			}
+		}
+	}
+}

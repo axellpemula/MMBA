@@ -1,0 +1,28 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "jjba:spin_lesson_3",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "paper",
+			"minecraft:glint": true,
+			"minecraft:display_name": {
+				"value": "§eSpin Lesson 3"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:rarity": "rare",
+			"minecraft:use_modifiers": {
+				"use_duration": 99999,
+				"movement_modifier": 1.0
+			},
+			"minecraft:cooldown": {
+				"category": "spin_item",
+				"duration": 0.5
+			}
+		}
+	}
+}

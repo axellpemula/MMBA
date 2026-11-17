@@ -1,0 +1,101 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.tob": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "tob_default"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "tob_idle",
+            "tob_summon"
+          ],
+          "transitions": [
+            {
+              "idle": "query.any_animation_finished && query.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            },
+            {
+              "run": "query.is_sprinting && query.any_animation_finished && query.ground_speed >= 0.5"
+            },
+            {
+              "walk": "!query.is_sprinting && query.any_animation_finished && query.ground_speed >= 0.5"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "tob_idle"
+          ],
+          "transitions": [
+            {
+              "run": "query.is_sprinting && query.ground_speed >= 0.5"
+            },
+            {
+              "walk": "!query.is_sprinting && query.ground_speed >= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "tob_walk"
+          ],
+          "transitions": [
+            {
+              "run": "query.is_sprinting && query.ground_speed >= 0.5"
+            },
+            {
+              "idle": "query.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "run": {
+          "animations": [
+            "tob_run"
+          ],
+          "transitions": [
+            {
+              "walk": "!query.is_sprinting && query.ground_speed >= 0.5"
+            },
+            {
+              "idle": "query.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

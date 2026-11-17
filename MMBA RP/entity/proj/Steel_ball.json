@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "jjba:steelball",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/sbr/Steel_ball",
+        "wrecking": "textures/sbr/Wrecking_ball"
+      },
+      "geometry": {
+        "default": "geometry.ball_entity"
+      },
+      "scripts": {
+        "animate": [
+          "spin"
+        ]
+      },
+      "animations": {
+        "spin": "controller.animation.ball.spin",
+        "spinning": "animation.ball.rotate",
+        "spinning_only": "animation.ball.rotate_only",
+        "trail": "animation.ball.trail",
+        "trail_yellow": "animation.ball.trail_yellow"
+      },
+      "particle_effects": {
+        "spin": "ball:spin",
+        "spin2": "ball:spin2",
+        "trail": "ball:trail",
+        "trail_yellow": "ball:trail_yellow"
+      },
+      "render_controllers": [
+        "controller.render.wrecking_ball"
+      ]
+    }
+  }
+}

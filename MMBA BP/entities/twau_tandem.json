@@ -1,0 +1,81 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "xvoid:twau_tandem",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "properties": {
+        "property:stand_hue": {
+          "type": "int",
+          "range": [-180, 180],
+          "default": 0,
+          "client_sync": true
+        },
+        "property:stand_sat": {
+          "type": "int",
+          "range": [-100, 100],
+          "default": 0,
+          "client_sync": true
+        },
+        "property:stand_bri": {
+          "type": "int",
+          "range": [-100, 100],
+          "default": 0,
+          "client_sync": true
+        },
+        "property:stand_rainbow": {
+          "type": "int",
+          "range": [0, 1],
+          "default": 0,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "xvoid:remove": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["inanimate", "damage", "non_target"]
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:collision_box": {
+        "width": 0.0,
+        "height": 0.0
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "deals_damage": "no"
+          }
+        ]
+      },
+      "minecraft:timer": {
+        "looping": false,
+        "time": 4.0,
+        "time_down_event": {
+          "event": "xvoid:despawn",
+          "target": "self"
+        }
+      }
+    },
+    "events": {
+      "xvoid:despawn": {
+        "add": {
+          "component_groups": ["xvoid:remove"]
+        }
+      }
+    }
+  }
+}

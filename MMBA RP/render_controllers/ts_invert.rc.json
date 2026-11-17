@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.ui.ts_invert": {
+      "part_visibility": [
+        {
+          "*": true
+        }
+      ],
+      "geometry": "Geometry.timestop_effect",
+      "materials": [
+        {
+          "*": "Material.reversed_color"
+        }
+      ],
+      "textures": [
+        "Texture.timestop_effect"
+      ],
+      "overlay_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "is_hurt_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "on_fire_color": {
+        "r": 0,
+        "g": 0,
+        "b": 0,
+        "a": 0
+      },
+      "light_color_multiplier": 1.0,
+      "ignore_lighting": true
+    }
+  }
+}

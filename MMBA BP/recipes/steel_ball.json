@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "jjba:ball"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			" I ",
+			"IEI",
+			" I "
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"E": {
+				"item": "minecraft:emerald"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:emerald"
+			}
+		],
+		"result": {
+			"item": "jjba:ball",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"format_version": "1.16.0",
+	"animations": {
+		"animation.ball.rotate": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"root": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"Ball": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [1080, 0, 0]
+					}
+				},
+				"particle": {
+					"position": [0, -0.55, 0]
+				},
+				"particle2": {
+					"position": [0, 0.2, 0]
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "spin2",
+						"locator": "ball2"
+					},
+					{
+						"effect": "spin",
+						"locator": "ball"
+					}
+				],
+				"0.25": [
+					{
+						"effect": "spin2",
+						"locator": "ball"
+					},
+					{
+						"effect": "spin",
+						"locator": "ball2"
+					}
+				]
+			}
+		},
+		"animation.ball.rotate_only": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"root": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"Ball": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [1080, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.ball.trail": {
+			"loop": true,
+			"animation_length": 0.0001,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail",
+					"locator": "trail"
+				}
+			}
+		},
+		"animation.ball.trail_yellow": {
+			"loop": true,
+			"animation_length": 0.0001,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail_yellow",
+					"locator": "trail"
+				}
+			}
+		}
+	}
+}

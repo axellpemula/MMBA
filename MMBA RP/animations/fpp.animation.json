@@ -1,0 +1,19 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.stand.fpp": {
+			"loop": true,
+			"bones": {
+				"stand": {
+					"rotation": [0, -180, 0]
+				},
+				"br": {
+					"scale": 0
+				},
+				"particlebase": {
+					"rotation": [0, -180, 0]
+				}
+			}
+		}
+	}
+}

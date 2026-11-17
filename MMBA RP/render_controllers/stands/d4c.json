@@ -1,0 +1,201 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.d4c": {
+      "geometry": "Geometry.d4c",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "textures": [
+        "Texture.d4c_hue"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u_off",
+          "variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.stand_u_sc",
+          "variable.stand_v_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.d4c_sat": {
+      "geometry": "Geometry.d4c",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.d4c_gray",
+            "Texture.d4c_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_sat_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_su_off",
+          "variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.stand_su_sc",
+          "variable.stand_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.d4c_add": {
+      "geometry": "Geometry.d4c",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.d4c_gray",
+            "Texture.d4c_hue",
+            "Texture.d4c_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_add_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_bu_off",
+          "variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.stand_bu_sc",
+          "variable.stand_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    },
+    "controller.render.d4c_fpp": {
+      "geometry": "geometry.d4c_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "textures": [
+        "Texture.d4c_hue"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u_off",
+          "variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.stand_u_sc",
+          "variable.stand_v_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.d4c_fpp_sat": {
+      "geometry": "geometry.d4c_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.d4c_gray",
+            "Texture.d4c_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_sat_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_su_off",
+          "variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.stand_su_sc",
+          "variable.stand_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.d4c_fpp_add": {
+      "geometry": "geometry.d4c_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.d4c_gray",
+            "Texture.d4c_hue",
+            "Texture.d4c_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_add_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_bu_off",
+          "variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.stand_bu_sc",
+          "variable.stand_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "MMBA",
+		"description": "MMBA Resource Pack",
+		"uuid": "899985e2-c459-4e9d-d04d-c68225c4fa7d",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			26,
+			0
+		]
+	},
+	"metadata": {
+		"authors": ["xVoid_Axell"],
+		"product_type": "addon"
+	},
+	"modules": [
+		{
+			"description": "MMBA",
+			"type": "resources",
+			"uuid": "7e0cc8c1-c97a-2916-8b76-bc0ce580ab33",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "7eb1b2cc-7052-26e8-392b-31e1d5138d1e",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

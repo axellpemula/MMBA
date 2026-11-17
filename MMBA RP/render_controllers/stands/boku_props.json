@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.boku_smoke_props": {
+      "geometry": "Geometry.boku_smoke_props",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.boku_smoke_props"
+      ]
+    }
+  }
+}

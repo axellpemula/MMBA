@@ -1,0 +1,84 @@
+{
+	"format_version": "1.19.60",
+	"animation_controllers": {
+		"controller.animation.nail.spin": {
+			"initial_state": "act1",
+			"states": {
+				"act1": {
+					"animations": [
+						"spinning",
+						"trail_act1"
+					],
+					"transitions": [
+						{ "stopped": "query.property('property:stopped') == 1" },
+						{ "no_trail": "query.property('property:trail') == 0" },
+						{ "act2": "query.property('property:act') == 1" },
+						{ "act3": "query.property('property:act') == 2" },
+						{ "drill": "query.property('property:act') == 3" }
+					]
+				},
+				"act2": {
+					"animations": [
+						"spinning",
+						"trail_act2"
+					],
+					"transitions": [
+						{ "stopped": "query.property('property:stopped') == 1" },
+						{ "no_trail": "query.property('property:trail') == 0" },
+						{ "act1": "query.property('property:act') == 0" },
+						{ "act3": "query.property('property:act') == 2" },
+						{ "drill": "query.property('property:act') == 3" }
+					]
+				},
+				"act3": {
+					"animations": [
+						"spinning",
+						"trail_act3"
+					],
+					"transitions": [
+						{ "stopped": "query.property('property:stopped') == 1" },
+						{ "no_trail": "query.property('property:trail') == 0" },
+						{ "act1": "query.property('property:act') == 0" },
+						{ "act2": "query.property('property:act') == 1" },
+						{ "drill": "query.property('property:act') == 3" }
+					]
+				},
+				"drill": {
+					"animations": [
+						"spinning",
+						"trail_drill"
+					],
+					"transitions": [
+						{ "stopped": "query.property('property:stopped') == 1" },
+						{ "no_trail": "query.property('property:trail') == 0" },
+						{ "act1": "query.property('property:act') == 0" },
+						{ "act2": "query.property('property:act') == 1" },
+						{ "act3": "query.property('property:act') == 2" }
+					]
+				},
+				"no_trail": {
+					"animations": [
+						"spinning"
+					],
+					"transitions": [
+						{ "stopped": "query.property('property:stopped') == 1" },
+						{ "act1": "query.property('property:trail') == 1 && query.property('property:act') == 0" },
+						{ "act2": "query.property('property:trail') == 1 && query.property('property:act') == 1" },
+						{ "act3": "query.property('property:trail') == 1 && query.property('property:act') == 2" },
+						{ "drill": "query.property('property:trail') == 1 && query.property('property:act') == 3" }
+					]
+				},
+				"stopped": {
+					"transitions": [
+						{ "no_trail": "query.property('property:stopped') == 0 && query.property('property:trail') == 0" },
+						{ "act1": "query.property('property:stopped') == 0 && query.property('property:act') == 0" },
+						{ "act2": "query.property('property:stopped') == 0 && query.property('property:act') == 1" },
+						{ "act3": "query.property('property:stopped') == 0 && query.property('property:act') == 2" },
+						{ "drill": "query.property('property:stopped') == 0 && query.property('property:act') == 3" }
+					]
+				}
+			}
+		}
+	}
+}
+

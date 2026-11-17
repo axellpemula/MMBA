@@ -1,0 +1,190 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.johnnyac": {
+			"initial_state": "johnny_idle",
+			"states": {
+				"johnny_idle": {
+					"animations": [
+						"johnny_idle"
+					],
+					"transitions": [
+						{
+							"johnny_onair": "!q.is_on_ground"
+						},
+						{
+							"johnny_walk": "q.ground_speed > 0.5 && (!q.is_sneaking || v.johnny_m1)"
+						},
+						{
+							"johnny_run": "q.is_sprinting && !v.johnny_m1"
+						},
+						{
+							"johnny_idle_stand": "(query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2')"
+						},
+						{
+							"johnny_sneak_walk": "q.ground_speed > 0.5 && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_sneak": "q.is_sneaking && !v.johnny_m1"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"johnny_idle_stand": {
+					"animations": [
+						"johnny_idle_stand"
+					],
+					"transitions": [
+						{
+							"johnny_onair": "!q.is_on_ground"
+						},
+						{
+							"johnny_idle": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						},
+						{
+							"johnny_run": "q.is_sprinting && !v.johnny_m1"
+						},
+						{
+							"johnny_walk": "q.ground_speed > 0.5 && (!q.is_sneaking || v.johnny_m1)"
+						},
+						{
+							"johnny_sneak_walk": "q.ground_speed > 0.5 && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_sneak": "q.is_sneaking && !v.johnny_m1"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"johnny_walk": {
+					"animations": [
+						"johnny_walk"
+					],
+					"transitions": [
+						{
+							"johnny_onair": "!q.is_on_ground"
+						},
+						{
+							"johnny_sneak_walk": "q.ground_speed > 0.5 && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_sneak": "q.ground_speed <= 0.5 && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_run": "q.is_sprinting && !v.johnny_m1"
+						},
+						{
+							"johnny_idle_stand": "q.ground_speed < 0.5 && (query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2')"
+						},
+						{
+							"johnny_idle": "q.ground_speed < 0.5"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"johnny_run": {
+					"animations": [
+						"johnny_run",
+						{
+							"nail_trail": "variable.act_1"
+						},
+						{
+							"nail_trail_act2": "variable.act_2"
+						},
+						{
+							"nail_trail_act3": "variable.act_3"
+						}
+					],
+					"transitions": [
+						{
+							"johnny_onair": "!q.is_on_ground"
+						},
+						{
+							"johnny_sneak_walk": "!q.is_sprinting && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_walk": "(!q.is_sprinting || v.johnny_m1) && (!q.is_sneaking || v.johnny_m1) && q.ground_speed >= 0.5"
+						},
+						{
+							"johnny_idle_stand": "(q.ground_speed < 0.5 || v.johnny_m1) && (query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2')"
+						},
+						{
+							"johnny_idle": "(q.ground_speed < 0.5 || v.johnny_m1) && query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"johnny_sneak_walk": {
+					"animations": [
+						"johnny_sneak_walk"
+					],
+					"transitions": [
+						{
+							"johnny_onair": "!q.is_on_ground"
+						},
+						{
+							"johnny_run": "q.is_sprinting && !v.johnny_m1"
+						},
+						{
+							"johnny_walk": "q.ground_speed >= 0.5 && (!q.is_sneaking || v.johnny_m1)"
+						},
+						{
+							"johnny_sneak": "q.ground_speed < 0.5 && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_idle_stand": "(q.ground_speed < 0.5 || v.johnny_m1) && (!q.is_sneaking || v.johnny_m1) && (query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2')"
+						},
+						{
+							"johnny_idle": "(q.ground_speed < 0.5 || v.johnny_m1) && (!q.is_sneaking || v.johnny_m1)"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"johnny_sneak": {
+					"animations": [
+						"johnny_sneak"
+					],
+					"transitions": [
+						{
+							"johnny_onair": "!q.is_on_ground"
+						},
+						{
+							"johnny_run": "q.is_sprinting && !v.johnny_m1"
+						},
+						{
+							"johnny_sneak_walk": "q.ground_speed > 0.5 && q.is_sneaking && !v.johnny_m1"
+						},
+						{
+							"johnny_walk": "q.ground_speed > 0.5 && (!q.is_sneaking || v.johnny_m1)"
+						},
+						{
+							"johnny_idle_stand": "(!q.is_sneaking || v.johnny_m1) && (query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2')"
+						},
+						{
+							"johnny_idle": "!q.is_sneaking || v.johnny_m1"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"johnny_onair": {
+					"animations": [
+						"johnny_onair"
+					],
+					"transitions": [
+						{
+							"johnny_idle": "q.is_on_ground"
+						}
+					],
+					"blend_transition": 1,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

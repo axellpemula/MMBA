@@ -1,0 +1,162 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.tusk_4_Unused": {
+			"states": {
+				"default": {
+					"animations": [
+						"tusk4_default"
+					],
+					"transitions": [
+						{
+							"summon": "query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2'"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"summon": {
+					"animations": [
+						"tusk4_swing",
+						"tusk4_summon"
+					],
+					"transitions": [
+						{
+							"idle": "q.all_animations_finished && q.ground_speed < 0.5"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						},
+						{
+							"walk": "q.all_animations_finished && q.ground_speed > 0.5"
+						},
+						{
+							"barrage_start": "query.property('property:attack') == 2"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"idle": {
+					"animations": [
+						"tusk4_swing",
+						"tusk4_idle"
+					],
+					"transitions": [
+						{
+							"walk": "q.ground_speed > 0.5"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						},
+						{
+							"block_start": "query.property('property:blocking') == 1 && q.ground_speed < 0.5"
+						},
+						{
+							"barrage_start": "query.property('property:attack') == 2"
+						}
+					],
+					"blend_transition": 0.3,
+					"blend_via_shortest_path": true
+				},
+				"walk": {
+					"animations": [
+						"tusk4_swing",
+						"tusk4_walk"
+					],
+					"transitions": [
+						{
+							"idle": "q.ground_speed < 0.5"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						},
+						{
+							"block_start": "query.property('property:blocking') == 1"
+						},
+						{
+							"barrage_start": "query.property('property:attack') == 2"
+						}
+					],
+					"blend_transition": 0.3,
+					"blend_via_shortest_path": true
+				},
+				"blocking": {
+					"animations": [
+						"tusk4_swing",
+						"tusk4_block"
+					],
+					"transitions": [
+						{
+							"block_start": "query.property('property:blocking') == 0 && query.property('property:attack') == 0"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						},
+						{
+							"barrage_start": "query.property('property:attack') == 2"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"block_start": {
+					"animations": [
+						"tusk4_blockS"
+					],
+					"transitions": [
+						{
+							"idle": "query.property('property:blocking') == 0 && q.ground_speed < 0.5"
+						},
+						{
+							"walk": "query.property('property:blocking') == 0 && q.ground_speed > 0.5"
+						},
+						{
+							"blocking": "query.property('property:blocking') == 1"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"barrage_start": {
+					"animations": [
+						"tusk4_swing",
+						"tusk4_barrage_start"
+					],
+					"transitions": [
+						{
+							"blocking": "query.property('property:attack') == 0"
+						},
+						{
+							"charge_idle_sneak": "q.all_animations_finished"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"charge_idle_sneak": {
+					"animations": [
+						"tusk4_swing",
+						"tusk4_barrage_idle"
+					],
+					"transitions": [
+						{
+							"blocking": "query.property('property:attack') == 0"
+						},
+						{
+							"default": "query.get_equipped_item_name(0) != 'stand' && query.get_equipped_item_name(0) != 'stand2'"
+						}
+					],
+					"blend_transition": 0.1,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

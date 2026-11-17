@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.ts_invert": {
+      "initial_state": "inactive",
+      "states": {
+        "inactive": {
+          "animations": ["ts_invert_off"],
+          "transitions": [
+            { "active": "query.property('property:ts_fx') == 1" },
+            { "closing": "query.property('property:ts_fx') == 2" }
+          ]
+        },
+        "active": {
+          "animations": ["ts_invert_expand"],
+          "transitions": [
+            { "closing": "query.property('property:ts_fx') == 2" },
+            { "inactive": "query.property('property:ts_fx') == 0" }
+          ]
+        },
+        "closing": {
+          "animations": ["ts_invert_collapse"],
+          "transitions": [
+            { "active": "query.property('property:ts_fx') == 1" },
+            { "inactive": "query.property('property:ts_fx') == 0" }
+          ]
+        }
+      }
+    }
+  }
+}

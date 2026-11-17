@@ -1,0 +1,188 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.diego_sm": {
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "diego_sm_summon",
+            "diego_sm_summon2"
+          ],
+          "transitions": [
+            {
+              "idle": "q.all_animations_finished && q.ground_speed < 0.5"
+            },
+            {
+              "deact": "!variable.stand"
+            },
+            {
+              "run": "q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "diego_sm_idle"
+          ],
+          "transitions": [
+            {
+              "deact": "!variable.stand"
+            },
+            {
+              "walk": "query.is_moving && !query.is_sprinting"
+            },
+            {
+              "run": "query.is_moving && query.is_sprinting"
+            },
+            {
+              "sneaking": "q.is_sneaking"
+            },
+            {
+              "jongwalking": "q.is_sneaking && q.is_moving"
+            }
+          ],
+          "blend_transition": {
+            "0.0": 1,
+            "0.0333": 0.96571,
+            "0.0667": 0.8738,
+            "0.1": 0.74074,
+            "0.1333": 0.58299,
+            "0.1667": 0.41701,
+            "0.2": 0.25926,
+            "0.2333": 0.1262,
+            "0.2667": 0.03429,
+            "0.3": 0
+          },
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "diego_sm_walk"
+          ],
+          "transitions": [
+            {
+              "idle": "!query.is_moving"
+            },
+            {
+              "sneaking": "q.is_sneaking"
+            },
+            {
+              "jongwalking": "q.is_sneaking && q.is_moving"
+            },
+            {
+              "run": "query.is_moving && (query.movement_direction(0) * math.sin(-query.body_y_rotation) + query.movement_direction(2) * math.cos(-query.body_y_rotation)) > 0.1 && query.is_sprinting"
+            },
+            {
+              "deact": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "run": {
+          "animations": [
+            "diego_sm_run"
+          ],
+          "transitions": [
+            {
+              "idle": "!query.is_moving"
+            },
+            {
+              "walk": "query.is_moving && !query.is_sprinting"
+            },
+            {
+              "deact": "!variable.stand"
+            },
+            {
+              "sneaking": "q.is_sneaking"
+            },
+            {
+              "jongwalking": "q.is_sneaking && q.is_moving"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "sneaking": {
+          "animations": [
+            "diego_sm_sneaking"
+          ],
+          "transitions": [
+            {
+              "idle": "!q.is_moving && !q.is_sneaking"
+            },
+            {
+              "jongwalking": "q.is_sneaking && q.is_moving"
+            },
+            {
+              "deact": "!variable.stand"
+            },
+            {
+              "walk": "query.is_moving && !query.is_sprinting"
+            },
+            {
+              "run": "query.is_moving && (query.movement_direction(0) * math.sin(-query.body_y_rotation) + query.movement_direction(2) * math.cos(-query.body_y_rotation)) > 0.1 && query.is_sprinting"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "jongwalking": {
+          "animations": [
+            "diego_sm_sneak_walking"
+          ],
+          "transitions": [
+            {
+              "idle": "!q.is_moving && !q.is_sneaking"
+            },
+            {
+              "walk": "q.is_moving && !q.is_sneaking && !q.is_sprinting"
+            },
+            {
+              "run": "q.is_moving && (q.movement_direction(0) * math.sin(-q.body_y_rotation) + q.movement_direction(2) * math.cos(-q.body_y_rotation)) > 0.1 && q.is_sprinting"
+            },
+            {
+              "deact": "!variable.stand"
+            },
+            {
+              "sneaking": "q.is_sneaking && !q.is_moving"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "deact": {
+          "animations": [
+            "diego_sm_deact"
+          ],
+          "transitions": [
+            {
+              "summon": "variable.stand"
+            },
+            {
+              "default": "q.all_animations_finished"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

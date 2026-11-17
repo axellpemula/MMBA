@@ -1,0 +1,1889 @@
+{
+  "namespace": "player_menu",
+  "tab_bg_variant": {
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "texture": "$tab_texture",
+    "color": "$tab_color",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - $tab_marker) = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "tab_btn_visual": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$tab_texture_active|default": "textures/ui/stand_ui/button_hover",
+    "$tab_texture_inactive|default": "textures/ui/stand_ui/button_default",
+    "$tab_color_active|default": [
+      1.0,
+      0.86,
+      0.52
+    ],
+    "$tab_color_inactive|default": [
+      0.66,
+      0.70,
+      0.82
+    ],
+    "$tab_label_offset|default": [
+      0,
+      -1
+    ],
+    "controls": [
+      {
+        "bg_active@player_menu.tab_bg_variant": {
+          "$tab_marker": "§t§1§r",
+          "$tab_texture": "$tab_texture_active",
+          "$tab_color": "$tab_color_active"
+        }
+      },
+      {
+        "bg_inactive@player_menu.tab_bg_variant": {
+          "$tab_marker": "§t§0§r",
+          "$tab_texture": "$tab_texture_inactive",
+          "$tab_color": "$tab_color_inactive"
+        }
+      },
+      {
+        "tab_label": {
+          "type": "label",
+          "text": "#text",
+          "text_alignment": "center",
+          "size": [
+            "100% - 8px",
+            "default"
+          ],
+          "max_size": [
+            "100% - 8px",
+            "100% - 4px"
+          ],
+          "offset": "$tab_label_offset",
+          "color": [
+            0.98,
+            0.95,
+            0.88
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.9,
+          "layer": 5,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#form_button_text - '§t§1§r') - '§t§0§r')",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tab_btn_default@player_menu.tab_btn_visual": {},
+  "tab_btn_hover@player_menu.tab_btn_visual": {
+    "$tab_texture_inactive": "textures/ui/stand_ui/button_hover",
+    "$tab_color_inactive": [
+      0.88,
+      0.90,
+      0.98
+    ],
+    "$tab_color_active": [
+      1.0,
+      0.92,
+      0.66
+    ]
+  },
+  "tab_btn_pressed@player_menu.tab_btn_visual": {
+    "$tab_texture_inactive": "textures/ui/stand_ui/button_pressed",
+    "$tab_texture_active": "textures/ui/stand_ui/button_pressed",
+    "$tab_color_inactive": [
+      0.62,
+      0.66,
+      0.78
+    ],
+    "$tab_color_active": [
+      0.90,
+      0.76,
+      0.44
+    ],
+    "$tab_label_offset": [
+      0,
+      0
+    ]
+  },
+  "tab_grid_cell": {
+    "type": "panel",
+    "size": [
+      107,
+      24
+    ],
+    "controls": [
+      {
+        "tab_btn_wrap": {
+          "type": "panel",
+          "size": [
+            104,
+            24
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "controls": [
+            {
+              "tab_btn@common.button": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$pressed_button_name": "button.form_button_click",
+                "sound_name": "random.click",
+                "sound_volume": 0.7,
+                "sound_pitch": 1.0,
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "form_buttons"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@player_menu.tab_btn_default": {}
+                  },
+                  {
+                    "hover@player_menu.tab_btn_hover": {}
+                  },
+                  {
+                    "pressed@player_menu.tab_btn_pressed": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stat_bg_variant": {
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "texture": "$stat_texture",
+    "color": "$stat_color",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - $stat_marker) = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "stat_plus_badge": {
+    "type": "panel",
+    "size": [
+      18,
+      16
+    ],
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [
+      -4,
+      0
+    ],
+    "layer": 6,
+    "controls": [
+      {
+        "badge_bg_on@player_menu.stat_bg_variant": {
+          "$stat_marker": "§s§a§r",
+          "$stat_texture": "textures/ui/stand_ui/button_default",
+          "$stat_color": "$plus_color_on"
+        }
+      },
+      {
+        "badge_bg_off@player_menu.stat_bg_variant": {
+          "$stat_marker": "§s§l§r",
+          "$stat_texture": "textures/ui/stand_ui/button_pressed",
+          "$stat_color": "$plus_color_off"
+        }
+      },
+      {
+        "plus_sign": {
+          "type": "label",
+          "text": "+",
+          "color": [
+            0.98,
+            0.96,
+            0.90
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.95,
+          "offset": [
+            0,
+            -1
+          ],
+          "layer": 8
+        }
+      }
+    ]
+  },
+  "stat_btn_visual": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$stat_texture_on|default": "textures/ui/stand_ui/button_default",
+    "$stat_texture_off|default": "textures/ui/stand_ui/button_default",
+    "$stat_color_on|default": [
+      0.84,
+      0.88,
+      0.98
+    ],
+    "$stat_color_off|default": [
+      0.56,
+      0.58,
+      0.66
+    ],
+    "$plus_color_on|default": [
+      0.54,
+      0.92,
+      0.58
+    ],
+    "$plus_color_off|default": [
+      0.42,
+      0.44,
+      0.50
+    ],
+    "controls": [
+      {
+        "bg_on@player_menu.stat_bg_variant": {
+          "$stat_marker": "§s§a§r",
+          "$stat_texture": "$stat_texture_on",
+          "$stat_color": "$stat_color_on"
+        }
+      },
+      {
+        "bg_off@player_menu.stat_bg_variant": {
+          "$stat_marker": "§s§l§r",
+          "$stat_texture": "$stat_texture_off",
+          "$stat_color": "$stat_color_off"
+        }
+      },
+      {
+        "stat_label": {
+          "type": "label",
+          "text": "#text",
+          "text_alignment": "left",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [
+            "100% - 30px",
+            "default"
+          ],
+          "offset": [
+            7,
+            -1
+          ],
+          "color": [
+            0.96,
+            0.95,
+            0.90
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.80,
+          "layer": 5,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#form_button_text - '§s§a§r') - '§s§l§r')",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "plus_badge@player_menu.stat_plus_badge": {}
+      }
+    ]
+  },
+  "stat_btn_default@player_menu.stat_btn_visual": {},
+  "stat_btn_hover@player_menu.stat_btn_visual": {
+    "$stat_texture_on": "textures/ui/stand_ui/button_hover",
+    "$stat_texture_off": "textures/ui/stand_ui/button_hover",
+    "$stat_color_on": [
+      0.98,
+      0.96,
+      1.0
+    ],
+    "$stat_color_off": [
+      0.66,
+      0.68,
+      0.76
+    ],
+    "$plus_color_on": [
+      0.72,
+      1.0,
+      0.74
+    ]
+  },
+  "stat_btn_pressed@player_menu.stat_btn_visual": {
+    "$stat_texture_on": "textures/ui/stand_ui/button_pressed",
+    "$stat_texture_off": "textures/ui/stand_ui/button_pressed",
+    "$stat_color_on": [
+      0.76,
+      0.82,
+      0.92
+    ],
+    "$stat_color_off": [
+      0.50,
+      0.52,
+      0.60
+    ],
+    "$plus_color_on": [
+      0.46,
+      0.82,
+      0.50
+    ]
+  },
+  "stat_grid_cell": {
+    "type": "panel",
+    "size": [
+      198,
+      25
+    ],
+    "controls": [
+      {
+        "stat_cell_content": {
+          "type": "panel",
+          "size": [
+            198,
+            22
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#form_button_text - '§s§a§r') = #form_button_text)) or (not ((#form_button_text - '§s§l§r') = #form_button_text)))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "stat_btn@common.button": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$pressed_button_name": "button.form_button_click",
+                "sound_volume": 0.0,
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons",
+                    "binding_name": "#form_button_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((not ((#form_button_text - '§s§a§r') = #form_button_text)) or (not ((#form_button_text - '§s§l§r') = #form_button_text)))",
+                    "target_property_name": "#enabled"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@player_menu.stat_btn_default": {}
+                  },
+                  {
+                    "hover@player_menu.stat_btn_hover": {}
+                  },
+                  {
+                    "pressed@player_menu.stat_btn_pressed": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "footer_bg_variant": {
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "texture": "$footer_texture",
+    "color": "$footer_color",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - $footer_marker) = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "footer_btn_visual": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$footer_tex|default": "textures/ui/stand_ui/button_default",
+    "$footer_col_conv_on|default": [
+      0.56,
+      0.92,
+      0.66
+    ],
+    "$footer_col_conv_off|default": [
+      0.52,
+      0.56,
+      0.64
+    ],
+    "$footer_col_rst_on|default": [
+      0.94,
+      0.56,
+      0.58
+    ],
+    "$footer_col_rst_off|default": [
+      0.52,
+      0.54,
+      0.60
+    ],
+    "$footer_label_offset|default": [
+      0,
+      -1
+    ],
+    "controls": [
+      {
+        "bg_conv_on@player_menu.footer_bg_variant": {
+          "$footer_marker": "§a§1§r",
+          "$footer_texture": "$footer_tex",
+          "$footer_color": "$footer_col_conv_on"
+        }
+      },
+      {
+        "bg_conv_off@player_menu.footer_bg_variant": {
+          "$footer_marker": "§a§0§r",
+          "$footer_texture": "$footer_tex",
+          "$footer_color": "$footer_col_conv_off"
+        }
+      },
+      {
+        "bg_rst_on@player_menu.footer_bg_variant": {
+          "$footer_marker": "§r§1§r",
+          "$footer_texture": "$footer_tex",
+          "$footer_color": "$footer_col_rst_on"
+        }
+      },
+      {
+        "bg_rst_off@player_menu.footer_bg_variant": {
+          "$footer_marker": "§r§0§r",
+          "$footer_texture": "$footer_tex",
+          "$footer_color": "$footer_col_rst_off"
+        }
+      },
+      {
+        "footer_label": {
+          "type": "label",
+          "text": "#text",
+          "text_alignment": "center",
+          "size": [
+            "100% - 8px",
+            "default"
+          ],
+          "max_size": [
+            "100% - 8px",
+            "100% - 4px"
+          ],
+          "offset": "$footer_label_offset",
+          "color": [
+            0.98,
+            0.96,
+            0.90
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.76,
+          "layer": 5,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((#form_button_text - '§a§1§r') - '§a§0§r') - '§r§1§r') - '§r§0§r')",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "footer_btn_default@player_menu.footer_btn_visual": {},
+  "footer_btn_hover@player_menu.footer_btn_visual": {
+    "$footer_tex": "textures/ui/stand_ui/button_hover",
+    "$footer_col_conv_on": [
+      0.72,
+      1.0,
+      0.80
+    ],
+    "$footer_col_conv_off": [
+      0.62,
+      0.66,
+      0.74
+    ],
+    "$footer_col_rst_on": [
+      1.0,
+      0.70,
+      0.72
+    ],
+    "$footer_col_rst_off": [
+      0.62,
+      0.64,
+      0.70
+    ]
+  },
+  "footer_btn_pressed@player_menu.footer_btn_visual": {
+    "$footer_tex": "textures/ui/stand_ui/button_pressed",
+    "$footer_col_conv_on": [
+      0.48,
+      0.82,
+      0.56
+    ],
+    "$footer_col_rst_on": [
+      0.84,
+      0.46,
+      0.48
+    ],
+    "$footer_label_offset": [
+      0,
+      0
+    ]
+  },
+  "footer_grid_cell": {
+    "type": "panel",
+    "size": [
+      99,
+      24
+    ],
+    "controls": [
+      {
+        "footer_cell_content": {
+          "type": "panel",
+          "size": [
+            96,
+            22
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((((not ((#form_button_text - '§a§1§r') = #form_button_text)) or (not ((#form_button_text - '§a§0§r') = #form_button_text))) or (not ((#form_button_text - '§r§1§r') = #form_button_text))) or (not ((#form_button_text - '§r§0§r') = #form_button_text)))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "footer_btn@common.button": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$pressed_button_name": "button.form_button_click",
+                "sound_volume": 0.0,
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons",
+                    "binding_name": "#form_button_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((((not ((#form_button_text - '§a§1§r') = #form_button_text)) or (not ((#form_button_text - '§a§0§r') = #form_button_text))) or (not ((#form_button_text - '§r§1§r') = #form_button_text))) or (not ((#form_button_text - '§r§0§r') = #form_button_text)))",
+                    "target_property_name": "#enabled"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@player_menu.footer_btn_default": {}
+                  },
+                  {
+                    "hover@player_menu.footer_btn_hover": {}
+                  },
+                  {
+                    "pressed@player_menu.footer_btn_pressed": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "paperdoll_panel@stand_color_common.paperdoll_card_bg": {
+    "size": [
+      116,
+      "100%"
+    ],
+    "controls": [
+      {
+        "player_header": {
+          "type": "label",
+          "text": "#player_name",
+          "bindings": [
+            {
+              "binding_name": "#title_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#title_text - $player_menu_stats_tag)",
+              "target_property_name": "#player_name"
+            }
+          ],
+          "color": [
+            0.94,
+            0.69,
+            0.22
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.85,
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            6
+          ],
+          "layer": 6
+        }
+      },
+      {
+        "paperdoll_viewport": {
+          "type": "panel",
+          "size": [
+            "100% - 8px",
+            "100% - 22px"
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [
+            0,
+            -4
+          ],
+          "clips_children": true,
+          "controls": [
+            {
+              "player_paperdoll_renderer": {
+                "type": "custom",
+                "renderer": "live_player_renderer",
+                "size": [
+                  40,
+                  40
+                ],
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  14
+                ],
+                "layer": 10,
+                "property_bag": {
+                  "#look_at_cursor": true
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stats_panel@stand_color_common.controls_card_bg": {
+    "size": [
+      "fill",
+      "100%"
+    ],
+    "controls": [
+      {
+        "inner_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            198,
+            187
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "header_row": {
+                "type": "panel",
+                "size": [
+                  198,
+                  13
+                ],
+                "controls": [
+                  {
+                    "panel_title": {
+                      "type": "label",
+                      "text": "mmba.menu.attributes",
+                      "color": [
+                        0.94,
+                        0.69,
+                        0.22
+                      ],
+                      "shadow": true,
+                      "font_scale_factor": 0.82,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle"
+                    }
+                  },
+                  {
+                    "points_label": {
+                      "type": "label",
+                      "text": "#form_text",
+                      "color": [
+                        0.96,
+                        0.93,
+                        0.80
+                      ],
+                      "shadow": true,
+                      "font_scale_factor": 0.78,
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "bindings": [
+                        {
+                          "binding_name": "#form_text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title_divider@stand_color_common.divider": {}
+            },
+            {
+              "top_pad@stand_color_common.padding": {
+                "$padding": [
+                  198,
+                  5
+                ]
+              }
+            },
+            {
+              "stats_viewport": {
+                "type": "panel",
+                "size": [
+                  198,
+                  125
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "stats_grid": {
+                      "type": "grid",
+                      "size": [
+                        198,
+                        250
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        0,
+                        -75
+                      ],
+                      "grid_dimensions": [
+                        1,
+                        10
+                      ],
+                      "grid_item_template": "player_menu.stat_grid_cell",
+                      "collection_name": "form_buttons",
+                      "bindings": [
+                        {
+                          "binding_name": "#form_button_length",
+                          "binding_name_override": "#maximum_grid_items"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "footer_top_pad@stand_color_common.padding": {
+                "$padding": [
+                  198,
+                  6
+                ]
+              }
+            },
+            {
+              "footer_divider@stand_color_common.divider": {}
+            },
+            {
+              "footer_bot_pad@stand_color_common.padding": {
+                "$padding": [
+                  198,
+                  6
+                ]
+              }
+            },
+            {
+              "footer_viewport": {
+                "type": "panel",
+                "size": [
+                  198,
+                  24
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "footer_grid": {
+                      "type": "grid",
+                      "size": [
+                        198,
+                        120
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        0,
+                        -96
+                      ],
+                      "grid_dimensions": [
+                        2,
+                        5
+                      ],
+                      "grid_item_template": "player_menu.footer_grid_cell",
+                      "collection_name": "form_buttons",
+                      "bindings": [
+                        {
+                          "binding_name": "#form_button_length",
+                          "binding_name_override": "#maximum_grid_items"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stats_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "paperdoll_panel@player_menu.paperdoll_panel": {}
+      },
+      {
+        "column_gap@stand_color_common.padding": {
+          "$padding": [
+            6,
+            "100%"
+          ]
+        }
+      },
+      {
+        "stats_panel@player_menu.stats_panel": {}
+      }
+    ]
+  },
+  "colorway_btn_visual": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$cw_tex|default": "textures/ui/stand_ui/button_default",
+    "$cw_col|default": [
+      0.96,
+      0.84,
+      0.54
+    ],
+    "$cw_offset|default": [
+      0,
+      -1
+    ],
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "$cw_tex",
+          "color": "$cw_col",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 1
+        }
+      },
+      {
+        "cw_label": {
+          "type": "label",
+          "text": "#text",
+          "text_alignment": "center",
+          "size": [
+            "100% - 8px",
+            "default"
+          ],
+          "offset": "$cw_offset",
+          "color": [
+            0.98,
+            0.95,
+            0.88
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.78,
+          "layer": 5,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(#form_button_text - '§c§0§r')",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "colorway_btn_default@player_menu.colorway_btn_visual": {},
+  "colorway_btn_hover@player_menu.colorway_btn_visual": {
+    "$cw_tex": "textures/ui/stand_ui/button_hover",
+    "$cw_col": [
+      1.0,
+      0.92,
+      0.66
+    ]
+  },
+  "colorway_btn_pressed@player_menu.colorway_btn_visual": {
+    "$cw_tex": "textures/ui/stand_ui/button_pressed",
+    "$cw_col": [
+      0.86,
+      0.74,
+      0.46
+    ],
+    "$cw_offset": [
+      0,
+      0
+    ]
+  },
+  "colorway_grid_cell": {
+    "type": "panel",
+    "size": [
+      116,
+      24
+    ],
+    "controls": [
+      {
+        "cw_cell_content": {
+          "type": "panel",
+          "size": [
+            116,
+            24
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#form_button_text - '§c§0§r') = #form_button_text))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "cw_btn@common.button": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$pressed_button_name": "button.form_button_click",
+                "sound_volume": 0.0,
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons",
+                    "binding_name": "#form_button_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "(not ((#form_button_text - '§c§0§r') = #form_button_text))",
+                    "target_property_name": "#enabled"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@player_menu.colorway_btn_default": {}
+                  },
+                  {
+                    "hover@player_menu.colorway_btn_hover": {}
+                  },
+                  {
+                    "pressed@player_menu.colorway_btn_pressed": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stand_bg_variant": {
+    "type": "image",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "texture": "$stand_texture",
+    "color": "$stand_color",
+    "layer": 1,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - $stand_marker) = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "stand_active_badge": {
+    "type": "label",
+    "text": "mmba.stand.badge.active",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [
+      -8,
+      -1
+    ],
+    "color": [
+      0.60,
+      0.98,
+      0.66
+    ],
+    "shadow": true,
+    "font_scale_factor": 0.72,
+    "layer": 6,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§s§1§r') = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "stand_select_badge": {
+    "type": "label",
+    "text": ">",
+    "anchor_from": "right_middle",
+    "anchor_to": "right_middle",
+    "offset": [
+      -8,
+      -1
+    ],
+    "color": [
+      0.78,
+      0.80,
+      0.88
+    ],
+    "shadow": true,
+    "font_scale_factor": 0.80,
+    "layer": 6,
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§s§0§r') = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "stand_btn_visual": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "$st_tex_on|default": "textures/ui/stand_ui/button_hover",
+    "$st_tex_off|default": "textures/ui/stand_ui/button_default",
+    "$st_col_on|default": [
+      0.62,
+      0.94,
+      0.68
+    ],
+    "$st_col_off|default": [
+      0.82,
+      0.86,
+      0.96
+    ],
+    "controls": [
+      {
+        "bg_on@player_menu.stand_bg_variant": {
+          "$stand_marker": "§s§1§r",
+          "$stand_texture": "$st_tex_on",
+          "$stand_color": "$st_col_on"
+        }
+      },
+      {
+        "bg_off@player_menu.stand_bg_variant": {
+          "$stand_marker": "§s§0§r",
+          "$stand_texture": "$st_tex_off",
+          "$stand_color": "$st_col_off"
+        }
+      },
+      {
+        "stand_label": {
+          "type": "label",
+          "text": "#text",
+          "text_alignment": "left",
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "size": [
+            "100% - 54px",
+            "default"
+          ],
+          "offset": [
+            8,
+            -1
+          ],
+          "color": [
+            0.96,
+            0.95,
+            0.90
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.82,
+          "layer": 5,
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#form_button_text - '§s§1§r') - '§s§0§r')",
+              "target_property_name": "#text"
+            }
+          ]
+        }
+      },
+      {
+        "active_badge@player_menu.stand_active_badge": {}
+      },
+      {
+        "select_badge@player_menu.stand_select_badge": {}
+      }
+    ]
+  },
+  "stand_btn_default@player_menu.stand_btn_visual": {},
+  "stand_btn_hover@player_menu.stand_btn_visual": {
+    "$st_tex_off": "textures/ui/stand_ui/button_hover",
+    "$st_col_on": [
+      0.74,
+      1.0,
+      0.80
+    ],
+    "$st_col_off": [
+      0.98,
+      0.96,
+      1.0
+    ]
+  },
+  "stand_btn_pressed@player_menu.stand_btn_visual": {
+    "$st_tex_on": "textures/ui/stand_ui/button_pressed",
+    "$st_tex_off": "textures/ui/stand_ui/button_pressed",
+    "$st_col_on": [
+      0.52,
+      0.84,
+      0.58
+    ],
+    "$st_col_off": [
+      0.74,
+      0.78,
+      0.88
+    ]
+  },
+  "stand_grid_cell": {
+    "type": "panel",
+    "size": [
+      198,
+      25
+    ],
+    "controls": [
+      {
+        "stand_cell_content": {
+          "type": "panel",
+          "size": [
+            198,
+            22
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "bindings": [
+            {
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons",
+              "binding_name": "#form_button_text"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#form_button_text - '§s§1§r') = #form_button_text)) or (not ((#form_button_text - '§s§0§r') = #form_button_text)))",
+              "target_property_name": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "stand_btn@common.button": {
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "$pressed_button_name": "button.form_button_click",
+                "sound_volume": 0.0,
+                "default_control": "default",
+                "hover_control": "hover",
+                "pressed_control": "pressed",
+                "bindings": [
+                  {
+                    "binding_type": "collection_details",
+                    "binding_collection_name": "form_buttons"
+                  },
+                  {
+                    "binding_type": "collection",
+                    "binding_collection_name": "form_buttons",
+                    "binding_name": "#form_button_text"
+                  },
+                  {
+                    "binding_type": "view",
+                    "source_property_name": "((not ((#form_button_text - '§s§1§r') = #form_button_text)) or (not ((#form_button_text - '§s§0§r') = #form_button_text)))",
+                    "target_property_name": "#enabled"
+                  }
+                ],
+                "controls": [
+                  {
+                    "default@player_menu.stand_btn_default": {}
+                  },
+                  {
+                    "hover@player_menu.stand_btn_hover": {}
+                  },
+                  {
+                    "pressed@player_menu.stand_btn_pressed": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stand_left_column": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      116,
+      "100%"
+    ],
+    "controls": [
+      {
+        "stand_paperdoll_card@stand_color_common.paperdoll_card_bg": {
+          "size": [
+            116,
+            "fill"
+          ],
+          "controls": [
+            {
+              "preview_header": {
+                "type": "label",
+                "text": "mmba.stand.preview",
+                "color": [
+                  0.94,
+                  0.69,
+                  0.22
+                ],
+                "shadow": true,
+                "font_scale_factor": 0.85,
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+                "offset": [
+                  0,
+                  6
+                ],
+                "layer": 6
+              }
+            },
+            {
+              "paperdoll_viewport": {
+                "type": "panel",
+                "size": [
+                  "100% - 8px",
+                  "100% - 22px"
+                ],
+                "anchor_from": "bottom_middle",
+                "anchor_to": "bottom_middle",
+                "offset": [
+                  0,
+                  -4
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "stand_paperdoll_renderer": {
+                      "type": "custom",
+                      "renderer": "live_player_renderer",
+                      "size": [
+                        34,
+                        34
+                      ],
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [
+                        6,
+                        14
+                      ],
+                      "layer": 10,
+                      "property_bag": {
+                        "#look_at_cursor": true
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "btn_gap@stand_color_common.padding": {
+          "$padding": [
+            116,
+            4
+          ]
+        }
+      },
+      {
+        "colorway_btn_viewport": {
+          "type": "panel",
+          "size": [
+            116,
+            24
+          ],
+          "clips_children": true,
+          "controls": [
+            {
+              "colorway_btn_grid": {
+                "type": "grid",
+                "size": [
+                  116,
+                  216
+                ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "offset": [
+                  0,
+                  -72
+                ],
+                "grid_dimensions": [
+                  1,
+                  9
+                ],
+                "grid_item_template": "player_menu.colorway_grid_cell",
+                "collection_name": "form_buttons",
+                "bindings": [
+                  {
+                    "binding_name": "#form_button_length",
+                    "binding_name_override": "#maximum_grid_items"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stand_select_panel@stand_color_common.controls_card_bg": {
+    "size": [
+      "fill",
+      "100%"
+    ],
+    "controls": [
+      {
+        "inner_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            198,
+            187
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "header_row": {
+                "type": "panel",
+                "size": [
+                  198,
+                  13
+                ],
+                "controls": [
+                  {
+                    "panel_title": {
+                      "type": "label",
+                      "text": "mmba.stand.select",
+                      "color": [
+                        0.94,
+                        0.69,
+                        0.22
+                      ],
+                      "shadow": true,
+                      "font_scale_factor": 0.82,
+                      "anchor_from": "left_middle",
+                      "anchor_to": "left_middle"
+                    }
+                  },
+                  {
+                    "active_stand_label": {
+                      "type": "label",
+                      "text": "#form_text",
+                      "color": [
+                        0.68,
+                        0.96,
+                        0.72
+                      ],
+                      "shadow": true,
+                      "font_scale_factor": 0.78,
+                      "anchor_from": "right_middle",
+                      "anchor_to": "right_middle",
+                      "bindings": [
+                        {
+                          "binding_name": "#form_text"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title_divider@stand_color_common.divider": {}
+            },
+            {
+              "top_pad@stand_color_common.padding": {
+                "$padding": [
+                  198,
+                  5
+                ]
+              }
+            },
+            {
+              "stand_list_viewport": {
+                "type": "panel",
+                "size": [
+                  198,
+                  125
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "stand_list_grid": {
+                      "type": "grid",
+                      "size": [
+                        198,
+                        225
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "offset": [
+                        0,
+                        -100
+                      ],
+                      "grid_dimensions": [
+                        1,
+                        9
+                      ],
+                      "grid_item_template": "player_menu.stand_grid_cell",
+                      "collection_name": "form_buttons",
+                      "bindings": [
+                        {
+                          "binding_name": "#form_button_length",
+                          "binding_name_override": "#maximum_grid_items"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "footer_top_pad@stand_color_common.padding": {
+                "$padding": [
+                  198,
+                  6
+                ]
+              }
+            },
+            {
+              "footer_divider@stand_color_common.divider": {}
+            },
+            {
+              "footer_bot_pad@stand_color_common.padding": {
+                "$padding": [
+                  198,
+                  6
+                ]
+              }
+            },
+            {
+              "dev_hint_label": {
+                "type": "label",
+                "text": "mmba.stand.dev_hint",
+                "text_alignment": "center",
+                "size": [
+                  198,
+                  20
+                ],
+                "color": [
+                  0.68,
+                  0.70,
+                  0.78
+                ],
+                "shadow": true,
+                "font_scale_factor": 0.72
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "stand_content": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "stand_left_column@player_menu.stand_left_column": {}
+      },
+      {
+        "column_gap@stand_color_common.padding": {
+          "$padding": [
+            6,
+            "100%"
+          ]
+        }
+      },
+      {
+        "stand_select_panel@player_menu.stand_select_panel": {}
+      }
+    ]
+  },
+  "codex_scroll_content": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      "100% - 8px",
+      "100%c"
+    ],
+    "controls": [
+      {
+        "codex_body_label": {
+          "type": "label",
+          "text": "#form_text",
+          "size": [
+            "100%",
+            "default"
+          ],
+          "color": [
+            0.92,
+            0.92,
+            0.95
+          ],
+          "shadow": true,
+          "font_scale_factor": 0.80,
+          "line_padding": 5,
+          "bindings": [
+            {
+              "binding_name": "#form_text"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "codex_scroll@stand_color_common.default_scrollbar": {
+    "size": [
+      "100%",
+      "fill"
+    ],
+    "$show_background": false,
+    "$scrolling_content": "player_menu.codex_scroll_content"
+  },
+  "codex_content@stand_color_common.controls_card_bg": {
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "inner_stack": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [
+            "100% - 16px",
+            "100% - 14px"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "panel_title": {
+                "type": "label",
+                "text": "mmba.codex.header",
+                "color": [
+                  0.94,
+                  0.69,
+                  0.22
+                ],
+                "shadow": true,
+                "font_scale_factor": 0.85,
+                "size": [
+                  "100%",
+                  13
+                ]
+              }
+            },
+            {
+              "title_divider@stand_color_common.divider": {}
+            },
+            {
+              "top_pad@stand_color_common.padding": {
+                "$padding": [
+                  "100%",
+                  6
+                ]
+              }
+            },
+            {
+              "codex_scroll@player_menu.codex_scroll": {}
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "player_menu_dialog": {
+    "type": "stack_panel",
+    "size": "$player_menu_form_size",
+    "max_size": "$player_menu_form_size",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "$menu_body_content|default": "common.empty_panel",
+    "controls": [
+      {
+        "header_tab_bar": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "size": [
+            "100%",
+            24
+          ],
+          "controls": [
+            {
+              "tabs_viewport": {
+                "type": "panel",
+                "size": [
+                  321,
+                  24
+                ],
+                "clips_children": true,
+                "controls": [
+                  {
+                    "tabs_grid": {
+                      "type": "grid",
+                      "size": [
+                        321,
+                        24
+                      ],
+                      "anchor_from": "top_left",
+                      "anchor_to": "top_left",
+                      "grid_dimensions": [
+                        3,
+                        1
+                      ],
+                      "grid_item_template": "player_menu.tab_grid_cell",
+                      "collection_name": "form_buttons"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title_gap@stand_color_common.padding": {
+                "$padding": [
+                  3,
+                  "100%"
+                ]
+              }
+            },
+            {
+              "close_button@stand_color_common.stand_close_button": {
+                "size": [
+                  24,
+                  24
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "header_gap@stand_color_common.padding": {
+          "$padding": [
+            "100%",
+            3
+          ]
+        }
+      },
+      {
+        "dialog_main@stand_color_common.dialog_bg": {
+          "size": [
+            "100%",
+            "fill"
+          ],
+          "controls": [
+            {
+              "content_panel": {
+                "type": "panel",
+                "size": [
+                  "100% - 14px",
+                  "100% - 14px"
+                ],
+                "controls": [
+                  {
+                    "content@$menu_body_content": {}
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "player_menu_stats_screen@player_menu.player_menu_dialog": {
+    "$menu_body_content": "player_menu.stats_content"
+  },
+  "player_menu_stand_screen@player_menu.player_menu_dialog": {
+    "$menu_body_content": "player_menu.stand_content"
+  },
+  "player_menu_codex_screen@player_menu.player_menu_dialog": {
+    "$menu_body_content": "player_menu.codex_content"
+  }
+}

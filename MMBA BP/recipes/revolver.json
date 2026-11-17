@@ -1,0 +1,35 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "xvoid:revolver"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"IIF",
+			"  S"
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"F": {
+				"item": "minecraft:flint_and_steel"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:iron_ingot"
+			}
+		],
+		"result": {
+			"item": "xvoid:revolver",
+			"count": 1
+		}
+	}
+}

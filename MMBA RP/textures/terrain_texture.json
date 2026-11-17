@@ -1,0 +1,18 @@
+{
+  "resource_pack_name": "AddonMaker[Resource]",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "metore":{
+			"textures":"textures/blocks/meti"
+		},
+    "steel:ball":{
+      "textures":"textures/sbr/Steel_ball"
+    },
+    "steel:wrecking_ball":{
+      "textures":"textures/sbr/Wrecking_ball"
+    }
+
+  }
+}

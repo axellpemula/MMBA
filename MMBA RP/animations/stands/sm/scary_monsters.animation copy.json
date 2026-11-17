@@ -1,0 +1,30 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.scary_monsters.tail_main": {
+			"loop": true,
+			"bones": {
+				"tails": {
+					"rotation": [
+						"v.conf_yaw = v.conf_yaw ?? query.body_y_rotation; v.raw_d = math.mod(query.body_y_rotation - v.conf_yaw, 360.0); v.raw_d = v.raw_d > 180.0 ? (v.raw_d - 360.0) : (v.raw_d < -180.0 ? (v.raw_d + 360.0) : v.raw_d); v.is_pd_sig = (math.abs(query.head_x_rotation(0)) < 0.0001 && math.abs(query.target_y_rotation) < 0.0001); v.is_outlier = (math.abs(v.raw_d) > 22.0 && (v.out_cnt ?? 0.0) < 5.0); v.sm_is_world = !variable.is_paperdoll && !variable.is_first_person && !variable.map_face_icon && (query.delta_time > 0.0001) && !v.is_pd_sig && !v.is_outlier; v.out_cnt = (query.delta_time > 0.0001 && !v.is_pd_sig) ? (v.is_outlier ? ((v.out_cnt ?? 0.0) + 1.0) : 0.0) : (v.out_cnt ?? 0.0); v.conf_yaw = v.sm_is_world ? query.body_y_rotation : v.conf_yaw; v.sm_dt = v.sm_is_world ? math.clamp(query.delta_time, 0.001, 0.05) : 0.0; v.sm_hold = v.sm_is_world ? (variable.stand ? 0.25 : math.max((v.sm_hold ?? 0.0) - v.sm_dt, 0.0)) : (v.sm_hold ?? 0.0); v.sm_vis = (v.sm_vis ?? 0.0) + ((v.sm_hold > 0.0 ? 1.0 : 0.0) - (v.sm_vis ?? 0.0)) * (1.0 - math.exp(-12.0 * v.sm_dt)); v.sm_swim_t = query.is_swimming ? 1.0 : 0.0; v.sm_swim = (v.sm_swim ?? 0.0) + (v.sm_swim_t - (v.sm_swim ?? 0.0)) * (1.0 - math.exp(-8.0 * v.sm_dt)); v.sm_phase = math.mod((v.sm_phase ?? 0.0) + v.sm_dt * (150.0 + 300.0 * v.sm_swim), 360.0); v.vs0 = v.sm_is_world ? query.vertical_speed : (v.vs0 ?? query.vertical_speed); v.vs1 = v.vs1 ?? v.vs0; v.vs2 = v.vs2 ?? v.vs0; v.med_vs = v.vs0 + v.vs1 + v.vs2 - math.min(v.vs0, math.min(v.vs1, v.vs2)) - math.max(v.vs0, math.max(v.vs1, v.vs2)); v.vs2 = v.sm_is_world ? v.vs1 : v.vs2; v.vs1 = v.sm_is_world ? v.vs0 : v.vs1; v.wind = v.sm_is_world ? math.clamp((-v.med_vs - 2.0) / 8.0, 0.0, 1.0) : (v.wind ?? 0.0); v.up_ = v.sm_is_world ? math.clamp((v.med_vs - 2.0) / 8.0, 0.0, 1.0) : (v.up_ ?? 0.0); v.pl_1 = (v.pl_1 ?? 0.0) + (17.0 * v.wind - 5.95 * v.up_ - (v.pl_1 ?? 0.0)) * (1.0 - math.exp(-14.0 * v.sm_dt)); v.pl_2 = (v.pl_2 ?? 0.0) + (19.5 * v.wind - 6.82 * v.up_ - (v.pl_2 ?? 0.0)) * (1.0 - math.exp(-10.0 * v.sm_dt)); v.pl_3 = (v.pl_3 ?? 0.0) + (15.5 * v.wind - 5.42 * v.up_ - (v.pl_3 ?? 0.0)) * (1.0 - math.exp(-7.5 * v.sm_dt)); v.pl_4 = (v.pl_4 ?? 0.0) + (11.5 * v.wind - 4.02 * v.up_ - (v.pl_4 ?? 0.0)) * (1.0 - math.exp(-5.5 * v.sm_dt)); v.pl_5 = (v.pl_5 ?? 0.0) + (9.0 * v.wind - 3.15 * v.up_ - (v.pl_5 ?? 0.0)) * (1.0 - math.exp(-4.0 * v.sm_dt)); v.sm_a1 = 2.5 * (1.0 - v.sm_swim) + 12.0 * v.sm_swim; v.sm_a2 = 4.0 * (1.0 - v.sm_swim) + 18.0 * v.sm_swim; v.sm_a3 = 5.5 * (1.0 - v.sm_swim) + 24.0 * v.sm_swim; v.sm_a4 = 7.0 * (1.0 - v.sm_swim) + 28.0 * v.sm_swim; v.sm_a5 = 9.0 * (1.0 - v.sm_swim) + 32.0 * v.sm_swim; v.sm_p1 = -1.5 * (1.0 - v.sm_swim) + v.pl_1; v.sm_p2 = -0.5 * (1.0 - v.sm_swim) + v.pl_2; v.sm_p3 = v.pl_3; v.sm_p4 = v.pl_4; v.sm_p5 = v.pl_5; return v.sm_p1;",
+						"v.by0 = v.sm_is_world ? v.conf_yaw : (v.by0 ?? v.conf_yaw); v.by1 = v.by1 ?? v.by0; v.by2 = v.by2 ?? v.by0; v.d1 = math.mod(v.by1 - v.by0, 360.0); v.d1 = v.d1 > 180.0 ? (v.d1 - 360.0) : (v.d1 < -180.0 ? (v.d1 + 360.0) : v.d1); v.d2 = math.mod(v.by2 - v.by0, 360.0); v.d2 = v.d2 > 180.0 ? (v.d2 - 360.0) : (v.d2 < -180.0 ? (v.d2 + 360.0) : v.d2); v.med_y = v.by0 + (v.d1 + v.d2 - math.min(0.0, math.min(v.d1, v.d2)) - math.max(0.0, math.max(v.d1, v.d2))); v.by2 = v.sm_is_world ? v.by1 : v.by2; v.by1 = v.sm_is_world ? v.by0 : v.by1; v.byaw_s = v.byaw_s ?? v.med_y; v.tk_diff = v.sm_is_world ? math.mod(v.med_y - v.byaw_s, 360.0) : 0.0; v.tk_diff = v.tk_diff > 180.0 ? (v.tk_diff - 360.0) : (v.tk_diff < -180.0 ? (v.tk_diff + 360.0) : v.tk_diff); v.tk_lp = 1.0 - math.exp(-24.0 * v.sm_dt); v.yaw_delta = math.clamp(v.tk_diff * v.tk_lp, -12.0, 12.0); v.byaw_s = math.mod(v.byaw_s + v.yaw_delta, 360.0); v.tail_lag_1 = math.clamp((v.tail_lag_1 ?? 0.0) - v.yaw_delta, -30.0, 30.0); v.tail_delta_1 = (0.0 - v.tail_lag_1) * (1.0 - math.exp(-25.8 * v.sm_dt)); v.tail_lag_1 = v.tail_lag_1 + v.tail_delta_1; v.tail_lag_2 = math.clamp((v.tail_lag_2 ?? 0.0) - v.tail_delta_1 * 0.9, -30.0, 30.0); v.tail_delta_2 = (0.0 - v.tail_lag_2) * (1.0 - math.exp(-17.9 * v.sm_dt)); v.tail_lag_2 = v.tail_lag_2 + v.tail_delta_2; v.tail_lag_3 = math.clamp((v.tail_lag_3 ?? 0.0) - v.tail_delta_2 * 0.9, -30.0, 30.0); v.tail_delta_3 = (0.0 - v.tail_lag_3) * (1.0 - math.exp(-13.4 * v.sm_dt)); v.tail_lag_3 = v.tail_lag_3 + v.tail_delta_3; v.tail_lag_4 = math.clamp((v.tail_lag_4 ?? 0.0) - v.tail_delta_3 * 0.9, -30.0, 30.0); v.tail_delta_4 = (0.0 - v.tail_lag_4) * (1.0 - math.exp(-9.75 * v.sm_dt)); v.tail_lag_4 = v.tail_lag_4 + v.tail_delta_4; v.tail_lag_5 = math.clamp((v.tail_lag_5 ?? 0.0) - v.tail_delta_4 * 0.9, -30.0, 30.0); v.tail_delta_5 = (0.0 - v.tail_lag_5) * (1.0 - math.exp(-6.3 * v.sm_dt)); v.tail_lag_5 = v.tail_lag_5 + v.tail_delta_5; return math.sin(variable.sm_phase - 0 * (20.0 + 20.0 * variable.sm_swim)) * variable.sm_a1 + variable.tail_lag_1;",
+						0
+					],
+					"scale": "variable.sm_vis"
+				},
+				"tails2": {
+					"rotation": ["variable.sm_p2", "math.sin(variable.sm_phase - 1 * (20.0 + 20.0 * variable.sm_swim)) * variable.sm_a2 + variable.tail_lag_2", 0]
+				},
+				"tails3": {
+					"rotation": ["variable.sm_p3", "math.sin(variable.sm_phase - 2 * (20.0 + 20.0 * variable.sm_swim)) * variable.sm_a3 + variable.tail_lag_3", 0]
+				},
+				"tails4": {
+					"rotation": ["variable.sm_p4", "math.sin(variable.sm_phase - 3 * (20.0 + 20.0 * variable.sm_swim)) * variable.sm_a4 + variable.tail_lag_4", 0]
+				},
+				"tails5": {
+					"rotation": ["variable.sm_p5", "math.sin(variable.sm_phase - 4 * (20.0 + 20.0 * variable.sm_swim)) * variable.sm_a5 + variable.tail_lag_5", 0]
+				}
+			}
+		}
+	}
+}

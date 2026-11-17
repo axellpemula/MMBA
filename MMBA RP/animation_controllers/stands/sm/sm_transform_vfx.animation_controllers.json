@@ -1,0 +1,51 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.sm_transform_vfx": {
+			"initial_state": "human",
+			"states": {
+				"human": {
+					"transitions": [
+						{
+							"full_in": "variable.sm_target_full"
+						}
+					]
+				},
+				"full_in": {
+					"animations": [
+						"sm_vfx_full_in"
+					],
+					"transitions": [
+						{
+							"full_out": "!variable.sm_target_full"
+						},
+						{
+							"full": "q.all_animations_finished"
+						}
+					]
+				},
+				"full": {
+					"transitions": [
+						{
+							"full_out": "!variable.sm_target_full"
+						}
+					]
+				},
+				"full_out": {
+					"animations": [
+						"sm_vfx_full_out"
+					],
+					"transitions": [
+						{
+							"full_in": "variable.sm_target_full"
+						},
+						{
+							"human": "!variable.sm_dino_exiting"
+						}
+					]
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,100 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.heyya": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "heyya_default"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "heyya_summon"
+          ],
+          "transitions": [
+            {
+              "idle": "q.all_animations_finished && q.ground_speed < 0.5"
+            },
+            {
+              "run": "q.all_animations_finished && q.is_sprinting && q.ground_speed > 0.5"
+            },
+            {
+              "walk": "q.all_animations_finished && !q.is_sprinting && q.ground_speed > 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "heyya_idle"
+          ],
+          "transitions": [
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.25,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "heyya_walk"
+          ],
+          "transitions": [
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5"
+            },
+            {
+              "idle": "q.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.25,
+          "blend_via_shortest_path": true
+        },
+        "run": {
+          "animations": [
+            "heyya_run"
+          ],
+          "transitions": [
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5"
+            },
+            {
+              "idle": "q.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.25,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

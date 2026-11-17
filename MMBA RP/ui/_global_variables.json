@@ -1,0 +1,16 @@
+{
+  "$stand_color_form_tag": "§s§c",
+  "$tusk_wheel_form_tag": "§t§w",
+  "$player_menu_stats_tag": "§p§m§1",
+  "$player_menu_stand_tag": "§p§m§2",
+  "$player_menu_codex_tag": "§p§m§3",
+  "$stand_color_form_size": [
+    340,
+    244
+  ],
+  "$player_menu_form_size": [
+    348,
+    240
+  ]
+}
+

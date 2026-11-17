@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.70",
+    "minecraft:block": {
+        "description": {
+            "identifier": "steel:wrecking_ball"
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "steel:wrecking_ball",
+                    "render_method": "alpha_test",
+                    "face_dimming": true,
+                    "ambient_occlusion": true
+                }
+            },
+            "minecraft:geometry": "geometry.wrecking_ball_icon"
+        }
+    }
+}
+

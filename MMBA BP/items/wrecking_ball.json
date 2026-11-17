@@ -1,0 +1,41 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:item": {
+		"description": {
+			"identifier": "jjba:wrecking_ball",
+			"menu_category": {
+				"category": "equipment",
+				"group": "minecraft:itemGroup.name.sword"
+			}
+		},
+		"components": {
+			"minecraft:rarity": "rare",
+			"minecraft:hand_equipped": true,
+			"minecraft:allow_off_hand": true,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:damage": 0,
+			"minecraft:swing_duration": {
+				"value": 0.1
+			},
+			"minecraft:display_name": {
+				"value": "§6Wrecking Ball"
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 99999,
+				"movement_modifier": 1.0
+			},
+			"minecraft:cooldown": {
+				"category": "wrecking_ball",
+				"duration": 1.2
+			},
+			"minecraft:block_placer": {
+				"block": "steel:wrecking_ball",
+				"replace_block_item": true,
+				"use_on": [
+					"steel:wrecking_ball"
+				]
+			},
+			"minecraft:max_stack_size": 1
+		}
+	}
+}

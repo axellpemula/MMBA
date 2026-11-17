@@ -1,0 +1,95 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sm.vfx_full_in": {
+			"loop": false,
+			"animation_length": 0.65,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "sm_transform_smoke",
+						"locator": "skill3"
+					},
+					{
+						"effect": "sm_transform_flash",
+						"locator": "skill3"
+					},
+					{
+						"effect": "sm_transform_mist",
+						"locator": "skill3"
+					},
+					{
+						"effect": "sm_transform_shards",
+						"locator": "skill3"
+					}
+				],
+				"0.15": [
+					{
+						"effect": "sm_transform_smoke",
+						"locator": "skill3"
+					},
+					{
+						"effect": "sm_transform_mist",
+						"locator": "skill3"
+					}
+				],
+				"0.2917": {
+					"effect": "sm_transform_shards",
+					"locator": "skill3"
+				}
+			},
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "sm_transform_in"
+					},
+					{
+						"effect": "sm_hha"
+					}
+				],
+				"0.25": [
+					{
+						"effect": "sm_dino_roar"
+					},
+					{
+						"effect": "sm_transform_roar"
+					}
+				]
+			}
+		},
+		"animation.sm.vfx_full_out": {
+			"loop": false,
+			"animation_length": 0.45,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "sm_transform_smoke",
+						"locator": "skill3"
+					},
+					{
+						"effect": "sm_detransform_inward",
+						"locator": "skill3"
+					},
+					{
+						"effect": "sm_transform_mist",
+						"locator": "skill3"
+					}
+				],
+				"0.2": {
+					"effect": "sm_transform_smoke",
+					"locator": "skill3"
+				},
+				"0.3333": {
+					"effect": "sm_transform_flash",
+					"locator": "skill3"
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "sm_transform_roar"
+				}
+			}
+		}
+	}
+}
+

@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.body_parts_visibility": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"scale": "(query.property('property:stand') == 6 && (query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 3)) || (query.property('property:stand') == 1 && query.property('property:tim_limb') == 2) ? 0.0 : 1.0"
+				},
+				"rightSleeve": {
+					"scale": "(query.property('property:stand') == 6 && (query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 3)) || (query.property('property:stand') == 1 && query.property('property:tim_limb') == 2) ? 0.0 : 1.0"
+				},
+				"leftArm": {
+					"scale": "(query.property('property:stand') == 6 && (query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0))) || (query.property('property:stand') == 1 && query.property('property:tim_limb') == 2) ? 0.0 : 1.0"
+				},
+				"leftSleeve": {
+					"scale": "(query.property('property:stand') == 6 && (query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0))) || (query.property('property:stand') == 1 && query.property('property:tim_limb') == 2) ? 0.0 : 1.0"
+				},
+				"body": {
+					"scale": "(query.property('property:stand') == 6 && query.property('property:tim_limb') == 3) ? 0.0 : 1.0"
+				},
+				"jacket": {
+					"scale": "(query.property('property:stand') == 6 && (query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0))) ? 0.0 : 1.0"
+				},
+				"head": {
+					"scale": "((query.property('property:stand') == 6 && (query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0))) || (query.property('property:stand') == 1 && query.property('property:tim_limb') == 2)) ? 0.0 : 1.0"
+				},
+				"hat": {
+					"scale": "((query.property('property:stand') == 6 && (query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0))) || (query.property('property:stand') == 1 && query.property('property:tim_limb') == 2)) ? 0.0 : 1.0"
+				},
+				"rightLeg": {
+					"scale": "(query.property('property:stand') == 6 && query.property('property:tim_limb') == 3) ? 0.0 : 1.0"
+				},
+				"rightPants": {
+					"scale": "(query.property('property:stand') == 6 && query.property('property:tim_limb') == 3) ? 0.0 : 1.0"
+				},
+				"leftLeg": {
+					"scale": "(query.property('property:stand') == 6 && query.property('property:tim_limb') == 3) ? 0.0 : 1.0"
+				},
+				"leftPants": {
+					"scale": "(query.property('property:stand') == 6 && query.property('property:tim_limb') == 3) ? 0.0 : 1.0"
+				},
+				"rightItem": {
+					"scale": "(query.property('property:stand') == 1 && query.property('property:tim_limb') > 0) ? 0.0 : 1.0"
+				}
+			}
+		}
+	}
+}

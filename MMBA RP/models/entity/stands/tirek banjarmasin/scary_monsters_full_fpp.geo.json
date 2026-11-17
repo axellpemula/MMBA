@@ -1,0 +1,683 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.scary_monsters_full_fpp",
+        "texture_width": 256,
+        "texture_height": 256,
+        "visible_bounds_width": 4,
+        "visible_bounds_height": 4,
+        "visible_bounds_offset": [
+          0,
+          1.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "firstview",
+          "pivot": [
+            0,
+            18,
+            0
+          ]
+        },
+        {
+          "name": "root",
+          "parent": "firstview",
+          "pivot": [
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "name": "waist",
+          "parent": "root",
+          "pivot": [
+            0,
+            13,
+            0
+          ]
+        },
+        {
+          "name": "body",
+          "parent": "waist",
+          "pivot": [
+            0,
+            25,
+            0
+          ]
+        },
+        {
+          "name": "rightArm",
+          "parent": "body",
+          "pivot": [
+            -5,
+            23,
+            0
+          ]
+        },
+        {
+          "name": "rightArmFpp",
+          "parent": "rightArm",
+          "pivot": [
+            -5.5,
+            24.5,
+            0.2
+          ]
+        },
+        {
+          "name": "rightDinoArm",
+          "parent": "rightArmFpp",
+          "pivot": [
+            -5.92839,
+            24.5,
+            0.2
+          ],
+          "rotation": [
+            -20,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6.5,
+                20.28012,
+                -0.70456
+              ],
+              "size": [
+                2,
+                5,
+                3
+              ],
+              "uv": [
+                82,
+                98
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightHands2",
+          "parent": "rightDinoArm",
+          "pivot": [
+            -5.5,
+            20.65071,
+            -0.68753
+          ],
+          "rotation": [
+            -40,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6.5,
+                19.15071,
+                -4.18753
+              ],
+              "size": [
+                2,
+                3,
+                5
+              ],
+              "uv": [
+                68,
+                97
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightClaws",
+          "parent": "rightHands2",
+          "pivot": [
+            -5.56119,
+            21.54177,
+            -4.31914
+          ],
+          "rotation": [
+            30,
+            0,
+            -5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7.06119,
+                18.46881,
+                -4.87431
+              ],
+              "size": [
+                3,
+                3,
+                2
+              ],
+              "uv": [
+                102,
+                98
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightJaris",
+          "parent": "rightClaws",
+          "pivot": [
+            -5.06119,
+            18.71881,
+            -4.37431
+          ],
+          "rotation": [
+            32.5,
+            0,
+            -22.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.06119,
+                16.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                52,
+                82
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightJari",
+          "parent": "rightJaris",
+          "pivot": [
+            -4.56119,
+            16.71881,
+            -4.87431
+          ],
+          "rotation": [
+            27.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -5.06119,
+                14.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "inflate": -0.15,
+              "uv": [
+                52,
+                85
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightJaris2",
+          "parent": "rightClaws",
+          "pivot": [
+            -6.06119,
+            18.71881,
+            -4.37431
+          ],
+          "rotation": [
+            32.5,
+            0,
+            22.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7.06119,
+                16.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                76,
+                89
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightJari2",
+          "parent": "rightJaris2",
+          "pivot": [
+            -6.56119,
+            16.71881,
+            -4.87431
+          ],
+          "rotation": [
+            27.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -7.06119,
+                14.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "inflate": -0.15,
+              "uv": [
+                76,
+                92
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightJaris3",
+          "parent": "rightClaws",
+          "pivot": [
+            -5.56119,
+            18.46881,
+            -4.37431
+          ],
+          "rotation": [
+            7.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6.06119,
+                16.46881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                16,
+                97
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rightJari3",
+          "parent": "rightJaris3",
+          "pivot": [
+            -5.56119,
+            16.46881,
+            -4.87431
+          ],
+          "rotation": [
+            27.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -6.06119,
+                14.46881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "inflate": -0.15,
+              "uv": [
+                16,
+                100
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leftArm",
+          "parent": "body",
+          "pivot": [
+            5,
+            23,
+            0
+          ]
+        },
+        {
+          "name": "leftArmFpp",
+          "parent": "leftArm",
+          "pivot": [
+            5.5,
+            24.5,
+            0.2
+          ]
+        },
+        {
+          "name": "leftDinoArm",
+          "parent": "leftArmFpp",
+          "pivot": [
+            5.92839,
+            24.5,
+            0.2
+          ],
+          "rotation": [
+            -20,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.5,
+                20.28012,
+                -0.70456
+              ],
+              "size": [
+                2,
+                5,
+                3
+              ],
+              "uv": [
+                82,
+                98
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftHands2",
+          "parent": "leftDinoArm",
+          "pivot": [
+            5.5,
+            20.65071,
+            -0.68753
+          ],
+          "rotation": [
+            -40,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.5,
+                19.15071,
+                -4.18753
+              ],
+              "size": [
+                2,
+                3,
+                5
+              ],
+              "uv": [
+                68,
+                97
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftClaws",
+          "parent": "leftHands2",
+          "pivot": [
+            5.56119,
+            21.54177,
+            -4.31914
+          ],
+          "rotation": [
+            30,
+            0,
+            5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.06119,
+                18.46881,
+                -4.87431
+              ],
+              "size": [
+                3,
+                3,
+                2
+              ],
+              "uv": [
+                102,
+                98
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftJaris",
+          "parent": "leftClaws",
+          "pivot": [
+            5.06119,
+            18.71881,
+            -4.37431
+          ],
+          "rotation": [
+            32.5,
+            0,
+            22.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.06119,
+                16.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                52,
+                82
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftJari",
+          "parent": "leftJaris",
+          "pivot": [
+            4.56119,
+            16.71881,
+            -4.87431
+          ],
+          "rotation": [
+            27.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                4.06119,
+                14.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "inflate": -0.15,
+              "uv": [
+                52,
+                85
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftJaris2",
+          "parent": "leftClaws",
+          "pivot": [
+            6.06119,
+            18.71881,
+            -4.37431
+          ],
+          "rotation": [
+            32.5,
+            0,
+            -22.5
+          ],
+          "cubes": [
+            {
+              "origin": [
+                6.06119,
+                16.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                76,
+                89
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftJari2",
+          "parent": "leftJaris2",
+          "pivot": [
+            6.56119,
+            16.71881,
+            -4.87431
+          ],
+          "rotation": [
+            27.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                6.06119,
+                14.71881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "inflate": -0.15,
+              "uv": [
+                76,
+                92
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftJaris3",
+          "parent": "leftClaws",
+          "pivot": [
+            5.56119,
+            18.46881,
+            -4.37431
+          ],
+          "rotation": [
+            7.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5.06119,
+                16.46881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "uv": [
+                16,
+                97
+              ],
+              "mirror": true
+            }
+          ]
+        },
+        {
+          "name": "leftJari3",
+          "parent": "leftJaris3",
+          "pivot": [
+            5.56119,
+            16.46881,
+            -4.87431
+          ],
+          "rotation": [
+            27.5,
+            0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                5.06119,
+                14.46881,
+                -4.87431
+              ],
+              "size": [
+                1,
+                2,
+                1
+              ],
+              "inflate": -0.15,
+              "uv": [
+                16,
+                100
+              ],
+              "mirror": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

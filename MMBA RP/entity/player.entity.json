@@ -1,0 +1,1123 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "materials": {
+        "default": "entity_alphatest",
+        "cape": "entity_alphatest",
+        "animated": "player_animated",
+        "spectator": "player_spectator",
+        "rainbow": "rainbow_fade",
+        "stand_color": "stand_color",
+        "stand_color_blend": "stand_color_blend",
+        "stand_color_sat": "stand_color_sat",
+        "stand_color_blend_sat": "stand_color_blend_sat",
+        "stand_color_add": "stand_color_add",
+        "stand_color_blend_add": "stand_color_blend_add",
+        "reversed_color": "reversed_color"
+      },
+      "textures": {
+        "default": "textures/entity/steve",
+        "cape": "textures/entity/cape_invisible",
+        "none": "textures/entity/cape_invisible",
+        "timestop_effect": "textures/effect/timeStop_reversedColor",
+        "tusk_act_1": "textures/entity/tusk/Act1",
+        "tusk_act_2": "textures/entity/tusk/Act2",
+        "tusk_act_3": "textures/entity/tusk/Act3",
+        "tusk_act_4": "textures/entity/tusk/Act4",
+        "twau": "textures/entity/twau/twau",
+        "d4c": "textures/entity/d4c/d4c",
+        "mandom": "textures/entity/mandom/mandom",
+        "mandom_watch": "textures/entity/mandom/mandom_watch",
+        "boku": "textures/entity/boku/boku",
+        "boku_smoke_props": "textures/entity/boku/smoke_props",
+        "century": "textures/entity/20th",
+        "rainbow": "textures/entity/rainbow",
+        "tob_1": "textures/entity/tob/tob_1",
+        "tob_2": "textures/entity/tob/tob_2",
+        "tob_3": "textures/entity/tob/tob_3",
+        "scary_monsters_half": "textures/entity/tirek/tirek banjarmasin_half",
+        "scary_monsters_full": "textures/entity/tirek/scary monster",
+        "hey_ya": "textures/entity/heya",
+        "civil_war": "textures/entity/civil_war",
+        "tim_purple": "textures/entity/tim/tim_purple",
+        "tim_rope": "textures/particle/tim/rope_segment",
+        "tim_stand_rope": "textures/entity/tim/tim_stand_rope",
+        "tusk_act_1_hue": "textures/entity/stand_color/tusk_act_1_hue",
+        "tusk_act_1_vivid": "textures/entity/stand_color/tusk_act_1_vivid",
+        "tusk_act_1_gray": "textures/entity/stand_color/tusk_act_1_gray",
+        "tusk_act_2_hue": "textures/entity/stand_color/tusk_act_2_hue",
+        "tusk_act_2_vivid": "textures/entity/stand_color/tusk_act_2_vivid",
+        "tusk_act_2_gray": "textures/entity/stand_color/tusk_act_2_gray",
+        "tusk_act_3_hue": "textures/entity/stand_color/tusk_act_3_hue",
+        "tusk_act_3_vivid": "textures/entity/stand_color/tusk_act_3_vivid",
+        "tusk_act_3_gray": "textures/entity/stand_color/tusk_act_3_gray",
+        "twau_hue": "textures/entity/stand_color/twau_hue",
+        "twau_vivid": "textures/entity/stand_color/twau_vivid",
+        "twau_gray": "textures/entity/stand_color/twau_gray",
+        "d4c_hue": "textures/entity/stand_color/d4c_hue",
+        "d4c_vivid": "textures/entity/stand_color/d4c_vivid",
+        "d4c_gray": "textures/entity/stand_color/d4c_gray",
+        "mandom_hue": "textures/entity/stand_color/mandom_hue",
+        "mandom_vivid": "textures/entity/stand_color/mandom_vivid",
+        "mandom_gray": "textures/entity/stand_color/mandom_gray",
+        "boku_hue": "textures/entity/stand_color/boku_hue",
+        "boku_vivid": "textures/entity/stand_color/boku_vivid",
+        "boku_gray": "textures/entity/stand_color/boku_gray",
+        "century_hue": "textures/entity/stand_color/century_hue",
+        "century_vivid": "textures/entity/stand_color/century_vivid",
+        "century_gray": "textures/entity/stand_color/century_gray",
+        "rainbow_hue": "textures/entity/stand_color/rainbow_hue",
+        "rainbow_vivid": "textures/entity/stand_color/rainbow_vivid",
+        "rainbow_gray": "textures/entity/stand_color/rainbow_gray",
+        "tob_1_hue": "textures/entity/stand_color/tob_1_hue",
+        "tob_1_vivid": "textures/entity/stand_color/tob_1_vivid",
+        "tob_1_gray": "textures/entity/stand_color/tob_1_gray",
+        "tob_2_hue": "textures/entity/stand_color/tob_2_hue",
+        "tob_2_vivid": "textures/entity/stand_color/tob_2_vivid",
+        "tob_2_gray": "textures/entity/stand_color/tob_2_gray",
+        "tob_3_hue": "textures/entity/stand_color/tob_3_hue",
+        "tob_3_vivid": "textures/entity/stand_color/tob_3_vivid",
+        "tob_3_gray": "textures/entity/stand_color/tob_3_gray",
+        "scary_monsters_half_hue": "textures/entity/stand_color/scary_monsters_half_hue",
+        "scary_monsters_half_vivid": "textures/entity/stand_color/scary_monsters_half_vivid",
+        "scary_monsters_half_gray": "textures/entity/stand_color/scary_monsters_half_gray",
+        "scary_monsters_full_hue": "textures/entity/stand_color/scary_monsters_full_hue",
+        "scary_monsters_full_vivid": "textures/entity/stand_color/scary_monsters_full_vivid",
+        "scary_monsters_full_gray": "textures/entity/stand_color/scary_monsters_full_gray",
+        "hey_ya_hue": "textures/entity/stand_color/hey_ya_hue",
+        "hey_ya_vivid": "textures/entity/stand_color/hey_ya_vivid",
+        "hey_ya_gray": "textures/entity/stand_color/hey_ya_gray",
+        "civil_war_hue": "textures/entity/stand_color/civil_war_hue",
+        "civil_war_vivid": "textures/entity/stand_color/civil_war_vivid",
+        "civil_war_gray": "textures/entity/stand_color/civil_war_gray",
+        "tim_purple_hue": "textures/entity/stand_color/tim_purple_hue",
+        "tim_purple_vivid": "textures/entity/stand_color/tim_purple_vivid",
+        "tim_purple_gray": "textures/entity/stand_color/tim_purple_gray",
+        "tusk_act_4_hue_0": "textures/entity/stand_color/tusk_act_4_hue_0",
+        "tusk_act_4_hue_1": "textures/entity/stand_color/tusk_act_4_hue_1",
+        "tusk_act_4_vivid_0": "textures/entity/stand_color/tusk_act_4_vivid_0",
+        "tusk_act_4_vivid_1": "textures/entity/stand_color/tusk_act_4_vivid_1",
+        "tusk_act_4_gray": "textures/entity/stand_color/tusk_act_4_gray"
+      },
+      "geometry": {
+        "default": "geometry.humanoid.custom",
+        "cape": "geometry.cape",
+        "kontol": "geometry.humanoid.first",
+        "locator": "geometry.locator",
+        "tusk_act_1": "geometry.tusk_act_1",
+        "tusk_act_2": "geometry.tusk_act_2",
+        "tusk_act_3": "geometry.tusk_act_3",
+        "tusk_act_4": "geometry.tusk_act_4",
+        "tusk_act_4_fpp": "geometry.tusk_act_4_fpp",
+        "twau": "geometry.twau",
+        "twau_fpp": "geometry.twau_fpp",
+        "d4c": "geometry.d4c",
+        "d4c_fpp": "geometry.d4c_fpp",
+        "mandom": "geometry.mandom",
+        "mandom_watch": "geometry.mandom_watch",
+        "mandom_watch_fpp": "geometry.mandom_watch_fpp",
+        "boku": "geometry.boku",
+        "boku_smoke_props": "geometry.boku_smoke_props",
+        "century": "geometry.century_boy",
+        "rainbow": "geometry.rainbow",
+        "tob_1": "geometry.tomb_of_the_boom_1",
+        "tob_2": "geometry.tomb_of_the_boom_2",
+        "tob_3": "geometry.tomb_of_the_boom_3",
+        "scary_monsters_half": "geometry.scary_monsters_half",
+        "scary_monsters_full": "geometry.scary_monsters_full",
+        "scary_monsters_full_fpp": "geometry.scary_monsters_full_fpp",
+        "hey_ya": "geometry.hey_ya",
+        "civil_war": "geometry.civil_war",
+        "tim_skin": "geometry.tim_divided_skin",
+        "tim_purple": "geometry.tim_purple_disks",
+        "tim_rope": "geometry.tim_rope",
+        "tim_stand_rope": "geometry.tim_stand_rope",
+        "tim_stand_rope_fpp": "geometry.tim_stand_rope_fpp",
+        "timestop_effect": "geometry.timeStop_reversedColor"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "variables": {
+          "variable.fp_melee_spear_use_attachable_rotation_z": "public",
+          "variable.tp_melee_spear_use_attachable_rotation_z": "public",
+          "variable.fp_melee_spear_attack_attachable_rotation_z": "public",
+          "variable.tp_melee_spear_attack_attachable_position_z": "public",
+          "variable.attack_time": "public",
+          "variable.item_use_normalized": "public",
+          "variable.tail_lag_1": "public",
+          "variable.tail_lag_2": "public",
+          "variable.tail_lag_3": "public",
+          "variable.tail_lag_4": "public",
+          "variable.tail_lag_5": "public"
+        },
+        "initialize": [
+          "v.is_holding_right = 0.0;",
+          "v.is_blinking = 0.0;",
+          "v.last_blink_time = 0.0;",
+          "v.hand_bob = 0.0;",
+          "v.melee_spear_java_to_bedrock_scale = 40.0;",
+          "v.scoreboard = 0;",
+          "v.gun_shot_seen = 0;",
+          "v.gun_reload_seen = 0;",
+          "v.rainbow_alpha = 0.0;",
+          "v.tail_lag_1 = 0.0;",
+          "v.tail_lag_2 = 0.0;",
+          "v.tail_lag_3 = 0.0;",
+          "v.tail_lag_4 = 0.0;",
+          "v.tail_lag_5 = 0.0;",
+          "v.sm_vis = 0.0;",
+          "v.sm_swim = 0.0;",
+          "v.sm_phase = 0.0;",
+          "v.ts_p = 0.0;",
+          "v.tim_dx = 0.0; v.tim_dy = 0.0; v.tim_dz = 0.0;",
+          "v.tim_m1x = 0.0; v.tim_m1y = 0.0; v.tim_m1z = 0.0;",
+          "v.tim_m2x = 0.0; v.tim_m2y = 0.0; v.tim_m2z = 0.0;",
+          "v.tim_px = 0.0; v.tim_py = 0.0; v.tim_pz = 0.0;",
+          "v.tim_lx = 0.0; v.tim_ly = 0.0; v.tim_lz = 0.0;",
+          "v.tim_det = 0.0; v.tim_det_s = 0.0;",
+          "v.tim_p_head = 0.0; v.tim_p_body = 0.0; v.tim_p_rarm = 0.0; v.tim_p_lleg = 0.0;",
+          "v.tim_arm_yaw = 0.0; v.tim_arm_pitch = 0.0;",
+          "v.johnny_m1 = 0.0;",
+          "v.stand_h_idx = 36; v.stand_h_half = 1;",
+          "v.stand_u_off = 0.0; v.stand_v_off = 0.5; v.stand_u_sc = 0.083317; v.stand_v_sc = 0.166633;",
+          "v.stand_u6_off = 0.0; v.stand_v6_off = 0.0; v.stand_u6_sc = 0.166633; v.stand_v6_sc = 0.166633;",
+          "v.stand_bri_mul = 1.0; v.stand_bri_pos = 0.0;",
+          "v.stand_sat_neg = 0.0; v.stand_sat_pos = 0.0; v.stand_sat_alpha = 0.0; v.stand_sat_active = 0.0; v.stand_sat_tex = 1; v.stand_t4_sat_tex = 1; v.stand_add_tex = 1; v.stand_t4_add_tex = 1;",
+          "v.stand_su_off = 0.0; v.stand_sv_off = 0.5; v.stand_su_sc = 0.083317; v.stand_sv_sc = 0.166633;",
+          "v.stand_t4_su_off = 0.0; v.stand_t4_sv_off = 0.0; v.stand_t4_su_sc = 0.166633; v.stand_t4_sv_sc = 0.166633;",
+          "v.stand_bu_off = 0.0; v.stand_bv_off = 0.5; v.stand_bu_sc = 0.083317; v.stand_bv_sc = 0.166633;",
+          "v.stand_t4_bu_off = 0.0; v.stand_t4_bv_off = 0.0; v.stand_t4_bu_sc = 0.166633; v.stand_t4_bv_sc = 0.166633;",
+          "v.t3_px = 0.0; v.t3_py = 0.0; v.t3_pz = 0.0; v.t3_arm_yaw = 0.0; v.t3_arm_pitch = 0.0; v.t3_root_yaw = 0.0;"
+        ],
+        "pre_animation": [
+          "variable.gun = query.get_equipped_item_name(0) == 'revolver' || query.get_equipped_item_name(0) == 'tommy_gun' || query.get_equipped_item_name(0) == 'shotgun';",
+          "variable.attack_time = variable.gun ? 0.0 : variable.attack_time;",
+          "v.helmet_layer_visible = !query.has_head_gear;",
+          "v.leg_layer_visible = 1.0;",
+          "v.boot_layer_visible = 1.0;",
+          "v.chest_layer_visible = 1.0;",
+          "v.attack_body_rot_y = Math.sin(360 * Math.sqrt(v.attack_time)) * 10.0;",
+          "v.tcos0 = math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / v.gliding_speed_value * 57.3;",
+          "v.first_person_item_rotation_factor = math.sin((1 - v.attack_time) * 180.0);",
+          "v.hand_bob = query.life_time < 0.01 ? 0.0 : v.hand_bob + ((query.is_on_ground && query.is_alive ? math.clamp(math.sqrt(math.pow(query.position_delta(0), 2.0) + math.pow(query.position_delta(2), 2.0)), 0.0, 0.1) : 0.0) - v.hand_bob) * 0.02;",
+          "v.map_angle = math.clamp(1 - v.player_x_rotation / 45.1, 0.0, 1.0);",
+          "v.item_use_duration = query.main_hand_item_use_duration > 0.0 ? (query.main_hand_item_max_duration - (query.main_hand_item_use_duration - query.frame_alpha + 1.0)) : 0.0;",
+          "v.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;",
+          "v.riding_y_offset = query.is_riding_any_entity_of_type('minecraft:minecart', 'minecraft:boat', 'minecraft:chest_boat', 'minecraft:strider') ? -3.0 : 0.0;",
+          "v.melee_spear_equipped = query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_spear');",
+          "v.tp_melee_spear_base_arm_rotation_x = (query.is_swimming || query.is_gliding) ? (-115.0 - query.target_x_rotation) : (query.is_crawling ? -115.0 : -30.0);",
+          "t.melee_spear_use_finish_raise_tick = v.melee_spear_equipped ? query.kinetic_weapon_delay : 0.0;",
+          "t.melee_spear_use_start_sway_tick = v.melee_spear_equipped ? t.melee_spear_use_finish_raise_tick + query.kinetic_weapon_dismount_duration : 0.0;",
+          "t.melee_spear_use_start_lower_tick = v.melee_spear_equipped ? t.melee_spear_use_finish_raise_tick + query.kinetic_weapon_knockback_duration : 0.0;",
+          "t.melee_spear_use_finish_lower_tick = v.melee_spear_equipped ? t.melee_spear_use_finish_raise_tick + query.kinetic_weapon_damage_duration : 0.0;",
+          "t.melee_spear_use_raise_progress = math.clamp(math.inverse_lerp(0.0, t.melee_spear_use_finish_raise_tick, v.item_use_duration), 0.0, 1.0);",
+          "t.melee_spear_use_raise_progress_start = math.clamp(math.inverse_lerp(0.0, 0.5, t.melee_spear_use_raise_progress), 0.0, 1.0);",
+          "t.melee_spear_use_raise_progress_middle = math.clamp(math.inverse_lerp(0.5, 0.8, t.melee_spear_use_raise_progress), 0.0, 1.0);",
+          "t.melee_spear_use_raise_progress_end = math.clamp(math.inverse_lerp(0.8, 1.0, t.melee_spear_use_raise_progress), 0.0, 1.0);",
+          "t.melee_spear_use_sway_progress = math.clamp(math.inverse_lerp(t.melee_spear_use_start_sway_tick, t.melee_spear_use_start_lower_tick, v.item_use_duration), 0.0, 1.0);",
+          "t.melee_spear_use_lower_progress = math.ease_out_cubic(0.0, 1.0, math.ease_in_out_elastic(0.0, 1.0, math.clamp(math.inverse_lerp(t.melee_spear_use_start_lower_tick, t.melee_spear_use_finish_lower_tick - 5, v.item_use_duration), 0.0, 1.0)));",
+          "t.melee_spear_use_raise_back_progress = math.clamp(math.inverse_lerp(t.melee_spear_use_finish_lower_tick - 5.0, t.melee_spear_use_finish_lower_tick, v.item_use_duration), 0.0, 1.0);",
+          "t.melee_spear_use_sway_intensity = math.ease_out_circ(0.0, 2.0, t.melee_spear_use_sway_progress) + math.ease_in_circ(0.0, -2.0, t.melee_spear_use_raise_back_progress);",
+          "t.melee_spear_use_sway_scale_slow = math.sin(v.item_use_duration * 19.0) * t.melee_spear_use_sway_intensity;",
+          "t.melee_spear_use_sway_scale_fast = math.sin(v.item_use_duration * 30.0) * t.melee_spear_use_sway_intensity;",
+          "v.fp_melee_spear_use_item_position_x = (t.melee_spear_use_raise_progress_start * 0.05 + t.melee_spear_use_raise_progress_end * -0.05 + t.melee_spear_use_sway_scale_slow * 0.005) * v.melee_spear_java_to_bedrock_scale;",
+          "v.fp_melee_spear_use_item_position_y = (t.melee_spear_use_raise_progress_start * -0.075 + t.melee_spear_use_raise_progress_middle * 0.075 + t.melee_spear_use_sway_scale_fast * 0.01) * v.melee_spear_java_to_bedrock_scale;",
+          "v.fp_melee_spear_use_item_position_z = (t.melee_spear_use_raise_progress_start * 0.05 + t.melee_spear_use_raise_progress_end * -0.05 + t.melee_spear_use_sway_scale_slow * 0.005) * v.melee_spear_java_to_bedrock_scale;",
+          "v.fp_melee_spear_use_item_rotation_y = t.melee_spear_use_raise_progress * 20.0 + t.melee_spear_use_lower_progress * 20.0 + t.melee_spear_use_sway_scale_slow * 0.5 + t.melee_spear_use_raise_back_progress * -40.0;",
+          "v.fp_melee_spear_use_item_rotation_z = math.ease_in_out_back(0.0, -60.0, t.melee_spear_use_raise_progress) + t.melee_spear_use_lower_progress * -25.0 + t.melee_spear_use_raise_back_progress * 85.0 + t.melee_spear_use_sway_scale_fast * 0.5;",
+          "v.fp_melee_spear_use_attachable_rotation_z = math.clamp(math.inverse_lerp(0.5, 0.55, t.melee_spear_use_raise_progress), 0.0, 1.0) * -50.0 + t.melee_spear_use_sway_progress * 90.0 + t.melee_spear_use_raise_back_progress * -40.0;",
+          "v.tp_melee_spear_use_arm_rotation_x = t.melee_spear_use_raise_progress_start * -40.0 + t.melee_spear_use_raise_progress_middle * 30.0 + t.melee_spear_use_raise_progress_end * -20.0 + t.melee_spear_use_lower_progress * 20.0 + t.melee_spear_use_raise_back_progress * 10.0;",
+          "v.tp_melee_spear_use_arm_rotation_x = v.tp_melee_spear_use_arm_rotation_x + t.melee_spear_use_sway_scale_slow * 0.6;",
+          "v.tp_melee_spear_use_arm_rotation_y = t.melee_spear_use_sway_scale_fast * 1.0;",
+          "v.tp_melee_spear_use_arm_rotation_z = t.melee_spear_use_sway_scale_slow * 0.5;",
+          "v.tp_melee_spear_use_item_rotation_x = t.melee_spear_use_raise_progress * 60.0 + t.melee_spear_use_raise_back_progress * -60.0;",
+          "v.tp_melee_spear_use_attachable_rotation_z = t.melee_spear_use_raise_progress * 90.0 + t.melee_spear_use_sway_progress * -90.0;",
+          "t.melee_spear_attack_duration_ratio = 1.0 / query.base_swing_duration;",
+          "t.melee_spear_attack_raise_end = 0.05 * t.melee_spear_attack_duration_ratio;",
+          "t.melee_spear_attack_thrust_end = 0.2 * t.melee_spear_attack_duration_ratio;",
+          "t.melee_spear_attack_recover_start = 1.0 - (0.6 * t.melee_spear_attack_duration_ratio);",
+          "t.melee_spear_attack_raise_progress = math.clamp(math.inverse_lerp(0.0, t.melee_spear_attack_raise_end, v.attack_time), 0.0, 1.0);",
+          "t.melee_spear_attack_thrust_progress = math.clamp(math.inverse_lerp(t.melee_spear_attack_raise_end, t.melee_spear_attack_thrust_end, v.attack_time), 0.0, 1.0);",
+          "t.melee_spear_attack_recover_progress = math.clamp(math.inverse_lerp(t.melee_spear_attack_recover_start, 1.0, v.attack_time), 0.0, 1.0);",
+          "t.melee_spear_attack_raise_scale = math.ease_in_out_sine(0.0, 1.0, t.melee_spear_attack_raise_progress);",
+          "t.melee_spear_attack_thrust_scale = math.ease_in_quad(0.0, 1.0, t.melee_spear_attack_thrust_progress);",
+          "t.melee_spear_attack_recover_scale = math.ease_in_out_expo(0.0, 1.0, t.melee_spear_attack_recover_progress);",
+          "v.fp_melee_spear_attack_item_position_x = (t.melee_spear_attack_raise_scale * 0.1 + t.melee_spear_attack_thrust_scale * -0.1) * v.melee_spear_java_to_bedrock_scale;",
+          "v.fp_melee_spear_attack_item_position_y = (t.melee_spear_attack_raise_scale * -0.075 + t.melee_spear_attack_recover_scale * 0.075) * v.melee_spear_java_to_bedrock_scale;",
+          "v.fp_melee_spear_attack_item_position_z = (t.melee_spear_attack_raise_scale * 0.65 + t.melee_spear_attack_thrust_scale * -0.65) * v.melee_spear_java_to_bedrock_scale;",
+          "v.fp_melee_spear_attack_item_rotation_y = t.melee_spear_attack_raise_scale * 20.0 + t.melee_spear_attack_recover_scale * -20.0;",
+          "v.fp_melee_spear_attack_item_rotation_z = t.melee_spear_attack_raise_scale * -60.0 + t.melee_spear_attack_recover_scale * 60.0;",
+          "v.fp_melee_spear_attack_attachable_rotation_z = t.melee_spear_attack_raise_scale * 40.0 + t.melee_spear_attack_recover_scale * -40.0;",
+          "v.tp_melee_spear_attack_arm_rotation_x = t.melee_spear_attack_raise_scale * 90.0 + t.melee_spear_attack_thrust_scale * -120.0 + t.melee_spear_attack_recover_scale * 30.0;",
+          "v.tp_melee_spear_attack_item_rotation_x = t.melee_spear_attack_thrust_scale * 60.0 + t.melee_spear_attack_recover_scale * -60.0;",
+          "v.tp_melee_spear_attack_attachable_position_z = (t.melee_spear_attack_thrust_scale * -0.15 + t.melee_spear_attack_recover_scale * 0.15) * v.melee_spear_java_to_bedrock_scale;",
+          "variable.johnny = (query.property('property:act') == 0 || query.property('property:act') == 1 || query.property('property:act') == 2) && !q.is_riding && !q.is_gliding && !q.is_swimming && !q.is_wall_climbing;",
+          "variable.stand_ui_preview = query.property('property:stand_preview') == 1;",
+          "variable.stand = query.get_equipped_item_name(0) == 'stand' || query.get_equipped_item_name(0) == 'stand2' || variable.stand_ui_preview;",
+          "v.johnny_m1 = (query.property('property:m1') > 0) || (variable.attack_time > 0 && variable.stand);",
+          "variable.revolver = query.get_equipped_item_name(0) == 'revolver';",
+          "variable.tommy_gun = query.get_equipped_item_name(0) == 'tommy_gun' || query.get_equipped_item_name(0) == 'shotgun';",
+          "variable.gun = query.get_equipped_item_name(0) == 'revolver' || query.get_equipped_item_name(0) == 'tommy_gun' || query.get_equipped_item_name(0) == 'shotgun';",
+          "variable.shotgun = query.get_equipped_item_name(0) == 'shotgun';",
+          "variable.tommy = query.get_equipped_item_name(0) == 'tommy_gun';",
+          "variable.spin_ball = (query.get_equipped_item_name(0) == 'ball' || query.get_equipped_item_name(0) == 'wrecking_ball') && query.property('property:spin_item') == 1;",
+          "variable.spin_block = query.property('property:spin_item') == 1;",
+          "variable.spin_item = query.property('property:spin_item') == 1;",
+          "variable.tusk = query.property('property:stand') == 1;",
+          "variable.act_1 = query.property('property:act') == 0;",
+          "variable.act_2 = query.property('property:act') == 1;",
+          "variable.act_3 = query.property('property:act') == 2;",
+          "variable.act_4 = query.property('property:act') == 3;",
+          "v.tusk_cur_act = query.property('property:act');",
+          "v.tusk_act_changed = variable.tusk && !variable.is_paperdoll && !variable.stand_ui_preview && ((v.tusk_last_act ?? v.tusk_cur_act) != v.tusk_cur_act);",
+          "v.tusk_reset_1 = (v.tusk_act_changed && v.tusk_cur_act == 0) || (v.tusk_need_1 ?? 0);",
+          "v.tusk_reset_2 = (v.tusk_act_changed && v.tusk_cur_act == 1) || (v.tusk_need_2 ?? 0);",
+          "v.tusk_reset_3 = (v.tusk_act_changed && v.tusk_cur_act == 2) || (v.tusk_need_3 ?? 0);",
+          "v.tusk_reset_4 = (v.tusk_act_changed && v.tusk_cur_act == 3) || (v.tusk_need_4 ?? 0);",
+          "v.tusk_need_1 = v.tusk_reset_1 && !(variable.tusk && variable.act_1);",
+          "v.tusk_need_2 = v.tusk_reset_2 && !(variable.tusk && variable.act_2);",
+          "v.tusk_need_3 = v.tusk_reset_3 && !(variable.tusk && variable.act_3);",
+          "v.tusk_need_4 = v.tusk_reset_4 && !(variable.tusk && variable.act_4 && !variable.is_first_person);",
+          "v.tusk_last_act = v.tusk_cur_act;",
+          "variable.twau = query.property('property:stand') == 2;",
+          "variable.d4c = query.property('property:stand') == 3;",
+          "variable.mandom = query.property('property:stand') == 4;",
+          "variable.boku = query.property('property:stand') == 5;",
+          "variable.tim = query.property('property:stand') == 6;",
+          "variable.century = query.property('property:stand') == 7;",
+          "variable.rainbow = query.property('property:stand') == 8;",
+          "variable.tob_1 = query.property('property:stand') == 9;",
+          "variable.tob_2 = query.property('property:stand') == 10;",
+          "variable.tob_3 = query.property('property:stand') == 11;",
+          "variable.tob = variable.tob_1 || variable.tob_2 || variable.tob_3;",
+          "variable.scary_monsters = query.property('property:stand') == 12;",
+          "variable.sm_act = query.property('property:act') == 1;",
+          "variable.sm_target_full = variable.scary_monsters && variable.sm_act && variable.stand;",
+          "variable.sm_dt = math.clamp(query.delta_time, 0.0, 0.05);",
+          "variable.sm_dino_exit_timer = (!variable.scary_monsters || variable.is_paperdoll || variable.stand_ui_preview || variable.sm_target_full) ? 0.0 : (((variable.sm_was_full ?? 0.0) > 0.5 && !variable.sm_target_full) ? 0.45 : math.max((variable.sm_dino_exit_timer ?? 0.0) - variable.sm_dt, 0.0));",
+          "variable.sm_was_full = (variable.is_paperdoll || variable.stand_ui_preview) ? (variable.sm_was_full ?? 0.0) : (variable.sm_target_full ? 1.0 : 0.0);",
+          "variable.sm_dino_exiting = variable.sm_dino_exit_timer > 0.0;",
+          "variable.sm_dino_visible = variable.sm_target_full || variable.sm_dino_exiting;",
+          "variable.sm_transformed = variable.sm_dino_visible;",
+          "v.cam_yaw = query.body_y_rotation + query.target_y_rotation;",
+          "v.move_fwd = -math.sin(v.cam_yaw) * query.movement_direction(0) + math.cos(v.cam_yaw) * query.movement_direction(2);",
+          "v.is_moving = query.modified_move_speed > 0.05;",
+          "v.dino_move_back = v.is_moving && (v.move_fwd <= -0.3);",
+          "v.dino_move_fwd = v.is_moving && !v.dino_move_back;",
+          "v.dino_yaw = (v.dino_yaw ?? 0.0) + (((v.dino_move_back ? query.target_y_rotation : 0.0) - (v.dino_yaw ?? 0.0)) * 0.35);",
+          "variable.hey_ya = query.property('property:stand') == 13;",
+          "variable.civil_war = query.property('property:stand') == 14;",
+          "variable.rainbow_target_alpha = (variable.rainbow && variable.stand) ? 1.0 : 0.0;",
+          "variable.rainbow_alpha = variable.stand_ui_preview ? 1.0 : math.clamp(variable.rainbow_alpha + (variable.rainbow_target_alpha - variable.rainbow_alpha) * 0.15, 0.0, 1.0);",
+          "v.ts_target = math.clamp(query.property('property:attack') / 100.0, 0.0, 1.0);",
+          "v.ts_p = v.ts_target > 0.0 ? math.clamp((v.ts_p ?? 0.0) + (v.ts_target - (v.ts_p ?? 0.0)) * 0.25, 0.0, 1.0) : 0.0;",
+          "v.tim_limb = q.property('property:tim_limb');",
+          "v.tim_grapple = (v.tim_limb == 3);",
+          "v.tim_unravel = (variable.tim && v.tim_limb == 4);",
+          "v.tim_det = q.property('property:tim_detach');",
+          "v.tim_active = (v.tim_limb > 0);",
+          "v.tim_lerp = math.min(1.0, q.delta_time * 25.0);",
+          "v.tim_dx = v.tim_active ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_dx, q.property('property:tim_dx'), v.tim_lerp) : q.property('property:tim_dx')) : 0.0;",
+          "v.tim_dy = v.tim_active ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_dy, q.property('property:tim_dy'), v.tim_lerp) : q.property('property:tim_dy')) : 0.0;",
+          "v.tim_dz = v.tim_active ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_dz, q.property('property:tim_dz'), v.tim_lerp) : q.property('property:tim_dz')) : 0.0;",
+          "v.tim_bx = v.tim_active ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_bx, q.property('property:tim_dir_x'), v.tim_lerp) : q.property('property:tim_dir_x')) : 0.0;",
+          "v.tim_by = v.tim_active ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_by, q.property('property:tim_dir_y'), v.tim_lerp) : q.property('property:tim_dir_y')) : -1.0;",
+          "v.tim_bz = v.tim_active ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_bz, q.property('property:tim_dir_z'), v.tim_lerp) : q.property('property:tim_dir_z')) : 0.0;",
+          "v.tim_m1x = v.tim_unravel ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_m1x, q.property('property:tim_m1x'), v.tim_lerp) : q.property('property:tim_m1x')) : 0.0;",
+          "v.tim_m1y = v.tim_unravel ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_m1y, q.property('property:tim_m1y'), v.tim_lerp) : q.property('property:tim_m1y')) : 0.0;",
+          "v.tim_m1z = v.tim_unravel ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_m1z, q.property('property:tim_m1z'), v.tim_lerp) : q.property('property:tim_m1z')) : 0.0;",
+          "v.tim_m2x = v.tim_unravel ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_m2x, q.property('property:tim_m2x'), v.tim_lerp) : q.property('property:tim_m2x')) : 0.0;",
+          "v.tim_m2y = v.tim_unravel ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_m2y, q.property('property:tim_m2y'), v.tim_lerp) : q.property('property:tim_m2y')) : 0.0;",
+          "v.tim_m2z = v.tim_unravel ? ((v.tim_was_active ?? 0) ? math.lerp(v.tim_m2z, q.property('property:tim_m2z'), v.tim_lerp) : q.property('property:tim_m2z')) : 0.0;",
+          "v.tim_was_active = v.tim_active;",
+          "v.tim_det_s = v.tim_grapple ? math.lerp(v.tim_det_s ?? 0.0, v.tim_det, v.tim_lerp) : 0.0;",
+          "v.tim_arm_p = v.tim_grapple ? math.clamp(v.tim_det_s * 2.5, 0.0, 1.0) : 0.0;",
+          "v.tim_torso_p = v.tim_grapple ? math.clamp((v.tim_det_s - 0.15) * 1.8, 0.0, 1.0) : 0.0;",
+          "v.tim_leg_p = v.tim_grapple ? math.clamp((v.tim_det_s - 0.35) * 1.6, 0.0, 1.0) : 0.0;",
+          "v.tim_side = (v.tim_limb == 1 ? -1.0 : ((v.tim_limb == 2 || v.tim_limb == 3) ? 1.0 : 0.0)) * (1.0 - v.tim_det_s);",
+          "v.tim_sh_x = v.tim_side * 0.3516 * math.cos(q.body_y_rotation);",
+          "v.tim_sh_y = (v.tim_limb > 0 && v.tim_limb < 4) ? (0.2344 * (1.0 - v.tim_det_s)) : 0.0;",
+          "v.tim_sh_z = v.tim_side * 0.3516 * math.sin(q.body_y_rotation);",
+          "v.eff_dx = v.tim_dx - v.tim_sh_x;",
+          "v.eff_dy = v.tim_dy - v.tim_sh_y;",
+          "v.eff_dz = v.tim_dz - v.tim_sh_z;",
+          "v.eff_horiz = math.sqrt(v.eff_dx * v.eff_dx + v.eff_dz * v.eff_dz);",
+          "v.eff_dist = math.sqrt(v.eff_horiz * v.eff_horiz + v.eff_dy * v.eff_dy);",
+          "v.tim_world_yaw = (v.eff_horiz > 0.001) ? math.atan2(-v.eff_dx, v.eff_dz) : q.body_y_rotation;",
+          "v.tim_raw_yaw = math.mod(v.tim_world_yaw - q.body_y_rotation, 360.0);",
+          "v.tim_rel_yaw = v.tim_raw_yaw > 180.0 ? (v.tim_raw_yaw - 360.0) : (v.tim_raw_yaw < -180.0 ? (v.tim_raw_yaw + 360.0) : v.tim_raw_yaw);",
+          "v.tim_pitch = (v.eff_dist > 0.001) ? -math.atan2(v.eff_dy, v.eff_horiz) : 0.0;",
+          "v.tim_b_horiz = math.sqrt(v.tim_bx * v.tim_bx + v.tim_bz * v.tim_bz);",
+          "v.tim_b_len = math.sqrt(v.tim_b_horiz * v.tim_b_horiz + v.tim_by * v.tim_by);",
+          "v.tim_b_raw_world_yaw = (v.tim_b_horiz > 0.001) ? math.atan2(-v.tim_bx, v.tim_bz) : v.tim_world_yaw;",
+          "v.tim_b_dyaw_raw = math.mod(v.tim_b_raw_world_yaw - v.tim_world_yaw, 360.0);",
+          "v.tim_b_dyaw_wrap = v.tim_b_dyaw_raw > 180.0 ? (v.tim_b_dyaw_raw - 360.0) : (v.tim_b_dyaw_raw < -180.0 ? (v.tim_b_dyaw_raw + 360.0) : v.tim_b_dyaw_raw);",
+          "v.tim_b_blend = (v.tim_grapple && v.tim_b_len > 0.001) ? v.tim_torso_p : 0.0;",
+          "v.tim_b_world_yaw = v.tim_world_yaw + math.clamp(v.tim_b_dyaw_wrap, -85.0, 85.0) * v.tim_b_blend;",
+          "v.tim_b_rel_raw = math.mod(v.tim_b_world_yaw - q.body_y_rotation, 360.0);",
+          "v.tim_back_rel_yaw = v.tim_b_rel_raw > 180.0 ? (v.tim_b_rel_raw - 360.0) : (v.tim_b_rel_raw < -180.0 ? (v.tim_b_rel_raw + 360.0) : v.tim_b_rel_raw);",
+          "v.tim_b_raw_pitch = (v.tim_b_len > 0.001) ? -math.atan2(v.tim_by, v.tim_b_horiz) : v.tim_pitch;",
+          "v.tim_back_pitch = v.tim_pitch + math.clamp(v.tim_b_raw_pitch - v.tim_pitch, -85.0, 85.0) * v.tim_b_blend;",
+          "v.tim_dist_px = math.max(6.0, v.eff_dist * 17.0667);",
+          "v.tim_forearm_z = v.tim_grapple ? math.lerp(v.tim_dist_px - 6.0, math.min(v.tim_dist_px - 6.0, 26.0), v.tim_arm_p) : math.max(6.0, v.tim_dist_px - 6.0);",
+          "v.tim_rope_start = (v.tim_grapple || v.tim_unravel) ? 0.0 : 6.0;",
+          "v.tim_rope_span = (v.tim_limb > 0) ? math.max(0.0, ((v.tim_grapple || v.tim_unravel) ? v.tim_dist_px : v.tim_forearm_z) - v.tim_rope_start) : 0.0;",
+          "v.tim_fseg_len = v.tim_rope_span / 12.0;",
+          "v.tim_whip = (v.tim_grapple || v.tim_unravel) ? 0.0 : math.clamp(0.9 - v.eff_dist * 0.04, 0.0, 0.9);",
+          "v.tim_sag = (v.tim_grapple || v.tim_unravel) ? 0.0 : math.clamp(v.eff_dist * 0.14, 0.0, 2.0);",
+          "v.tim_bseg_len = 0.0;",
+          "v.tim_back_sag = 0.0;",
+          "v.t3_c = (v.tim_limb == 2) ? 1.0 : 0.72537;",
+          "v.t3_s = (v.tim_limb == 2) ? 0.0 : 0.68835;",
+          "v.t3_h = math.sqrt(v.tim_dx * v.tim_dx + v.tim_dz * v.tim_dz);",
+          "v.t3_wyaw = ((v.tim_limb == 1 || v.tim_limb == 3 || v.tim_limb == 4) && v.t3_h > 0.001) ? math.atan2(-v.tim_dx, v.tim_dz) : q.body_y_rotation;",
+          "v.t3_ryaw_raw = math.mod(v.t3_wyaw - q.body_y_rotation, 360.0);",
+          "v.t3_root_yaw = (v.tim_limb == 1 || v.tim_limb == 3 || v.tim_limb == 4) ? (v.t3_ryaw_raw > 180.0 ? (v.t3_ryaw_raw - 360.0) : (v.t3_ryaw_raw < -180.0 ? (v.t3_ryaw_raw + 360.0) : v.t3_ryaw_raw)) : 0.0;",
+          "v.tu_x = v.tim_unravel ? ((v.tim_dx * math.cos(v.t3_wyaw) + v.tim_dz * math.sin(v.t3_wyaw)) * 17.0667) : 0.0;",
+          "v.tu_y = v.tim_unravel ? (v.tim_dy * 17.0667) : 0.0;",
+          "v.tu_z = v.tim_unravel ? ((v.tim_dx * math.sin(v.t3_wyaw) - v.tim_dz * math.cos(v.t3_wyaw)) * 17.0667) : 0.0;",
+          "v.tu_p_rarm = v.tim_unravel ? math.clamp((v.eff_dist - 2.0) / 1.5, 0.0, 1.0) : 0.0;",
+          "v.tu_f_larm = v.tim_unravel ? (math.clamp((v.eff_dist - 4.5) / 4.5, 0.0, 1.0) * 0.72) : 0.0;",
+          "v.tu_p_larm = v.tim_unravel ? math.clamp((v.eff_dist - 4.5) / 2.0, 0.0, 1.0) : 0.0;",
+          "v.tu_p_body = v.tim_unravel ? math.clamp((v.eff_dist - 8.5) / 2.5, 0.0, 1.0) : 0.0;",
+          "v.tu_f_body = v.tim_unravel ? (v.tu_p_body * 0.34) : 0.0;",
+          "v.tu_p_head = v.tim_unravel ? math.clamp((v.eff_dist - 10.5) / 2.0, 0.0, 1.0) : 0.0;",
+          "v.tu_f_head = v.tim_unravel ? (v.tu_p_head * 0.48) : 0.0;",
+          "v.tu_p_pelvis = v.tim_unravel ? math.clamp((v.eff_dist - 12.5) / 2.5, 0.0, 1.0) : 0.0;",
+          "v.tu_m1_ux = v.tim_unravel ? ((v.tim_m1x * math.cos(v.t3_wyaw) + v.tim_m1z * math.sin(v.t3_wyaw)) * 17.0667) : 0.0;",
+          "v.tu_m1_uy = v.tim_unravel ? (v.tim_m1y * 17.0667) : 0.0;",
+          "v.tu_m1_uz = v.tim_unravel ? ((v.tim_m1x * math.sin(v.t3_wyaw) - v.tim_m1z * math.cos(v.t3_wyaw)) * 17.0667) : 0.0;",
+          "v.tu_m1x = v.tu_m1_ux;",
+          "v.tu_m1y = v.tu_m1_uy * math.cos(v.tim_pitch) - v.tu_m1_uz * math.sin(v.tim_pitch);",
+          "v.tu_m1z = v.tu_m1_uy * math.sin(v.tim_pitch) + v.tu_m1_uz * math.cos(v.tim_pitch);",
+          "v.tu_m2_ux = v.tim_unravel ? ((v.tim_m2x * math.cos(v.t3_wyaw) + v.tim_m2z * math.sin(v.t3_wyaw)) * 17.0667) : 0.0;",
+          "v.tu_m2_uy = v.tim_unravel ? (v.tim_m2y * 17.0667) : 0.0;",
+          "v.tu_m2_uz = v.tim_unravel ? ((v.tim_m2x * math.sin(v.t3_wyaw) - v.tim_m2z * math.cos(v.t3_wyaw)) * 17.0667) : 0.0;",
+          "v.tu_m2x = v.tu_m2_ux;",
+          "v.tu_m2y = v.tu_m2_uy * math.cos(v.tim_pitch) - v.tu_m2_uz * math.sin(v.tim_pitch);",
+          "v.tu_m2z = v.tu_m2_uy * math.sin(v.tim_pitch) + v.tu_m2_uz * math.cos(v.tim_pitch);",
+          "v.tu_bx = v.tu_m1x * v.tu_p_body;",
+          "v.tu_by = v.tu_m1y * v.tu_p_body;",
+          "v.tu_bz = v.tu_m1z * v.tu_p_body;",
+          "v.tu_ax = v.tim_bx * math.cos(v.t3_wyaw) + v.tim_bz * math.sin(v.t3_wyaw);",
+          "v.tu_az = v.tim_bx * math.sin(v.t3_wyaw) - v.tim_bz * math.cos(v.t3_wyaw);",
+          "v.tu_ah = math.sqrt(v.tu_ax * v.tu_ax + v.tu_az * v.tu_az);",
+          "v.tu_arm_yaw = (v.tu_ah > 0.001) ? math.atan2(-v.tu_ax, -v.tu_az) : 0.0;",
+          "v.tu_aim_pitch = -math.atan2(v.tim_by, math.max(0.0001, v.tu_ah));",
+          "v.tu_arm_pitch = -90.0 + v.tu_aim_pitch + (variable.attack_time > 0.0 ? (-math.sin(variable.attack_time * 180.0) * 65.0) : 0.0);",
+          "v.t3_mx = (v.tim_dx * math.cos(v.t3_wyaw) + v.tim_dz * math.sin(v.t3_wyaw)) * 17.0667;",
+          "v.t3_vy = v.tim_dy * 17.0667 - 4.4;",
+          "v.t3_vz = (v.tim_dx * math.sin(v.t3_wyaw) - v.tim_dz * math.cos(v.t3_wyaw)) * 17.0667 - 1.6;",
+          "v.t3_px = (v.tim_limb == 1) ? (v.t3_mx * 0.74386 + v.t3_vy * 0.66815 - v.t3_vz * 0.01565) : v.t3_mx;",
+          "v.t3_py = (v.tim_limb == 1) ? (v.t3_mx * 0.16438 - v.t3_vy * 0.20561 - v.t3_vz * 0.96473 - 10.0) : (v.t3_vy * v.t3_c - v.t3_vz * v.t3_s - 10.0);",
+          "v.t3_pz = (v.tim_limb == 1) ? (-v.t3_mx * 0.64780 + v.t3_vy * 0.71505 - v.t3_vz * 0.26277) : (v.t3_vy * v.t3_s + v.t3_vz * v.t3_c);",
+          "v.t3_dmx = v.tim_bx * math.cos(v.t3_wyaw) + v.tim_bz * math.sin(v.t3_wyaw);",
+          "v.t3_dmz = v.tim_bx * math.sin(v.t3_wyaw) - v.tim_bz * math.cos(v.t3_wyaw);",
+          "v.t3_dlx = (v.tim_limb == 1) ? (v.t3_dmx * 0.74386 + v.tim_by * 0.66815 - v.t3_dmz * 0.01565) : v.t3_dmx;",
+          "v.t3_dly = (v.tim_limb == 1) ? (v.t3_dmx * 0.16438 - v.tim_by * 0.20561 - v.t3_dmz * 0.96473) : (v.tim_by * v.t3_c - v.t3_dmz * v.t3_s);",
+          "v.t3_dlz = (v.tim_limb == 1) ? (-v.t3_dmx * 0.64780 + v.tim_by * 0.71505 - v.t3_dmz * 0.26277) : (v.tim_by * v.t3_s + v.t3_dmz * v.t3_c);",
+          "v.t3_dh = math.sqrt(v.t3_dlx * v.t3_dlx + v.t3_dlz * v.t3_dlz);",
+          "v.t3_arm_yaw = (v.t3_dh > 0.001) ? math.atan2(-v.t3_dlx, -v.t3_dlz) : 0.0;",
+          "v.t3_arm_pitch = -math.atan2(v.t3_dly, v.t3_dh) - 90.0;",
+          "t.sc_h = (query.property('property:stand_rainbow') == 1) ? (math.mod(query.life_time * 180.0, 360.0) - 180.0) : query.property('property:stand_hue');",
+          "t.sc_s = query.property('property:stand_sat') / 100.0;",
+          "t.sc_b = query.property('property:stand_bri') / 100.0;",
+          "v.stand_h_idx = math.mod(math.floor((t.sc_h + 180.0) / 5.0 + 0.5), 72);",
+          "t.sc_col = math.mod(v.stand_h_idx, 12);",
+          "t.sc_row = math.floor(v.stand_h_idx / 12);",
+          "v.stand_u_off = (t.sc_col + 0.0001) / 12.0;",
+          "v.stand_v_off = (t.sc_row + 0.0001) / 6.0;",
+          "v.stand_u_sc = 0.9998 / 12.0;",
+          "v.stand_v_sc = 0.9998 / 6.0;",
+          "v.stand_h_half = math.floor(v.stand_h_idx / 36);",
+          "t.sc_i6 = math.mod(v.stand_h_idx, 36);",
+          "t.sc_c6 = math.mod(t.sc_i6, 6);",
+          "t.sc_r6 = math.floor(t.sc_i6 / 6);",
+          "v.stand_u6_off = (t.sc_c6 + 0.0001) / 6.0;",
+          "v.stand_v6_off = (t.sc_r6 + 0.0001) / 6.0;",
+          "v.stand_u6_sc = 0.9998 / 6.0;",
+          "v.stand_v6_sc = 0.9998 / 6.0;",
+          "v.stand_bri_mul = t.sc_b < 0.0 ? (1.0 + t.sc_b * 0.85) : 1.0;",
+          "v.stand_bri_pos = math.max(0.0, t.sc_b);",
+          "v.stand_sat_neg = math.max(0.0, -t.sc_s);",
+          "v.stand_sat_pos = math.max(0.0, t.sc_s);",
+          "v.stand_sat_alpha = v.stand_sat_neg > 0.005 ? v.stand_sat_neg : v.stand_sat_pos;",
+          "v.stand_sat_active = v.stand_sat_alpha > 0.005;",
+          "v.stand_base_w = (1.0 - v.stand_sat_alpha) * v.stand_bri_mul;",
+          "v.stand_sat_w = v.stand_sat_alpha * v.stand_bri_mul;",
+          "v.stand_base_dark = math.clamp(1.0 - v.stand_base_w, 0.0, 1.0);",
+          "v.stand_sat_dark = math.clamp(1.0 - v.stand_sat_w, 0.0, 1.0);",
+          "v.stand_add_dark = math.clamp(1.0 - v.stand_bri_pos, 0.0, 1.0);",
+          "t.sc_is_gray = v.stand_sat_neg > 0.005;",
+          "v.stand_sat_tex = t.sc_is_gray ? 0 : 1;",
+          "v.stand_t4_sat_tex = t.sc_is_gray ? 0 : (1 + v.stand_h_half);",
+          "v.stand_su_off = t.sc_is_gray ? 0.0 : v.stand_u_off;",
+          "v.stand_sv_off = t.sc_is_gray ? 0.0 : v.stand_v_off;",
+          "v.stand_su_sc = t.sc_is_gray ? 1.0 : v.stand_u_sc;",
+          "v.stand_sv_sc = t.sc_is_gray ? 1.0 : v.stand_v_sc;",
+          "v.stand_t4_su_off = t.sc_is_gray ? 0.0 : v.stand_u6_off;",
+          "v.stand_t4_sv_off = t.sc_is_gray ? 0.0 : v.stand_v6_off;",
+          "v.stand_t4_su_sc = t.sc_is_gray ? 1.0 : v.stand_u6_sc;",
+          "v.stand_t4_sv_sc = t.sc_is_gray ? 1.0 : v.stand_v6_sc;",
+          "t.sc_add_gray = v.stand_sat_neg >= 0.5;",
+          "t.sc_add_vivid = v.stand_sat_pos >= 0.5;",
+          "v.stand_add_tex = t.sc_add_gray ? 0 : (t.sc_add_vivid ? 2 : 1);",
+          "v.stand_t4_add_tex = t.sc_add_gray ? 0 : (t.sc_add_vivid ? (3 + v.stand_h_half) : (1 + v.stand_h_half));",
+          "v.stand_bu_off = t.sc_add_gray ? 0.0 : v.stand_u_off;",
+          "v.stand_bv_off = t.sc_add_gray ? 0.0 : v.stand_v_off;",
+          "v.stand_bu_sc = t.sc_add_gray ? 1.0 : v.stand_u_sc;",
+          "v.stand_bv_sc = t.sc_add_gray ? 1.0 : v.stand_v_sc;",
+          "v.stand_t4_bu_off = t.sc_add_gray ? 0.0 : v.stand_u6_off;",
+          "v.stand_t4_bv_off = t.sc_add_gray ? 0.0 : v.stand_v6_off;",
+          "v.stand_t4_bu_sc = t.sc_add_gray ? 1.0 : v.stand_u6_sc;",
+          "v.stand_t4_bv_sc = t.sc_add_gray ? 1.0 : v.stand_v6_sc;"
+        ],
+        "animate": [
+          {
+            "root": "(!variable.sm_transformed && !(variable.johnny && variable.tusk) && !(variable.tusk && v.tim_limb > 0) && !v.tim_unravel) || variable.is_first_person"
+          },
+          {
+            "look_at_target": "variable.johnny && variable.tusk && v.tim_limb == 0 && !variable.is_first_person"
+          },
+          {
+            "johnny_idleac": "variable.johnny && variable.tusk && v.tim_limb == 0 && !variable.is_first_person"
+          },
+          {
+            "attack.positions": "variable.johnny && variable.tusk && v.tim_limb == 0 && !variable.is_first_person && !variable.stand && !variable.gun && variable.attack_time > 0"
+          },
+          {
+            "attack.rotations": "variable.johnny && variable.tusk && v.tim_limb == 0 && !variable.is_first_person && !variable.stand && !variable.gun && variable.attack_time > 0"
+          },
+          {
+            "tusk_act_1_ac": "variable.act_1 && variable.tusk"
+          },
+          {
+            "tusk_act_2_ac": "variable.act_2 && variable.tusk"
+          },
+          {
+            "tusk_act_3_ac": "variable.act_3 && variable.tusk"
+          },
+          {
+            "tusk_act_4_ac": "variable.act_4 && variable.tusk && !variable.is_first_person"
+          },
+          {
+            "tusk_fpp": "variable.tusk && variable.act_4 && variable.is_first_person"
+          },
+          {
+            "twau_ac": "variable.twau && !variable.is_first_person"
+          },
+          {
+            "twau_fpp": "variable.twau && variable.is_first_person && query.property('property:tim_limb') == 0"
+          },
+          {
+            "d4c_ac": "variable.d4c && !variable.is_first_person"
+          },
+          {
+            "d4c_fpp": "variable.d4c && variable.is_first_person"
+          },
+          {
+            "revolver_basic": "variable.revolver && !variable.is_first_person && !query.is_sneaking && !v.tim_unravel"
+          },
+          {
+            "revolver_scope": "variable.revolver && !variable.is_first_person && query.is_sneaking && !v.tim_unravel"
+          },
+          {
+            "tommy_gun_basic": "variable.tommy_gun && !variable.is_first_person && v.tim_limb < 2"
+          },
+          {
+            "gun_fpp_tommy": "variable.tommy && variable.is_first_person && !query.is_sneaking && v.tim_limb < 2"
+          },
+          {
+            "gun_fpp_shotgun": "variable.shotgun && variable.is_first_person && !query.is_sneaking && v.tim_limb < 2"
+          },
+          {
+            "gun_fpp_revolver": "variable.revolver && variable.is_first_person && !query.is_sneaking"
+          },
+          {
+            "gun_fpp_scope_tommy": "variable.tommy && variable.is_first_person && query.is_sneaking && v.tim_limb < 2"
+          },
+          {
+            "gun_fpp_scope_shotgun": "variable.shotgun && variable.is_first_person && query.is_sneaking && v.tim_limb < 2"
+          },
+          {
+            "gun_fpp_scope_revolver": "variable.revolver && variable.is_first_person && query.is_sneaking"
+          },
+          {
+            "gun_fpp": "variable.gun && !variable.tommy && !variable.shotgun && !variable.revolver && variable.is_first_person && !query.is_sneaking"
+          },
+          {
+            "gun_fpp_scope": "variable.gun && !variable.tommy && !variable.shotgun && !variable.revolver && variable.is_first_person && query.is_sneaking"
+          },
+          {
+            "spin_item": "variable.spin_item"
+          },
+          "gun_actions",
+          {
+            "mandom_ac": "variable.mandom && !variable.is_first_person"
+          },
+          {
+            "mandom_fpp_ac": "variable.mandom && variable.is_first_person"
+          },
+          {
+            "boku_ac": "variable.boku && !variable.is_first_person"
+          },
+          "body_parts_visibility",
+          {
+            "tim_ac": "variable.tim && !variable.is_first_person"
+          },
+          {
+            "tim_stand_ac": "variable.tim"
+          },
+          {
+            "tob_ac": "variable.tob && !variable.is_first_person"
+          },
+          {
+            "scary_monsters_tail_main": "variable.scary_monsters && !variable.is_first_person && !variable.is_paperdoll"
+          },
+          {
+            "diego_sm_ac": "variable.scary_monsters && !variable.sm_dino_visible && !variable.sm_act && !variable.is_first_person"
+          },
+          {
+            "sm_dino_ac": "variable.sm_dino_visible && !variable.is_first_person"
+          },
+          {
+            "sm_transform_vfx_ac": "variable.scary_monsters && !variable.is_paperdoll && !variable.stand_ui_preview"
+          },
+          {
+            "heyya_ac": "variable.hey_ya && !variable.is_first_person"
+          },
+          {
+            "civil_war_ac": "variable.civil_war && !variable.is_first_person"
+          },
+          {
+            "tim_world_rig": "variable.tim && v.tim_limb > 0 && !variable.is_first_person"
+          },
+          {
+            "tim_unravel_arm": "v.tim_unravel && !variable.is_first_person"
+          },
+          {
+            "tusk3_detached_limbs": "variable.tusk && (v.tim_limb == 1 || v.tim_limb == 3) && !variable.is_first_person"
+          },
+          {
+            "johnny_wormhole": "variable.tusk && v.tim_limb == 4 && !variable.is_first_person"
+          },
+          {
+            "ts_invert_ac": "q.is_in_ui && !variable.is_paperdoll && !variable.stand_ui_preview"
+          }
+        ]
+      },
+      "animations": {
+        "root": "controller.animation.player.root",
+        "base_controller": "controller.animation.player.base",
+        "hudplayer": "controller.animation.player.hudplayer",
+        "humanoid_base_pose": "animation.humanoid.base_pose",
+        "look_at_target": "controller.animation.humanoid.look_at_target",
+        "look_at_target_ui": "animation.player.look_at_target.ui",
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "look_at_target_inverted": "animation.player.look_at_target.inverted",
+        "cape": "animation.player.cape",
+        "move.arms": "animation.player.move.arms",
+        "move.legs": "animation.player.move.legs",
+        "swimming": "animation.player.swim",
+        "swimming.legs": "animation.player.swim.legs",
+        "crawling": "animation.player.crawl",
+        "crawling.legs": "animation.player.crawl.legs",
+        "riding.arms": "animation.player.riding.arms",
+        "riding.legs": "animation.player.riding.legs",
+        "holding": "animation.player.holding",
+        "brandish_spear": "animation.humanoid.brandish_spear",
+        "holding_spyglass": "animation.humanoid.holding_spyglass",
+        "charging": "animation.humanoid.charging",
+        "attack.positions": "animation.player.attack.positions",
+        "attack.rotations": "animation.player.attack.rotations",
+        "sneaking": "animation.player.sneaking",
+        "bob": "animation.player.bob",
+        "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",
+        "bow_and_arrow": "animation.humanoid.bow_and_arrow",
+        "use_item_progress": "animation.humanoid.use_item_progress",
+        "skeleton_attack": "animation.skeleton.attack",
+        "sleeping": "animation.player.sleeping",
+        "first_person_base_pose": "animation.player.first_person.base_pose",
+        "first_person_empty_hand": "animation.player.first_person.empty_hand",
+        "first_person_swap_item": "animation.player.first_person.swap_item",
+        "first_person_shield_block": "animation.player.first_person.shield_block",
+        "first_person_attack_controller": "controller.animation.player.first_person_attack",
+        "first_person_attack_rotation": "animation.player.first_person.attack_rotation",
+        "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",
+        "first_person_walk": "animation.player.first_person.walk",
+        "first_person_map_controller": "controller.animation.player.first_person_map",
+        "first_person_map_hold": "animation.player.first_person.map_hold",
+        "first_person_map_hold_attack": "animation.player.first_person.map_hold_attack",
+        "first_person_map_hold_off_hand": "animation.player.first_person.map_hold_off_hand",
+        "first_person_map_hold_main_hand": "animation.player.first_person.map_hold_main_hand",
+        "first_person_crossbow_equipped": "animation.player.first_person.crossbow_equipped",
+        "third_person_crossbow_equipped": "animation.player.crossbow_equipped",
+        "third_person_bow_equipped": "animation.player.bow_equipped",
+        "crossbow_hold": "animation.player.crossbow_hold",
+        "crossbow_controller": "controller.animation.player.crossbow",
+        "shield_block_main_hand": "animation.player.shield_block_main_hand",
+        "shield_block_off_hand": "animation.player.shield_block_off_hand",
+        "blink": "controller.animation.persona.blink",
+        "tooting_goat_horn": "animation.humanoid.tooting_goat_horn",
+        "holding_brush": "animation.humanoid.holding_brush",
+        "brushing": "animation.humanoid.brushing",
+        "johnny_idleac": "controller.animation.johnnyac",
+        "johnny_idle": "animation.johnny.idle",
+        "johnny_walk": "animation.johnny.walk",
+        "johnny_run": "animation.johnny.run",
+        "johnny_idle_stand": "animation.johnny.idle",
+        "johnny_sneak_walk": "animation.johnny.walk2",
+        "johnny_sneak": "animation.johnny.sneak",
+        "johnny_onair": "animation.johnny.onair",
+        "nail_trail": "animation.johnny.nail_trail",
+        "nail_trail_act2": "animation.johnny.nail_trail_act2",
+        "nail_trail_act3": "animation.johnny.nail_trail_act3",
+        "tusk_fpp": "animation.stand.fpp",
+        "tusk1_idle": "animation.tusk_1.idle",
+        "tusk1_walk": "animation.tusk_1.walk",
+        "tusk1_default": "animation.tusk_1.default",
+        "tusk1_summon": "animation.tusk_1.summon",
+        "tusk2_idle": "animation.tusk_act_2.idle",
+        "tusk2_walk": "animation.tusk_act_2.walk",
+        "tusk2_default": "animation.tusk_act_2.default",
+        "tusk2_summon": "animation.tusk_act_2.summon",
+        "tusk3_idle": "animation.tusk_act_3.idle",
+        "tusk3_walk": "animation.tusk_act_3.walk",
+        "tusk3_default": "animation.tusk_act_3.default",
+        "tusk3_summon": "animation.tusk_act_3.summon",
+        "tusk4_idle": "animation.tusk_act_4.idle",
+        "tusk4_walk": "animation.tusk_act_4.walk",
+        "tusk4_default": "animation.tusk_act_4.default",
+        "tusk4_summon": "animation.tusk_act_4.summon",
+        "tusk4_swing": "animation.tusk_act_4.swing",
+        "tusk4_block": "animation.tusk_act_4.block",
+        "tusk4_blockS": "animation.tusk_act_4.stop_start_block",
+        "tusk4_m1a": "animation.tusk_act_4.m1a",
+        "tusk4_m1b": "animation.tusk_act_4.m1b",
+        "tusk4_m1c": "animation.tusk_act_4.m1c",
+        "tusk_act_1_ac": "controller.animation.tusk_1",
+        "tusk_act_2_ac": "controller.animation.tusk_2",
+        "tusk_act_3_ac": "controller.animation.tusk_3",
+        "tusk_act_4_ac": "controller.animation.tusk_4",
+        "twau_ac": "controller.animation.twau",
+        "twau_fpp": "animation.stand.fpp",
+        "twau_default": "animation.twau.default",
+        "twau_idle": "animation.twau.idle",
+        "twau_walk": "animation.twau.walk",
+        "twau_run": "animation.twau.run",
+        "twau_summon": "animation.twau.summon",
+        "twau_barrage": "animation.twau.barrage",
+        "twau_barrage2": "animation.twau.barrage2",
+        "twau_ts_start": "animation.twau.ts_start",
+        "twau_ts_end": "animation.twau.ts_end",
+        "twau_axe_kick": "animation.twau.axe_kick",
+        "twau_tandem_barrage": "animation.twau.tandem_barrage",
+        "player_knockdown": "animation.player.knockdown",
+        "stand_block": "animation.stand.block",
+        "d4c_ac": "controller.animation.d4c",
+        "d4c_fpp": "animation.stand.fpp",
+        "d4c_default": "animation.d4c.default",
+        "d4c_idle": "animation.d4c.idle",
+        "d4c_walk": "animation.d4c.walk",
+        "d4c_run": "animation.d4c.run",
+        "d4c_summon": "animation.d4c.summon",
+        "revolver_basic": "animation.basic.gun",
+        "revolver_scope": "animation.revolver.scope",
+        "tommy_gun_basic": "animation.gun.tommy",
+        "gun_fpp_tommy": "animation.gun.fpp.tommy",
+        "gun_fpp_shotgun": "animation.gun.fpp.shotgun",
+        "gun_fpp_revolver": "animation.gun.fpp.revolver",
+        "gun_fpp_scope_tommy": "animation.gun.fpp.scope_tommy",
+        "gun_fpp_scope_shotgun": "animation.gun.fpp.scope_shotgun",
+        "gun_fpp_scope_revolver": "animation.gun.fpp.scope_revolver",
+        "gun_fpp": "animation.gun.fpp.tommy",
+        "gun_fpp_scope": "animation.gun.fpp.scope_revolver",
+        "gun_actions": "controller.animation.gun_actions",
+        "gun_tp_nopunch": "animation.gun.tp.nopunch",
+        "gun_tp_revolver_fire": "animation.gun.tp.revolver_fire",
+        "gun_tp_revolver_fire_scope": "animation.gun.tp.revolver_fire_scope",
+        "gun_tp_revolver_reload": "animation.gun.tp.revolver_reload",
+        "gun_tp_shotgun_fire": "animation.gun.tp.shotgun_fire",
+        "gun_tp_shotgun_reload": "animation.gun.tp.shotgun_reload",
+        "gun_tp_tommy_fire": "animation.gun.tp.tommy_fire",
+        "gun_tp_tommy_reload": "animation.gun.tp.tommy_reload",
+        "gun_fp_fire": "animation.gun.fp.fire",
+        "gun_fp_fire_scope": "animation.gun.fp.fire_scope",
+        "gun_fp_shotgun_fire": "animation.gun.fp.shotgun_fire",
+        "gun_fp_tommy_fire": "animation.gun.fp.tommy_fire",
+        "gun_fp_round_reload": "animation.gun.fp.round_reload",
+        "gun_fp_shotgun_reload": "animation.gun.fp.shotgun_reload",
+        "gun_fp_tommy_reload": "animation.gun.fp.tommy_reload",
+        "mandom_ac": "controller.animation.mandom",
+        "mandom_fpp_ac": "controller.animation.mandom_fpp",
+        "mandom_default": "animation.mandom.default",
+        "mandom_idle": "animation.mandom.idle",
+        "mandom_revolver": "animation.mandom.revolver",
+        "mandom_tp_watch_wind": "animation.mandom.tp_watch_wind",
+        "mandom_fp_watch_wind": "animation.mandom.fp_watch_wind",
+        "boku_ac": "controller.animation.boku",
+        "boku_default": "animation.boku.default",
+        "boku_summon": "animation.boku.summon",
+        "boku_idle": "animation.boku.idle",
+        "boku_walk": "animation.boku.walk",
+        "boku_run": "animation.boku.run",
+        "tim_sever_arm": "animation.tim.sever_arm",
+        "tim_restore_arm": "animation.tim.restore_arm",
+        "tim_lasso_throw": "animation.tim.lasso_throw",
+        "tim_lasso_windup": "animation.tim.lasso_windup",
+        "tim_grapple_windup": "animation.tim.grapple_windup",
+        "tim_world_rig": "animation.tim.world_rig",
+        "tim_unravel_arm": "animation.tim.unravel_arm",
+        "tusk3_detached_limbs": "animation.tusk3.detached_limbs",
+        "johnny_wormhole": "animation.johnny.wormhole",
+        "tim_barrage": "animation.tim.barrage",
+        "tim_counter_stance": "animation.tim.counter_stance",
+        "body_parts_visibility": "animation.player.body_parts_visibility",
+        "tim_ac": "controller.animation.tim",
+        "tim_stand_ac": "controller.animation.tim_stand",
+        "tim_stand_default": "animation.tim.stand_default",
+        "tim_stand_summon": "animation.tim.stand_summon",
+        "tim_stand_idle": "animation.tim.stand_idle",
+        "tob_idle": "animation.tob.idle",
+        "tob_ac": "controller.animation.tob",
+        "century_default": "animation.century.default",
+        "century_summon": "animation.century.summon",
+        "century_idle": "animation.century.idle",
+        "century_ac": "controller.animation.century",
+        "tob_default": "animation.tob.default",
+        "tob_summon": "animation.tob.summon",
+        "tob_walk": "animation.tob.walk",
+        "tob_run": "animation.tob.run",
+        "scary_monsters_tail_main": "animation.scary_monsters.tail_main",
+        "sm_dino_ac": "controller.animation.sm_dino",
+        "sm_dino_idle": "animation.sm_dino.idle",
+        "sm_dino_walk": "animation.sm_dino.walk2",
+        "sm_dino_run": "animation.sm_dino.run",
+        "sm_dino_sneak": "animation.sm_dino.sneak",
+        "sm_dino_jump": "animation.sm_dino.jump",
+        "sm_dino_fall": "animation.sm_dino.fall",
+        "sm_dino_walk_tail": "animation.sm_dino.walk_tail",
+        "sm_dino_walk_back": "animation.sm_dino.walk_back",
+        "sm_dino_sneak_walk": "animation.sm_dino.sneak_walk",
+        "sm_dino_sneak_walk_back": "animation.sm_dino.sneak_walk_back",
+        "sm_dino_transform": "animation.sm_dino.transform",
+        "sm_dino_detransform": "animation.sm_dino.detransform",
+        "sm_transform_vfx_ac": "controller.animation.sm_transform_vfx",
+        "sm_vfx_full_in": "animation.sm.vfx_full_in",
+        "sm_vfx_full_out": "animation.sm.vfx_full_out",
+        "stand_invis": "animation.stand.invis",
+        "animation.stand.invis": "animation.stand.invis",
+        "spin_item": "animation.ball.spinItem",
+        "animation.ball.spinItem": "animation.ball.spinItem",
+        "spin_item_stop": "animation.ball.spinItem_stop",
+        "animation.ball.spinItem_stop": "animation.ball.spinItem_stop",
+        "diego_sm_ac": "controller.animation.diego_sm",
+        "diego_sm_summon": "animation.diego.sm_summon",
+        "diego_sm_summon2": "animation.diego.sm_summon2",
+        "diego_sm_idle": "animation.diego.sm_idle",
+        "diego_sm_walk": "animation.diego.sm_walk",
+        "diego_sm_run": "animation.diego.sm_run",
+        "diego_sm_sneaking": "animation.diego.sm_sneak",
+        "diego_sm_sneak_walking": "animation.diego.sm_sneak_walk",
+        "diego_sm_deact": "animation.diego.sm_deact",
+        "heyya_ac": "controller.animation.heyya",
+        "heyya_default": "animation.heyya.default",
+        "heyya_summon": "animation.heyya.summon",
+        "heyya_idle": "animation.heyya.idle",
+        "heyya_walk": "animation.heyya.walk",
+        "heyya_run": "animation.heyya.run",
+        "civil_war_ac": "controller.animation.civil_war",
+        "civil_war_default": "animation.civil_war.default",
+        "civil_war_summon": "animation.civil_war.summon",
+        "civil_war_idle": "animation.civil_war.idle",
+        "civil_war_walk": "animation.civil_war.walk",
+        "civil_war_run": "animation.civil_war.run",
+        "ts_invert_ac": "controller.animation.ts_invert",
+        "ts_invert_off": "animation.ts.invert_off",
+        "ts_invert_expand": "animation.ts.invert_expand",
+        "ts_invert_collapse": "animation.ts.invert_collapse"
+      },
+      "particle_effects": {
+        "spin": "ball:spin",
+        "spin2": "ball:spin2",
+        "johnny_trail": "tusk:glide",
+        "johnny_trail_act2": "tusk2:glide",
+        "johnny_trail_act3": "tusk3:glide",
+        "dash": "xvoid:dash",
+        "dash2": "xvoid:dash2",
+        "running": "xvoid:running",
+        "twau_m1a": "twau:m1a",
+        "twau_m1b": "twau:m1b",
+        "twau_hit": "twau:hit",
+        "d4c_m1a": "d4c:m1a",
+        "d4c_m1b": "d4c:m1b",
+        "d4c_hit": "d4c:hit",
+        "sm_m1a": "sm:m1a",
+        "sm_m1b": "sm:m1b",
+        "sm_hit": "sm:hit",
+        "sm_transform_flash": "sm:transform_flash",
+        "sm_transform_shards": "sm:transform_shards",
+        "sm_transform_mist": "sm:transform_mist",
+        "sm_transform_smoke": "sm:transform_smoke",
+        "sm_detransform_inward": "sm:detransform_inward",
+        "standBr": "stand:br",
+        "standBr2": "stand:br2",
+        "tusk_m1_spin": "tusk:m1_spin",
+        "tusk_m1_hit": "tusk:m1_hit",
+        "tusk_m1_star": "tusk:m1_star",
+        "tusk_low_spin_wave": "tusk:low_spin_wave",
+        "tusk_low_uppercut": "tusk:low_uppercut",
+        "tusk_drill_spiral": "tusk:drill_spiral",
+        "tusk_drill_core": "tusk:drill_core",
+        "tusk_drill_sparks": "tusk:drill_sparks",
+        "tusk_drill_hit": "tusk:drill_hit",
+        "tusk_drill_finisher": "tusk:drill_finisher",
+        "tusk1_nailb": "tusk1:nailb",
+        "tusk1_naila": "tusk1:naila",
+        "tusk1_skill_core": "tusk1:skill_core",
+        "tusk1_skill_spiral": "tusk1:skill_spiral",
+        "tusk1_drill_finisher": "tusk1:drill_finisher",
+        "tusk2_nailb": "tusk2:nailb",
+        "tusk2_naila": "tusk2:naila",
+        "tusk2_skill_core": "tusk2:skill_core",
+        "tusk2_skill_spiral": "tusk2:skill_spiral",
+        "tusk2_drill_finisher": "tusk2:drill_finisher",
+        "tusk2_drill_charge_core": "tusk2:drill_charge_core",
+        "tusk2_drill_charge_spiral": "tusk2:drill_charge_spiral",
+        "tusk2_drill_burst": "tusk2:drill_burst",
+        "tusk3_nailb": "tusk3:nailb",
+        "tusk3_naila": "tusk3:naila",
+        "tusk3_drill_finisher": "tusk3:drill_finisher",
+        "tusk4_drill_finisher": "tusk4:drill_finisher"
+      },
+      "sound_effects": {
+        "tusk4_barrage": "tusk4.barrage",
+        "tuskheavy": "tusk4.heavy",
+        "sm_transform_in": "xvoid.std_appear",
+        "sm_transform_roar": "xvoid.change",
+        "sm_dino_roar": "sm.dino",
+        "sm_hha": "sm.hha_transform"
+      },
+      "render_controllers": [
+        {
+          "controller.render.ui.ts_invert": "q.is_in_ui && !variable.is_paperdoll && !variable.stand_ui_preview && query.property('property:ts_fx') > 0"
+        },
+        {
+          "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator"
+        },
+        {
+          "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator"
+        },
+        {
+          "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator && !variable.sm_target_full"
+        },
+        {
+          "controller.render.player.first_person2": "variable.is_first_person && !query.is_spectator && !variable.sm_target_full && (((variable.tusk && (variable.act_1 || variable.act_2 || variable.act_3) || variable.mandom || variable.boku || variable.tim || variable.century || variable.rainbow || variable.tob || variable.scary_monsters) && variable.stand) || (variable.mandom && query.property('property:attack') > 0) || variable.gun)"
+        },
+        {
+          "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator && !variable.sm_transformed"
+        },
+        {
+          "controller.render.player.map": "variable.map_face_icon"
+        },
+        {
+          "controller.render.tusk": "variable.tusk && (!variable.is_first_person || !variable.act_4)"
+        },
+        {
+          "controller.render.tusk_sat": "(variable.tusk && (!variable.is_first_person || !variable.act_4)) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.tusk_add": "(variable.tusk && (!variable.is_first_person || !variable.act_4)) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.tusk_fpp": "variable.tusk && variable.act_4 && variable.is_first_person && v.stand"
+        },
+        {
+          "controller.render.tusk_fpp_sat": "(variable.tusk && variable.act_4 && variable.is_first_person && v.stand) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.tusk_fpp_add": "(variable.tusk && variable.act_4 && variable.is_first_person && v.stand) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.twau": "variable.twau && !variable.is_first_person && query.property('property:tim_limb') == 0"
+        },
+        {
+          "controller.render.twau_sat": "(variable.twau && !variable.is_first_person && query.property('property:tim_limb') == 0) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.twau_add": "(variable.twau && !variable.is_first_person && query.property('property:tim_limb') == 0) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.twau_fpp": "variable.twau && variable.is_first_person && v.stand && query.property('property:tim_limb') == 0"
+        },
+        {
+          "controller.render.twau_fpp_sat": "(variable.twau && variable.is_first_person && v.stand && query.property('property:tim_limb') == 0) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.twau_fpp_add": "(variable.twau && variable.is_first_person && v.stand && query.property('property:tim_limb') == 0) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.d4c": "variable.d4c && !variable.is_first_person"
+        },
+        {
+          "controller.render.d4c_sat": "(variable.d4c && !variable.is_first_person) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.d4c_add": "(variable.d4c && !variable.is_first_person) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.d4c_fpp": "variable.d4c && variable.is_first_person && v.stand"
+        },
+        {
+          "controller.render.d4c_fpp_sat": "(variable.d4c && variable.is_first_person && v.stand) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.d4c_fpp_add": "(variable.d4c && variable.is_first_person && v.stand) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.locator": "(1.0)"
+        },
+        {
+          "controller.render.mandom": "variable.mandom && !variable.is_first_person"
+        },
+        {
+          "controller.render.mandom_sat": "(variable.mandom && !variable.is_first_person) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.mandom_add": "(variable.mandom && !variable.is_first_person) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.mandom_watch": "variable.mandom && !variable.is_first_person && !query.is_spectator"
+        },
+        {
+          "controller.render.mandom_watch_fpp": "variable.mandom && variable.is_first_person && !query.is_spectator && (variable.stand || query.property('property:attack') > 0)"
+        },
+        {
+          "controller.render.boku": "variable.boku && !variable.is_first_person"
+        },
+        {
+          "controller.render.boku_sat": "(variable.boku && !variable.is_first_person) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.boku_add": "(variable.boku && !variable.is_first_person) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.boku_smoke_props": "!variable.is_first_person && variable.boku && query.property('property:boku_smoke') == 1"
+        },
+        {
+          "controller.render.century": "variable.century && !variable.is_first_person && variable.stand"
+        },
+        {
+          "controller.render.century_sat": "(variable.century && !variable.is_first_person && variable.stand) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.century_add": "(variable.century && !variable.is_first_person && variable.stand) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.rainbow": "variable.rainbow && !variable.is_first_person && (variable.rainbow_alpha > 0.005 || variable.stand)"
+        },
+        {
+          "controller.render.rainbow_sat": "(variable.rainbow && !variable.is_first_person && (variable.rainbow_alpha > 0.005 || variable.stand)) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.rainbow_add": "(variable.rainbow && !variable.is_first_person && (variable.rainbow_alpha > 0.005 || variable.stand)) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.tob_1": "variable.tob_1 && !variable.is_first_person && variable.stand"
+        },
+        {
+          "controller.render.tob_1_sat": "(variable.tob_1 && !variable.is_first_person && variable.stand) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.tob_1_add": "(variable.tob_1 && !variable.is_first_person && variable.stand) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.tob_2": "variable.tob_2 && !variable.is_first_person && variable.stand"
+        },
+        {
+          "controller.render.tob_2_sat": "(variable.tob_2 && !variable.is_first_person && variable.stand) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.tob_2_add": "(variable.tob_2 && !variable.is_first_person && variable.stand) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.tob_3": "variable.tob_3 && !variable.is_first_person && variable.stand"
+        },
+        {
+          "controller.render.tob_3_sat": "(variable.tob_3 && !variable.is_first_person && variable.stand) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.tob_3_add": "(variable.tob_3 && !variable.is_first_person && variable.stand) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.scary_monsters_half": "variable.scary_monsters && !variable.sm_dino_visible && !variable.sm_act && !variable.is_first_person && (!variable.is_paperdoll || variable.stand_ui_preview)"
+        },
+        {
+          "controller.render.scary_monsters_half_sat": "(variable.scary_monsters && !variable.sm_dino_visible && !variable.sm_act && !variable.is_first_person && (!variable.is_paperdoll || variable.stand_ui_preview)) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.scary_monsters_half_add": "(variable.scary_monsters && !variable.sm_dino_visible && !variable.sm_act && !variable.is_first_person && (!variable.is_paperdoll || variable.stand_ui_preview)) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.scary_monsters_full": "variable.sm_transformed && !variable.is_first_person && !query.is_spectator"
+        },
+        {
+          "controller.render.scary_monsters_full_sat": "(variable.sm_transformed && !variable.is_first_person && !query.is_spectator) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.scary_monsters_full_add": "(variable.sm_transformed && !variable.is_first_person && !query.is_spectator) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.scary_monsters_full_fpp": "variable.sm_target_full && variable.is_first_person && !query.is_spectator"
+        },
+        {
+          "controller.render.scary_monsters_full_fpp_sat": "(variable.sm_target_full && variable.is_first_person && !query.is_spectator) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.scary_monsters_full_fpp_add": "(variable.sm_target_full && variable.is_first_person && !query.is_spectator) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.hey_ya": "variable.hey_ya && !variable.is_first_person"
+        },
+        {
+          "controller.render.hey_ya_sat": "(variable.hey_ya && !variable.is_first_person) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.hey_ya_add": "(variable.hey_ya && !variable.is_first_person) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.civil_war": "variable.civil_war && !variable.is_first_person"
+        },
+        {
+          "controller.render.civil_war_sat": "(variable.civil_war && !variable.is_first_person) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.civil_war_add": "(variable.civil_war && !variable.is_first_person) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.tim_skin": "variable.tim && query.property('property:tim_limb') > 0 && !variable.is_first_person"
+        },
+        {
+          "controller.render.tim_purple": "variable.tim && query.property('property:tim_limb') > 0 && !variable.is_first_person"
+        },
+        {
+          "controller.render.tim_purple_sat": "(variable.tim && query.property('property:tim_limb') > 0 && !variable.is_first_person) && variable.stand_sat_active"
+        },
+        {
+          "controller.render.tim_purple_add": "(variable.tim && query.property('property:tim_limb') > 0 && !variable.is_first_person) && (variable.stand_bri_pos > 0.005)"
+        },
+        {
+          "controller.render.tim_stand_rope": "variable.tim && variable.stand && !variable.is_first_person && !query.is_spectator"
+        },
+        {
+          "controller.render.tim_stand_rope_fpp": "variable.tim && variable.stand && variable.is_first_person && !query.is_spectator"
+        }
+      ],
+      "enable_attachables": true
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{
+	"format_version": "1.19.60",
+	"animation_controllers": {
+		"controller.animation.ball.spin": {
+			"initial_state": "normal",
+			"states": {
+				"normal": {
+					"animations": [
+						"spinning",
+						"trail"
+					],
+					"transitions": [
+						{
+							"satellite_no_trail": "query.property('property:wrecking') == 3 && query.property('property:trail') == 0"
+						},
+						{
+							"satellite_powered": "query.property('property:wrecking') == 3 && query.property('property:charged') == 1"
+						},
+						{
+							"satellite": "query.property('property:wrecking') == 3"
+						},
+						{
+							"stopped": "query.property('property:stopped') == 1"
+						},
+						{
+							"powered": "query.property('property:charged') == 1"
+						}
+					]
+				},
+				"powered": {
+					"animations": [
+						"spinning",
+						"trail_yellow"
+					],
+					"transitions": [
+						{
+							"satellite_no_trail": "query.property('property:wrecking') == 3 && query.property('property:trail') == 0"
+						},
+						{
+							"satellite_powered": "query.property('property:wrecking') == 3 && query.property('property:charged') == 1"
+						},
+						{
+							"satellite": "query.property('property:wrecking') == 3"
+						},
+						{
+							"stopped": "query.property('property:stopped') == 1"
+						},
+						{
+							"normal": "query.property('property:charged') == 0"
+						}
+					]
+				},
+				"satellite": {
+					"animations": [
+						"spinning_only",
+						"trail"
+					],
+					"transitions": [
+						{
+							"satellite_no_trail": "query.property('property:trail') == 0"
+						},
+						{
+							"satellite_powered": "query.property('property:charged') == 1"
+						},
+						{
+							"stopped": "query.property('property:stopped') == 1"
+						},
+						{
+							"normal": "query.property('property:wrecking') != 3"
+						}
+					]
+				},
+				"satellite_powered": {
+					"animations": [
+						"spinning_only",
+						"trail_yellow"
+					],
+					"transitions": [
+						{
+							"satellite_no_trail": "query.property('property:trail') == 0"
+						},
+						{
+							"satellite": "query.property('property:charged') == 0"
+						},
+						{
+							"stopped": "query.property('property:stopped') == 1"
+						},
+						{
+							"powered": "query.property('property:wrecking') != 3"
+						}
+					]
+				},
+				"satellite_no_trail": {
+					"animations": [
+						"spinning_only"
+					],
+					"transitions": [
+						{
+							"satellite_powered": "query.property('property:wrecking') == 3 && query.property('property:trail') == 1 && query.property('property:charged') == 1"
+						},
+						{
+							"satellite": "query.property('property:wrecking') == 3 && query.property('property:trail') == 1"
+						},
+						{
+							"stopped": "query.property('property:stopped') == 1"
+						},
+						{
+							"normal": "query.property('property:wrecking') != 3"
+						}
+					]
+				},
+				"stopped": {
+					"transitions": [
+						{
+							"satellite_no_trail": "query.property('property:stopped') == 0 && query.property('property:wrecking') == 3 && query.property('property:trail') == 0"
+						},
+						{
+							"satellite_powered": "query.property('property:stopped') == 0 && query.property('property:wrecking') == 3 && query.property('property:charged') == 1"
+						},
+						{
+							"satellite": "query.property('property:stopped') == 0 && query.property('property:wrecking') == 3"
+						},
+						{
+							"powered": "query.property('property:stopped') == 0 && query.property('property:charged') == 1"
+						},
+						{
+							"normal": "query.property('property:stopped') == 0 && query.property('property:charged') == 0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

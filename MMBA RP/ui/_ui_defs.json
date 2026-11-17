@@ -1,0 +1,13 @@
+{
+  "ui_defs": [
+    "ui/king_crimson_ui.json",
+    "ui/contoh_ui.json",
+    "ui/bar.ui.json",
+    "ui/stand_color/stand_color_common.json",
+    "ui/stand_color/stand_color_form.json",
+    "ui/tusk/tusk_hud.json",
+    "ui/tusk/tusk_wheel.json",
+    "ui/player_menu/player_menu.json"
+  ]
+}
+

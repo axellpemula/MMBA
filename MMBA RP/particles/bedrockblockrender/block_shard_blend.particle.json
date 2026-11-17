@@ -1,0 +1,67 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "bedrockblockrender:block_shard_blend",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/bedrockblockrender/vanilla_block_atlas"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "variable.lifetime"
+			},
+			"minecraft:particle_motion_parametric": {
+				"relative_position": [
+					"variable.vel.x * v.particle_age + variable.offset.x * math.cos(variable.spin * v.particle_age) + variable.offset.z * math.sin(variable.spin * v.particle_age)",
+					"variable.vel.y * v.particle_age - 9.8 * v.particle_age * v.particle_age + variable.offset.y",
+					"variable.vel.z * v.particle_age - variable.offset.x * math.sin(variable.spin * v.particle_age) + variable.offset.z * math.cos(variable.spin * v.particle_age)"
+				],
+				"rotation": "variable.size.z"
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"variable.size.x",
+					"variable.size.y"
+				],
+				"facing_camera_mode": "direction_z",
+				"direction": {
+					"mode": "custom",
+					"custom_direction": [
+						"variable.normal.x * math.cos(variable.spin * v.particle_age) + variable.normal.z * math.sin(variable.spin * v.particle_age)",
+						"variable.normal.y",
+						"-variable.normal.x * math.sin(variable.spin * v.particle_age) + variable.normal.z * math.cos(variable.spin * v.particle_age)"
+					]
+				},
+				"uv": {
+					"texture_width": 1024,
+					"texture_height": 1024,
+					"uv": [
+						"variable.uv.x",
+						"variable.uv.y"
+					],
+					"uv_size": [
+						"variable.uv_size.x",
+						"variable.uv_size.y"
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": [
+					"variable.face_color.r",
+					"variable.face_color.g",
+					"variable.face_color.b",
+					"variable.face_color.a"
+				]
+			}
+		}
+	}
+}

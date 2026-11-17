@@ -1,0 +1,114 @@
+{
+    "namespace": "bokep",
+    "king_crimson_panel": {
+        "type": "panel",
+        "offset": [
+            0,
+            0
+        ],
+        "alpha": "@bokep.sample",
+        "propagate_alpha": true,
+        "layer": 1,
+        "ignored": "(#hud_title_text_string = 'king_crimson')",
+        "controls": [
+            {
+                "kontol": {
+                    "type": "panel",
+                    "offset": [
+                        0,
+                        0
+                    ],
+                    "controls": [
+                        {
+                            "kontol_gede": {
+                                "type": "image",
+                                "fill": true,
+                                "texture": "textures/ui/king_crimson_ui",
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "layer": 10,
+                                "size": [ "100%", "100%" ],
+                                "uv_size": [
+                                    800,
+                                    360
+                                ],
+                                "uv": "@bokep.anim_frame",
+                                "alpha": "@bokep.delay_frame",
+                                "propagate_alpha": true,
+                                "disable_anim_fast_forward": true,
+                                "offset": [
+                                    0,
+                                    0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#hud_title_text_string = 'king_crimson')",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "sample": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 5,
+        "from": 1,
+        "to": 1,
+        "next": "@bokep.sample2"
+    },
+    "sample2": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 1,
+        "from": 0,
+        "to": 0,
+        "destroy_at_end": "hud_title_text"
+    },
+    "delay_frame": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 0,
+        "from": 0,
+        "to": 1,
+        "next": "@bokep.delay_frame2"
+    },
+    "delay_frame2": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 0.5,
+        "from": 1,
+        "to": 1,
+        "next": "@bokep.delay_frame_end"
+    },
+    "delay_frame_end": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 0,
+        "from": 0,
+        "to": 0,
+        "destroy_at_end": "hud_title_text"
+    },
+    "anim_frame": {
+        "anim_type": "flip_book",
+        "initial_uv": [
+            0,
+            0
+        ],
+        "frame_count": 19,
+        "frame_step": 800,
+        "fps": 24,
+        "easing": "linear"
+    }
+}
+      
+      
+           

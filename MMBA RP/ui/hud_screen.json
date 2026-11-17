@@ -1,0 +1,885 @@
+{
+  "namespace": "hud",
+  "energy_bar": {
+    "type": "panel",
+    "size": [
+      81,
+      5
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      0,
+      0
+    ],
+    "layer": 10,
+    "$prefix": "energy:",
+    "$texture": "textures/ui/bar/energy_bar_fill",
+    "$background_texture": "textures/ui/bar/energy_bar_background",
+    "$clip_direction": "left",
+    "$anchor_from": "center",
+    "$anchor_to": "center",
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/bar/energy_bar_background",
+          "size": [
+            81,
+            5
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      {
+        "bar_ui@bar_ui.panel": {
+          "$size": [
+            81,
+            5
+          ],
+          "$anchor_from": "bottom_middle",
+          "$anchor_to": "bottom_middle"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'energy:') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "power_bar": {
+    "type": "panel",
+    "size": [
+      81,
+      5
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      0,
+      0
+    ],
+    "layer": 10,
+    "$prefix": "power:",
+    "$texture": "textures/ui/bar/powerBar",
+    "$background_texture": "textures/ui/bar/energy_bar_background",
+    "$clip_direction": "left",
+    "$anchor_from": "center",
+    "$anchor_to": "center",
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/bar/energy_bar_background",
+          "size": [
+            81,
+            5
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      {
+        "bar_ui@bar_ui.panel": {
+          "$size": [
+            81,
+            5
+          ],
+          "$anchor_from": "bottom_middle",
+          "$anchor_to": "bottom_middle"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'power:') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "ts_bar_base": {
+    "type": "panel",
+    "size": [
+      81,
+      5
+    ],
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      0,
+      0
+    ],
+    "layer": 10,
+    "$prefix": "ts:",
+    "$texture": "textures/ui/bar/ts_bar_fill",
+    "$background_texture": "textures/ui/bar/energy_bar_background",
+    "$clip_direction": "left",
+    "$anchor_from": "center",
+    "$anchor_to": "center",
+    "controls": [
+      {
+        "background": {
+          "type": "image",
+          "texture": "textures/ui/bar/energy_bar_background",
+          "size": [
+            81,
+            5
+          ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      },
+      {
+        "bar_ui@bar_ui.panel": {
+          "$size": [
+            81,
+            5
+          ],
+          "$anchor_from": "bottom_middle",
+          "$anchor_to": "bottom_middle"
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'ts:') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mmba_bar_stack": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [
+      81,
+      "100%c"
+    ],
+    "clips_children": false,
+    "controls": [
+      {
+        "tusk_wrap": {
+          "type": "panel",
+          "size": [
+            81,
+            11
+          ],
+          "clips_children": false,
+          "controls": [
+            {
+              "tusk_nail_hud@tusk_hud.tusk_nail_hud": {
+                "offset": [
+                  0,
+                  -1
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'tusk:') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ts_wrap": {
+          "type": "panel",
+          "size": [
+            81,
+            4
+          ],
+          "clips_children": false,
+          "controls": [
+            {
+              "ts_bar@hud.ts_bar_base": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'ts:') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "power_wrap": {
+          "type": "panel",
+          "size": [
+            81,
+            4
+          ],
+          "clips_children": false,
+          "controls": [
+            {
+              "power_bar@hud.power_bar": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'power:') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "energy_wrap": {
+          "type": "panel",
+          "size": [
+            81,
+            4
+          ],
+          "clips_children": false,
+          "controls": [
+            {
+              "energy_bar@hud.energy_bar": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'energy:') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y_spacer_base": {
+          "type": "panel",
+          "size": "$mmba_base_size"
+        }
+      },
+      {
+        "y_spacer_survival": {
+          "type": "panel",
+          "size": "$mmba_surv_size",
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#hud_title_text_string - 'pos:c') = #hud_title_text_string)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y_spacer_row1": {
+          "type": "panel",
+          "size": [
+            81,
+            10
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'r1;') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y_spacer_row2": {
+          "type": "panel",
+          "size": [
+            81,
+            10
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'r2;') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y_spacer_row3": {
+          "type": "panel",
+          "size": [
+            81,
+            10
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'r3;') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y_spacer_row4": {
+          "type": "panel",
+          "size": [
+            81,
+            10
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'r4;') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "y_spacer_row5": {
+          "type": "panel",
+          "size": [
+            81,
+            10
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "(not ((#hud_title_text_string - 'r5;') = #hud_title_text_string))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "mmba_hud_bars": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      "100%c",
+      "100%c"
+    ],
+    "layer": 20,
+    "clips_children": false,
+    "anchor_from": "$mmba_anchor",
+    "anchor_to": "bottom_middle",
+    "$mmba_anchor|default": "bottom_middle",
+    "$mmba_base_size|default": [
+      81,
+      28
+    ],
+    "$mmba_surv_size|default": [
+      81,
+      14
+    ],
+    "$mmba_left_spacer_size|default": [
+      98,
+      1
+    ],
+    "$mmba_hotbar_mode|default": false,
+    "variables": [
+      {
+        "requires": "($touch and not $mmba_hotbar_mode)",
+        "$mmba_left_spacer_size": [
+          118,
+          1
+        ]
+      }
+    ],
+    "controls": [
+      {
+        "left_spacer": {
+          "type": "panel",
+          "size": "$mmba_left_spacer_size",
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#hud_title_text_string - 'pos:c') = #hud_title_text_string)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "vertical_stack@hud.mmba_bar_stack": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((#hud_title_text_string - 'pos:hide') = #hud_title_text_string) and ((#hud_title_text_string - 'energy_hide') = #hud_title_text_string)) and (not ((#hud_title_text_string - '_mmba:') = #hud_title_text_string)))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mmba_bars_fixed": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "hud_vis_wrap": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "mmba_hud_bars@hud.mmba_hud_bars": {}
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hud_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hotbar_visible_not_centered_resizable",
+        "binding_type": "global"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not #hotbar_visible_not_centered_resizable)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "mmba_bars_hotbar": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "bars": {
+          "type": "panel",
+          "size": [
+            "100%",
+            40
+          ],
+          "offset": [
+            0,
+            0
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "use_anchored_offset": true,
+          "property_bag": {
+            "#anchored_offset_value_x": 0.0,
+            "#anchored_offset_value_y": 0.0,
+            "#size_binding_x": 0.0,
+            "#size_binding_y": 0.0
+          },
+          "controls": [
+            {
+              "hud_vis_wrap": {
+                "type": "panel",
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "controls": [
+                  {
+                    "mmba_hud_bars@hud.mmba_hud_bars": {
+                      "$mmba_anchor": "top_middle",
+                      "$mmba_base_size": [
+                        81,
+                        8
+                      ],
+                      "$mmba_surv_size": [
+                        81,
+                        4
+                      ],
+                      "$mmba_hotbar_mode": true
+                    }
+                  }
+                ],
+                "bindings": [
+                  {
+                    "binding_name": "#hud_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hotbar_offset_x",
+              "binding_name_override": "#anchored_offset_value_x"
+            },
+            {
+              "binding_name": "#hotbar_offset_y",
+              "binding_name_override": "#anchored_offset_value_y"
+            },
+            {
+              "binding_name": "#hotbar_size_x",
+              "binding_name_override": "#size_binding_x"
+            },
+            {
+              "binding_name": "#hotbar_size_y",
+              "binding_name_override": "#size_binding_y"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hotbar_visible_not_centered_resizable",
+        "binding_name_override": "#visible",
+        "binding_type": "global"
+      }
+    ]
+  },
+  "ataxia_overlay": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "layer": 250,
+    "controls": [
+      {
+        "left_blackout": {
+          "type": "image",
+          "texture": "textures/ui/ataxia_black",
+          "keep_ratio": false,
+          "color": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "alpha": 1.0,
+          "size": [
+            "50%",
+            "100%"
+          ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+          "offset": [
+            0,
+            0
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'ataxia') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "ts_invert_overlay": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "controls": [
+      {
+        "reversed_color": {
+          "type": "custom",
+          "renderer": "live_player_renderer",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 1,
+          "offset": [
+            0,
+            30592
+          ],
+          "size": [
+            1024,
+            1024
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'ts_invert') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "ts_muted_overlay": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 1,
+    "controls": [
+      {
+        "muted_tint": {
+          "type": "image",
+          "texture": "textures/effect/ts_white",
+          "keep_ratio": false,
+          "color": [
+            0.36,
+            0.34,
+            0.40
+          ],
+          "alpha": 0.36,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'ts_muted') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "sm_dino_overlay": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": 2,
+    "controls": [
+      {
+        "dino_tint": {
+          "type": "image",
+          "texture": "textures/effect/ts_white",
+          "keep_ratio": false,
+          "color": [
+            0.46,
+            0.94,
+            0.26
+          ],
+          "alpha": 0.12,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      },
+      {
+        "dino_vignette": {
+          "type": "image",
+          "texture": "textures/effect/sm_dino_vignette",
+          "keep_ratio": false,
+          "alpha": 0.72,
+          "size": [
+            "100%",
+            "100%"
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'sm_dino') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "king_crimson_frame": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "king_crimson_panel@bokep.king_crimson_panel"
+      }
+    }
+  },
+  "contoh_frame": {
+    "type": "panel",
+    "factory": {
+      "name": "hud_title_text_factory",
+      "control_ids": {
+        "hud_title_text": "contoh_panel@bokeps.contoh_panel"
+      }
+    }
+  },
+  "hud_title_text": {
+    "ignored": "(((not (($title_text - '_mmba:') = $title_text)) or ($title_text = 'king_crimson')) or (($title_text = 'ataxia') or (($title_text = 'contoh_title') or ($title_text = 'energy_hide'))))",
+    "bindings": [
+      {
+        "binding_type": "global",
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((((((#hud_title_text_string - '_mmba:') = #hud_title_text_string) and (not (#hud_title_text_string = 'king_crimson'))) and (not (#hud_title_text_string = 'ataxia'))) and ((not (#hud_title_text_string = 'contoh_title')) and (not (#hud_title_text_string = 'energy_hide')))) and ((((#hud_title_text_string - 'energy:') = #hud_title_text_string) and ((#hud_title_text_string - 'tusk:') = #hud_title_text_string)) and (((#hud_title_text_string - 'ts_') = #hud_title_text_string) and ((#hud_title_text_string - 'sm_dino') = #hud_title_text_string))))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  "item_name_text_root/item_text_aligner": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": {
+          "mmba_bar_buffer@common.empty_panel": {
+            "size": [
+              "100%sm",
+              14
+            ],
+            "bindings": [
+              {
+                "binding_name": "#hud_title_text_string"
+              },
+              {
+                "binding_type": "view",
+                "source_property_name": "(not ((#hud_title_text_string - 'pos:c') = #hud_title_text_string))",
+                "target_property_name": "#visible"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "root_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "sm_dino_overlay@hud.sm_dino_overlay": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "ataxia_overlay@hud.ataxia_overlay": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "mmba_bars_fixed@hud.mmba_bars_fixed": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "mmba_bars_hotbar@hud.mmba_bars_hotbar": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "king_crimson_frame@hud.king_crimson_frame": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "contoh_frame@hud.contoh_frame": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "ts_muted_overlay@hud.ts_muted_overlay": {}
+        }
+      },
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "ts_invert_overlay@hud.ts_invert_overlay": {}
+        }
+      }
+    ]
+  }
+}

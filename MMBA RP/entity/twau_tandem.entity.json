@@ -1,0 +1,84 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "xvoid:twau_tandem",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_alphatest",
+        "stand_color": "stand_color",
+        "stand_color_sat": "stand_color_sat",
+        "stand_color_add": "stand_color_add"
+      },
+      "textures": {
+        "default": "textures/entity/cape_invisible",
+        "twau_hue": "textures/entity/stand_color/twau_hue",
+        "twau_vivid": "textures/entity/stand_color/twau_vivid",
+        "twau_gray": "textures/entity/stand_color/twau_gray"
+      },
+      "geometry": {
+        "twau": "geometry.twau",
+        "locator": "geometry.locator"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "pre_animation": [
+          "t.sc_h = (query.property('property:stand_rainbow') == 1) ? (math.mod(query.life_time * 180.0, 360.0) - 180.0) : query.property('property:stand_hue');",
+          "t.sc_s = query.property('property:stand_sat') / 100.0;",
+          "t.sc_b = query.property('property:stand_bri') / 100.0;",
+          "v.stand_h_idx = math.mod(math.floor((t.sc_h + 180.0) / 5.0 + 0.5), 72);",
+          "t.sc_col = math.mod(v.stand_h_idx, 12);",
+          "t.sc_row = math.floor(v.stand_h_idx / 12);",
+          "v.stand_u_off = (t.sc_col + 0.0001) / 12.0;",
+          "v.stand_v_off = (t.sc_row + 0.0001) / 6.0;",
+          "v.stand_u_sc = 0.9998 / 12.0;",
+          "v.stand_v_sc = 0.9998 / 6.0;",
+          "v.stand_bri_mul = t.sc_b < 0.0 ? (1.0 + t.sc_b * 0.85) : 1.0;",
+          "v.stand_bri_pos = math.max(0.0, t.sc_b);",
+          "v.stand_sat_neg = math.max(0.0, -t.sc_s);",
+          "v.stand_sat_pos = math.max(0.0, t.sc_s);",
+          "v.stand_sat_alpha = v.stand_sat_neg > 0.005 ? v.stand_sat_neg : v.stand_sat_pos;",
+          "v.stand_sat_active = v.stand_sat_alpha > 0.005;",
+          "v.stand_base_w = (1.0 - v.stand_sat_alpha) * v.stand_bri_mul;",
+          "v.stand_sat_w = v.stand_sat_alpha * v.stand_bri_mul;",
+          "v.stand_base_dark = math.clamp(1.0 - v.stand_base_w, 0.0, 1.0);",
+          "v.stand_sat_dark = math.clamp(1.0 - v.stand_sat_w, 0.0, 1.0);",
+          "v.stand_add_dark = math.clamp(1.0 - v.stand_bri_pos, 0.0, 1.0);",
+          "t.sc_is_gray = v.stand_sat_neg > 0.005;",
+          "v.stand_sat_tex = t.sc_is_gray ? 0 : 1;",
+          "v.stand_su_off = t.sc_is_gray ? 0.0 : v.stand_u_off;",
+          "v.stand_sv_off = t.sc_is_gray ? 0.0 : v.stand_v_off;",
+          "v.stand_su_sc = t.sc_is_gray ? 1.0 : v.stand_u_sc;",
+          "v.stand_sv_sc = t.sc_is_gray ? 1.0 : v.stand_v_sc;",
+          "t.sc_add_gray = v.stand_sat_neg >= 0.5;",
+          "t.sc_add_vivid = v.stand_sat_pos >= 0.5;",
+          "v.stand_add_tex = t.sc_add_gray ? 0 : (t.sc_add_vivid ? 2 : 1);",
+          "v.stand_bu_off = t.sc_add_gray ? 0.0 : v.stand_u_off;",
+          "v.stand_bv_off = t.sc_add_gray ? 0.0 : v.stand_v_off;",
+          "v.stand_bu_sc = t.sc_add_gray ? 1.0 : v.stand_u_sc;",
+          "v.stand_bv_sc = t.sc_add_gray ? 1.0 : v.stand_v_sc;"
+        ],
+        "animate": [
+          "tandem_barrage"
+        ]
+      },
+      "animations": {
+        "tandem_barrage": "animation.twau.tandem_barrage"
+      },
+      "particle_effects": {
+        "standBr": "stand:br",
+        "standBr2": "stand:br2"
+      },
+      "render_controllers": [
+        "controller.render.twau",
+        {
+          "controller.render.twau_sat": "variable.stand_sat_active"
+        },
+        {
+          "controller.render.twau_add": "variable.stand_bri_pos > 0.005"
+        },
+        "controller.render.locator"
+      ]
+    }
+  }
+}

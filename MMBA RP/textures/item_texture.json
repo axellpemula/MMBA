@@ -1,0 +1,33 @@
+{
+	"resource_pack_name": "seggs",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"steel_ball": {
+			"textures": "textures/items/steel_ball"
+		},
+		"normal_attack": {
+			"textures": "textures/items/normal_attack"
+		},
+		"player_menu": {
+			"textures": "textures/items/player_menu"
+		},
+		"special_attack": {
+			"textures": "textures/items/special_attack"
+		},
+		"spitem": {
+			"textures": "textures/items/spitem"
+		},
+		"revolver": {
+			"textures": "textures/items/revolver"
+		},
+		"tommy_gun": {
+			"textures": "textures/items/tommy_gun"
+		},
+		"shotgun": {
+			"textures": "textures/items/shotgun"
+		},
+		"bullet": {
+			"textures": "textures/items/bullet"
+		}
+	}
+}

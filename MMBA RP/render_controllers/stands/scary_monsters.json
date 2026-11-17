@@ -1,0 +1,299 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.scary_monsters_half": {
+      "geometry": "Geometry.scary_monsters_half",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "textures": [
+        "Texture.scary_monsters_half_hue"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u_off",
+          "variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.stand_u_sc",
+          "variable.stand_v_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.scary_monsters_half_sat": {
+      "geometry": "Geometry.scary_monsters_half",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.scary_monsters_half_gray",
+            "Texture.scary_monsters_half_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_sat_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_su_off",
+          "variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.stand_su_sc",
+          "variable.stand_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.scary_monsters_half_add": {
+      "geometry": "Geometry.scary_monsters_half",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.scary_monsters_half_gray",
+            "Texture.scary_monsters_half_hue",
+            "Texture.scary_monsters_half_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_add_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_bu_off",
+          "variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.stand_bu_sc",
+          "variable.stand_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    },
+    "controller.render.scary_monsters_full": {
+      "geometry": "Geometry.scary_monsters_full",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "textures": [
+        "Texture.scary_monsters_full_hue"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u_off",
+          "variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.stand_u_sc",
+          "variable.stand_v_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.scary_monsters_full_sat": {
+      "geometry": "Geometry.scary_monsters_full",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.scary_monsters_full_gray",
+            "Texture.scary_monsters_full_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_sat_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_su_off",
+          "variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.stand_su_sc",
+          "variable.stand_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.scary_monsters_full_add": {
+      "geometry": "Geometry.scary_monsters_full",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.scary_monsters_full_gray",
+            "Texture.scary_monsters_full_hue",
+            "Texture.scary_monsters_full_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_add_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_bu_off",
+          "variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.stand_bu_sc",
+          "variable.stand_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    },
+    "controller.render.scary_monsters_full_fpp": {
+      "geometry": "Geometry.scary_monsters_full_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "textures": [
+        "Texture.scary_monsters_full_hue"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u_off",
+          "variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.stand_u_sc",
+          "variable.stand_v_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.scary_monsters_full_fpp_sat": {
+      "geometry": "Geometry.scary_monsters_full_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.scary_monsters_full_gray",
+            "Texture.scary_monsters_full_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_sat_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_su_off",
+          "variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.stand_su_sc",
+          "variable.stand_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.scary_monsters_full_fpp_add": {
+      "geometry": "Geometry.scary_monsters_full_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.scary_monsters_full_gray",
+            "Texture.scary_monsters_full_hue",
+            "Texture.scary_monsters_full_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_add_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_bu_off",
+          "variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.stand_bu_sc",
+          "variable.stand_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    }
+  }
+}

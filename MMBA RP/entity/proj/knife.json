@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "jjba:knife",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/sbr/knife"
+      },
+      "geometry": {
+        "default": "geometry.knife"
+      },
+      "render_controllers": [
+        "controller.render.xvoid"
+      ]
+    }
+  }
+}

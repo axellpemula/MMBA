@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.10",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "xvoid:tommy_gun"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"IIF",
+			"PGP"
+		],
+		"key": {
+			"I": {
+				"item": "minecraft:iron_ingot"
+			},
+			"F": {
+				"item": "minecraft:flint_and_steel"
+			},
+			"P": {
+				"tag": "minecraft:planks"
+			},
+			"G": {
+				"item": "minecraft:gold_ingot"
+			}
+		},
+		"unlock": [
+			{
+				"item": "minecraft:iron_ingot"
+			}
+		],
+		"result": {
+			"item": "xvoid:tommy_gun",
+			"count": 1
+		}
+	}
+}

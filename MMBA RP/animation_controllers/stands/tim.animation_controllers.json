@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.tim": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"active": "query.property('property:tim_limb') > 0"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"tim_world_rig"
+					],
+					"transitions": [
+						{
+							"default": "query.property('property:tim_limb') == 0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.tim_stand": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"tim_stand_default"
+					],
+					"transitions": [
+						{
+							"idle": "variable.stand_ui_preview"
+						},
+						{
+							"summon": "variable.stand"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"summon": {
+					"animations": [
+						"tim_stand_summon"
+					],
+					"transitions": [
+						{
+							"idle": "query.all_animations_finished"
+						},
+						{
+							"default": "!variable.stand"
+						}
+					],
+					"blend_transition": 0.08
+				},
+				"idle": {
+					"animations": [
+						"tim_stand_idle"
+					],
+					"transitions": [
+						{
+							"default": "!variable.stand"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

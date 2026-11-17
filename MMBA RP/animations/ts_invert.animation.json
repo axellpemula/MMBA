@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.ts.invert_off": {
+      "loop": true,
+      "bones": {
+        "timeStopEffect": {
+          "position": [0, 525.8, 0],
+          "scale": 0
+        }
+      }
+    },
+    "animation.ts.invert_expand": {
+      "loop": true,
+      "bones": {
+        "timeStopEffect": {
+          "position": [0, 525.8, 0],
+          "scale": "math.sin(math.min(1.0, q.anim_time / 0.22) * 90.0) * 2.4"
+        }
+      }
+    },
+    "animation.ts.invert_collapse": {
+      "loop": true,
+      "bones": {
+        "timeStopEffect": {
+          "position": [0, 525.8, 0],
+          "scale": "2.4 * math.max(0.0, 1.0 - q.anim_time / 0.30)"
+        }
+      }
+    }
+  }
+}

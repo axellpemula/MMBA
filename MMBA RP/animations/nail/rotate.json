@@ -1,0 +1,61 @@
+{
+	"format_version": "1.16.0",
+	"animations": {
+		"animation.nail.rotate": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"root": {
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"nail": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.5": [0, 0, 1440]
+					}
+				}
+			}
+		},
+		"animation.nail.trail_act1": {
+			"loop": true,
+			"animation_length": 0.0001,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail_act1",
+					"locator": "trail"
+				}
+			}
+		},
+		"animation.nail.trail_act2": {
+			"loop": true,
+			"animation_length": 0.0001,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail_act2",
+					"locator": "trail"
+				}
+			}
+		},
+		"animation.nail.trail_act3": {
+			"loop": true,
+			"animation_length": 0.0001,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail_act3",
+					"locator": "trail"
+				}
+			}
+		},
+		"animation.nail.trail_drill": {
+			"loop": true,
+			"animation_length": 0.0001,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trail_drill",
+					"locator": "trail"
+				}
+			}
+		}
+	}
+}
+

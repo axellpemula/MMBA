@@ -1,0 +1,390 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.tim_skin": {
+      "geometry": "Geometry.tim_skin",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightUpperArm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "rightForearm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "leftUpperArm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "leftForearm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "zip_chest": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_head": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_r_arm": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_pelvis": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_r_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_r_calf": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_calf": "query.property('property:tim_limb') == 3"
+        }
+      ]
+    },
+    "controller.render.tim_purple": {
+      "geometry": "Geometry.tim_purple",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "textures": [
+        "Texture.tim_purple_hue"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u_off",
+          "variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.stand_u_sc",
+          "variable.stand_v_sc"
+        ]
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightUpperArm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "rightForearm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "leftUpperArm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "leftForearm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "zip_chest": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_pelvis": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_r_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_r_calf": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_calf": "query.property('property:tim_limb') == 3"
+        }
+      ],
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.tim_purple_sat": {
+      "geometry": "Geometry.tim_purple",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tim_purple_gray",
+            "Texture.tim_purple_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_sat_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_su_off",
+          "variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.stand_su_sc",
+          "variable.stand_sv_sc"
+        ]
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightUpperArm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "rightForearm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "leftUpperArm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "leftForearm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "zip_chest": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_pelvis": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_r_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_r_calf": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_calf": "query.property('property:tim_limb') == 3"
+        }
+      ],
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.tim_purple_add": {
+      "geometry": "Geometry.tim_purple",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tim_purple_gray",
+            "Texture.tim_purple_hue",
+            "Texture.tim_purple_vivid"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_add_tex]"
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_bu_off",
+          "variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.stand_bu_sc",
+          "variable.stand_bv_sc"
+        ]
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightUpperArm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "rightForearm": "query.property('property:tim_limb') == 1 || query.property('property:tim_limb') == 4"
+        },
+        {
+          "leftUpperArm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "leftForearm": "query.property('property:tim_limb') == 2 || query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_larm ?? 0) > 0)"
+        },
+        {
+          "zip_chest": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_pelvis": "query.property('property:tim_limb') == 3 || (query.property('property:tim_limb') == 4 && (v.tu_p_body ?? 0) > 0)"
+        },
+        {
+          "zip_r_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_thigh": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_r_calf": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "zip_l_calf": "query.property('property:tim_limb') == 3"
+        }
+      ],
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    },
+    "controller.render.tim_rope": {
+      "geometry": "Geometry.tim_rope",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tim_rope"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rope_f0": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f1": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f2": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f3": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f4": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f5": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f6": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f7": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f8": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f9": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f10": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_f11": "query.property('property:tim_limb') > 0"
+        },
+        {
+          "rope_b0": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "rope_b1": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "rope_b2": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "rope_b3": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "rope_b4": "query.property('property:tim_limb') == 3"
+        },
+        {
+          "rope_b5": "query.property('property:tim_limb') == 3"
+        }
+      ]
+    },
+    "controller.render.tim_stand_rope": {
+      "geometry": "Geometry.tim_stand_rope",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tim_stand_rope"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightRope": "query.property('property:tim_limb') != 1 && query.property('property:tim_limb') != 3 && query.property('property:tim_limb') != 4"
+        },
+        {
+          "leftRope": "query.property('property:tim_limb') < 2"
+        }
+      ]
+    },
+    "controller.render.tim_stand_rope_fpp": {
+      "geometry": "Geometry.tim_stand_rope_fpp",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.tim_stand_rope"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightRope": "query.property('property:tim_limb') != 1 && query.property('property:tim_limb') != 3 && query.property('property:tim_limb') != 4"
+        },
+        {
+          "leftRope": "query.property('property:tim_limb') < 2"
+        }
+      ]
+    },
+    "controller.render.tim_hitbox": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ],
+      "part_visibility": [
+        {
+          "*": false
+        }
+      ]
+    }
+  }
+}

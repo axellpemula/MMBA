@@ -1,0 +1,98 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.tusk_4": {
+      "states": {
+        "default": {
+          "animations": [
+            "tusk4_swing",
+            "tusk4_default"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand && !(v.tusk_reset_4 ?? 0)"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "tusk4_swing",
+            "tusk4_summon"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.stand || (v.tusk_reset_4 ?? 0)"
+            },
+            {
+              "idle": "q.all_animations_finished && q.ground_speed < 0.5"
+            },
+            {
+              "walk": "q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "tusk4_swing",
+            "tusk4_idle"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.stand || (v.tusk_reset_4 ?? 0)"
+            },
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "walk": "q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "blocking": {
+          "animations": [
+            "tusk4_swing",
+            "tusk4_block"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.stand || (v.tusk_reset_4 ?? 0)"
+            },
+            {
+              "idle": "query.property('property:blocking') == 0"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "tusk4_swing",
+            "tusk4_walk"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.stand || (v.tusk_reset_4 ?? 0)"
+            },
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "idle": "(-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

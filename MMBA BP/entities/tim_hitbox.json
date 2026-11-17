@@ -1,0 +1,109 @@
+{
+  "format_version": "1.17.20",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "xvoid:tim_hitbox",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "xvoid:despawn": {
+        "minecraft:instant_despawn": {}
+      },
+      "xvoid:size_arm": {
+        "minecraft:collision_box": {
+          "width": 0.34,
+          "height": 0.34
+        }
+      },
+      "xvoid:size_head": {
+        "minecraft:collision_box": {
+          "width": 0.42,
+          "height": 0.42
+        }
+      },
+      "xvoid:size_torso": {
+        "minecraft:collision_box": {
+          "width": 0.48,
+          "height": 0.44
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.4,
+        "height": 0.4
+      },
+      "minecraft:health": {
+        "value": 10000,
+        "max": 10000
+      },
+      "minecraft:physics": {
+        "has_gravity": false,
+        "has_collision": false
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1.0,
+        "max": 1.0
+      },
+      "minecraft:type_family": {
+        "family": [
+          "tim_hitbox"
+        ]
+      }
+    },
+    "events": {
+      "xvoid:despawn": {
+        "add": {
+          "component_groups": [
+            "xvoid:despawn"
+          ]
+        }
+      },
+      "xvoid:size_arm": {
+        "remove": {
+          "component_groups": [
+            "xvoid:size_head",
+            "xvoid:size_torso"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "xvoid:size_arm"
+          ]
+        }
+      },
+      "xvoid:size_head": {
+        "remove": {
+          "component_groups": [
+            "xvoid:size_arm",
+            "xvoid:size_torso"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "xvoid:size_head"
+          ]
+        }
+      },
+      "xvoid:size_torso": {
+        "remove": {
+          "component_groups": [
+            "xvoid:size_arm",
+            "xvoid:size_head"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "xvoid:size_torso"
+          ]
+        }
+      }
+    }
+  }
+}

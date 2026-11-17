@@ -1,0 +1,849 @@
+{
+  "namespace": "tusk_hud",
+  "pip_slot_base": {
+    "type": "panel",
+    "size": [
+      8,
+      10
+    ],
+    "clips_children": false,
+    "$ready_tag|default": "n0R",
+    "$f1_tag|default": "n0F1",
+    "$f2_tag|default": "n0F2",
+    "$f3_tag|default": "n0F3",
+    "$f4_tag|default": "n0F4",
+    "$f5_tag|default": "n0F5",
+    "$f6_tag|default": "n0F6",
+    "$f7_tag|default": "n0F7",
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_pip_off",
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 2
+        }
+      },
+      {
+        "ready_a1": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_pip_a1",
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 6,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $ready_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_1": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_1",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f1_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_2": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_2",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f2_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_3": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_3",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f3_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_4": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_4",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f4_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_5": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_5",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f5_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_6": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_6",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f6_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a1_7": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_7",
+          "color": [
+            0.35,
+            0.9,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f7_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA1') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ready_a2": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_pip_a2",
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 6,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $ready_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_1": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_1",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f1_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_2": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_2",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f2_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_3": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_3",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f3_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_4": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_4",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f4_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_5": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_5",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f5_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_6": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_6",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f6_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a2_7": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_7",
+          "color": [
+            1.0,
+            0.85,
+            0.25
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f7_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA2') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "ready_a3": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_pip_a3",
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 6,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $ready_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_1": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_1",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f1_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_2": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_2",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f2_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_3": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_3",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f3_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_4": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_4",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f4_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_5": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_5",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f5_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_6": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_6",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f6_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "fill_a3_7": {
+          "type": "image",
+          "texture": "textures/ui/tusk/nail_fill_7",
+          "color": [
+            0.38,
+            0.62,
+            1.0
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#hud_title_text_string"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((not ((#hud_title_text_string - $f7_tag) = #hud_title_text_string)) and (not ((#hud_title_text_string - 'tA3') = #hud_title_text_string)))",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "slot0@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n0R",
+    "$f1_tag": "n0F1",
+    "$f2_tag": "n0F2",
+    "$f3_tag": "n0F3",
+    "$f4_tag": "n0F4",
+    "$f5_tag": "n0F5",
+    "$f6_tag": "n0F6",
+    "$f7_tag": "n0F7"
+  },
+  "slot1@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n1R",
+    "$f1_tag": "n1F1",
+    "$f2_tag": "n1F2",
+    "$f3_tag": "n1F3",
+    "$f4_tag": "n1F4",
+    "$f5_tag": "n1F5",
+    "$f6_tag": "n1F6",
+    "$f7_tag": "n1F7"
+  },
+  "slot2@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n2R",
+    "$f1_tag": "n2F1",
+    "$f2_tag": "n2F2",
+    "$f3_tag": "n2F3",
+    "$f4_tag": "n2F4",
+    "$f5_tag": "n2F5",
+    "$f6_tag": "n2F6",
+    "$f7_tag": "n2F7"
+  },
+  "slot3@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n3R",
+    "$f1_tag": "n3F1",
+    "$f2_tag": "n3F2",
+    "$f3_tag": "n3F3",
+    "$f4_tag": "n3F4",
+    "$f5_tag": "n3F5",
+    "$f6_tag": "n3F6",
+    "$f7_tag": "n3F7"
+  },
+  "slot4@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n4R",
+    "$f1_tag": "n4F1",
+    "$f2_tag": "n4F2",
+    "$f3_tag": "n4F3",
+    "$f4_tag": "n4F4",
+    "$f5_tag": "n4F5",
+    "$f6_tag": "n4F6",
+    "$f7_tag": "n4F7"
+  },
+  "slot5@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n5R",
+    "$f1_tag": "n5F1",
+    "$f2_tag": "n5F2",
+    "$f3_tag": "n5F3",
+    "$f4_tag": "n5F4",
+    "$f5_tag": "n5F5",
+    "$f6_tag": "n5F6",
+    "$f7_tag": "n5F7"
+  },
+  "slot6@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n6R",
+    "$f1_tag": "n6F1",
+    "$f2_tag": "n6F2",
+    "$f3_tag": "n6F3",
+    "$f4_tag": "n6F4",
+    "$f5_tag": "n6F5",
+    "$f6_tag": "n6F6",
+    "$f7_tag": "n6F7"
+  },
+  "slot7@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n7R",
+    "$f1_tag": "n7F1",
+    "$f2_tag": "n7F2",
+    "$f3_tag": "n7F3",
+    "$f4_tag": "n7F4",
+    "$f5_tag": "n7F5",
+    "$f6_tag": "n7F6",
+    "$f7_tag": "n7F7"
+  },
+  "slot8@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n8R",
+    "$f1_tag": "n8F1",
+    "$f2_tag": "n8F2",
+    "$f3_tag": "n8F3",
+    "$f4_tag": "n8F4",
+    "$f5_tag": "n8F5",
+    "$f6_tag": "n8F6",
+    "$f7_tag": "n8F7"
+  },
+  "slot9@tusk_hud.pip_slot_base": {
+    "$ready_tag": "n9R",
+    "$f1_tag": "n9F1",
+    "$f2_tag": "n9F2",
+    "$f3_tag": "n9F3",
+    "$f4_tag": "n9F4",
+    "$f5_tag": "n9F5",
+    "$f6_tag": "n9F6",
+    "$f7_tag": "n9F7"
+  },
+  "tusk_nail_hud": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "size": [
+      80,
+      10
+    ],
+    "clips_children": false,
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [
+      0,
+      -1
+    ],
+    "layer": 11,
+    "controls": [
+      {
+        "s0@tusk_hud.slot0": {}
+      },
+      {
+        "s1@tusk_hud.slot1": {}
+      },
+      {
+        "s2@tusk_hud.slot2": {}
+      },
+      {
+        "s3@tusk_hud.slot3": {}
+      },
+      {
+        "s4@tusk_hud.slot4": {}
+      },
+      {
+        "s5@tusk_hud.slot5": {}
+      },
+      {
+        "s6@tusk_hud.slot6": {}
+      },
+      {
+        "s7@tusk_hud.slot7": {}
+      },
+      {
+        "s8@tusk_hud.slot8": {}
+      },
+      {
+        "s9@tusk_hud.slot9": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#hud_title_text_string"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#hud_title_text_string - 'tusk:') = #hud_title_text_string))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

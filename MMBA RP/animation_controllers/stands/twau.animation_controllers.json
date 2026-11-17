@@ -1,0 +1,195 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.twau": {
+      "states": {
+        "default": {
+          "animations": [
+            "twau_default"
+          ],
+          "transitions": [
+            {
+              "tandem": "query.property('property:tim_limb') == 1"
+            },
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "ts_charging": "query.property('property:attack') > 0"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "twau_summon"
+          ],
+          "transitions": [
+            {
+              "tandem": "query.property('property:tim_limb') == 1"
+            },
+            {
+              "ts_charging": "query.property('property:attack') > 0"
+            },
+            {
+              "idle": "q.all_animations_finished && q.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            },
+            {
+              "run": "q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "twau_idle"
+          ],
+          "transitions": [
+            {
+              "tandem": "query.property('property:tim_limb') == 1"
+            },
+            {
+              "ts_charging": "query.property('property:attack') > 0"
+            },
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "ts_charging": {
+          "animations": [
+            "twau_ts_start"
+          ],
+          "transitions": [
+            {
+              "idle": "query.property('property:attack') == 0 && (variable.stand)"
+            },
+            {
+              "default": "query.property('property:attack') == 0 && !variable.stand"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "blocking": {
+          "animations": [
+            "stand_block"
+          ],
+          "transitions": [
+            {
+              "tandem": "query.property('property:tim_limb') == 1"
+            },
+            {
+              "ts_charging": "query.property('property:attack') > 0"
+            },
+            {
+              "idle": "query.property('property:blocking') == 0"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "twau_walk"
+          ],
+          "transitions": [
+            {
+              "tandem": "query.property('property:tim_limb') == 1"
+            },
+            {
+              "ts_charging": "query.property('property:attack') > 0"
+            },
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && q.ground_speed < 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "run": {
+          "animations": [
+            "twau_run"
+          ],
+          "transitions": [
+            {
+              "tandem": "query.property('property:tim_limb') == 1"
+            },
+            {
+              "ts_charging": "query.property('property:attack') > 0"
+            },
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && q.ground_speed < 0.5"
+            },
+            {
+              "idle": "(-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "tandem": {
+          "animations": [
+            "twau_default"
+          ],
+          "transitions": [
+            {
+              "idle": "query.property('property:tim_limb') == 0 && variable.stand"
+            },
+            {
+              "default": "query.property('property:tim_limb') == 0 && !variable.stand"
+            }
+          ],
+          "blend_transition": 0.12,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

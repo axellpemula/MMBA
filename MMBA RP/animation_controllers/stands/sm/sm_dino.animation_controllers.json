@@ -1,0 +1,408 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.sm_dino": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"idle": "variable.stand_ui_preview || variable.is_paperdoll"
+						},
+						{
+							"detransform": "!variable.sm_target_full"
+						},
+						{
+							"transform": "variable.sm_target_full"
+						}
+					]
+				},
+				"transform": {
+					"animations": [
+						"sm_dino_transform"
+					],
+					"transitions": [
+						{
+							"idle": "variable.stand_ui_preview || variable.is_paperdoll"
+						},
+						{
+							"detransform": "!variable.sm_target_full"
+						},
+						{
+							"jump": "q.all_animations_finished && !query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "q.all_animations_finished && !query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "q.all_animations_finished && query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "q.all_animations_finished && query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "q.all_animations_finished && query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"run": "q.all_animations_finished && query.is_on_ground && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "q.all_animations_finished && query.is_on_ground && v.dino_move_back"
+						},
+						{
+							"walk": "q.all_animations_finished && query.is_on_ground && v.dino_move_fwd"
+						},
+						{
+							"idle": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.18,
+					"blend_via_shortest_path": true
+				},
+				"detransform": {
+					"animations": [
+						"sm_dino_detransform"
+					],
+					"transitions": [
+						{
+							"transform": "variable.sm_target_full"
+						}
+					],
+					"blend_transition": 0.12,
+					"blend_via_shortest_path": true
+				},
+				"idle": {
+					"animations": [
+						"sm_dino_idle"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "query.is_on_ground && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"walk": {
+					"animations": [
+						"sm_dino_walk",
+						"sm_dino_walk_tail"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"idle": "query.is_on_ground && !v.is_moving"
+						},
+						{
+							"walk_back": "query.is_on_ground && v.dino_move_back"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"walk_back": {
+					"animations": [
+						"sm_dino_walk_back",
+						"sm_dino_walk_tail"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"idle": "query.is_on_ground && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk": "query.is_on_ground && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"run": {
+					"animations": [
+						"sm_dino_run",
+						"sm_dino_walk_tail"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"idle": "query.is_on_ground && !v.is_moving"
+						},
+						{
+							"walk_back": "query.is_on_ground && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && !query.is_sprinting && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"sneak": {
+					"animations": [
+						"sm_dino_sneak"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"idle": "query.is_on_ground && !query.is_sneaking && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && !query.is_sneaking && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "query.is_on_ground && !query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && !query.is_sneaking && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"sneak_walk": {
+					"animations": [
+						"sm_dino_sneak_walk",
+						"scary_monsters_tail_main"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"idle": "query.is_on_ground && !query.is_sneaking && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && !query.is_sneaking && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "query.is_on_ground && !query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && !query.is_sneaking && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"sneak_walk_back": {
+					"animations": [
+						"sm_dino_sneak_walk_back",
+						"scary_monsters_tail_main"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"fall": "!query.is_on_ground && query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"idle": "query.is_on_ground && !query.is_sneaking && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && !query.is_sneaking && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "query.is_on_ground && !query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && !query.is_sneaking && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.2,
+					"blend_via_shortest_path": true
+				},
+				"jump": {
+					"animations": [
+						"sm_dino_jump",
+						"sm_dino_idle"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"fall": "query.vertical_speed <= 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"idle": "query.is_on_ground && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "query.is_on_ground && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.15,
+					"blend_via_shortest_path": true
+				},
+				"fall": {
+					"animations": [
+						"sm_dino_fall",
+						"sm_dino_idle"
+					],
+					"transitions": [
+						{
+							"detransform": "!variable.sm_target_full && !variable.stand_ui_preview && !variable.is_paperdoll"
+						},
+						{
+							"jump": "!query.is_on_ground && query.vertical_speed > 0.05"
+						},
+						{
+							"sneak_walk_back": "query.is_on_ground && query.is_sneaking && v.dino_move_back"
+						},
+						{
+							"sneak_walk": "query.is_on_ground && query.is_sneaking && v.dino_move_fwd"
+						},
+						{
+							"sneak": "query.is_on_ground && query.is_sneaking && !v.is_moving"
+						},
+						{
+							"idle": "query.is_on_ground && !v.is_moving"
+						},
+						{
+							"run": "query.is_on_ground && query.is_sprinting && query.modified_move_speed > 0.1"
+						},
+						{
+							"walk_back": "query.is_on_ground && v.dino_move_back"
+						},
+						{
+							"walk": "query.is_on_ground && v.dino_move_fwd"
+						}
+					],
+					"blend_transition": 0.15,
+					"blend_via_shortest_path": true
+				}
+			}
+		}
+	}
+}

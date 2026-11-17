@@ -1,0 +1,52 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.century": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "animations": [
+            "century_default"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "century_summon"
+          ],
+          "transitions": [
+            {
+              "idle": "query.all_animations_finished"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.1,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "century_idle"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "MMBA",
+		"description": "MMBA Behavior Pack",
+		"uuid": "7eb1b2cc-7052-26e8-392b-31e1d5138d1e",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			26,
+			0
+		]
+	},
+	"metadata": {
+		"authors": ["xVoid_Axell"],
+		"product_type": "addon"
+	},
+	"modules": [
+		{
+			"description": "Behavior",
+			"version": [
+				1,
+				0,
+				0
+			],
+			"uuid": "170f9bc0-7dcc-47c6-5842-3729ba51d634",
+			"type": "data"
+		},
+		{
+			"description": "Scripts",
+			"version": [
+				1,
+				0,
+				0
+			],
+			"uuid": "d9c8e5b2-7a3c-4f1e-8c9b-5a2e1f3b6a7d",
+			"type": "script",
+			"entry": "scripts/index.js",
+			"language": "javascript"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "899985e2-c459-4e9d-d04d-c68225c4fa7d",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.10.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		}
+	]
+}

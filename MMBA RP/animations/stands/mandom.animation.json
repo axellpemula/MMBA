@@ -1,0 +1,393 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.mandom.default": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"All": {
+					"rotation": [0, -9.5, 0],
+					"position": [-8.4, 10.5, 3.3],
+					"scale": 0
+				},
+				"BodyStand": {
+					"rotation": [-15.0628, -19.9532, 2.8631],
+					"position": [0.8, 0, -1.7],
+					"scale": 0.85
+				},
+				"HeadStand": {
+					"rotation": ["-10.9408+query.target_x_rotation", "8.2092+query.target_y_rotation", 3.5863]
+				},
+				"rightWing": {
+					"rotation": [0, 0, -55]
+				},
+				"leftWing": {
+					"rotation": [0, 0, 60]
+				},
+				"tentacleR1_a": {
+					"rotation": [71.7751, -47.9629, 8.4551]
+				},
+				"tentacleR1_b": {
+					"rotation": [-0.8898, 4.5636, -22.0558]
+				},
+				"tentacleR1_c": {
+					"rotation": [0, 0, 20]
+				},
+				"tentacleR2_a": {
+					"rotation": [68.3791, -49.4072, 20.1907]
+				},
+				"tentacleR2_b": {
+					"rotation": [-0.3212, 2.3021, -14.8221],
+					"scale": [1, 1.4, 1]
+				},
+				"tentacleR2_c": {
+					"rotation": [0, 0, 37.5],
+					"scale": [0.9, 0.9, 1]
+				},
+				"tentacleR3_a": {
+					"rotation": [28.447, -73.0519, 68.5069]
+				},
+				"tentacleR3_b": {
+					"rotation": [0, 0, 0],
+					"scale": [1, 1.7, 1]
+				},
+				"tentacleR3_c": {
+					"rotation": [2.3705, -8.4264, 36.9562],
+					"scale": [0.6, 1, 1]
+				},
+				"tentacleR4_a": {
+					"rotation": [27.6235, -43.5711, -50.6808]
+				},
+				"tentacleR4_b": {
+					"rotation": [0, 0, 0]
+				},
+				"tentacleL1_a": {
+					"rotation": [-59.2648, 64.9794, -125.849],
+					"position": [0, -0.9, 0],
+					"scale": [1, 1.7, 1]
+				},
+				"tentacleL1_b": {
+					"rotation": [0.123, -0.3288, 4.5598]
+				},
+				"tentacleL1_c": {
+					"rotation": [-11.6798, -7.7443, 2.195],
+					"scale": [0.6, 1.7, 1]
+				},
+				"tentacleL2_a": {
+					"rotation": [-82.3765, 53.9909, -78.3395]
+				},
+				"tentacleL2_b": {
+					"rotation": [-0.0361, -0.8406, 1.429]
+				},
+				"tentacleL2_c": {
+					"rotation": [0, 0, 30]
+				},
+				"tentacleL3_a": {
+					"rotation": [-19.9545, 55.7779, -86.3918]
+				},
+				"tentacleL3_b": {
+					"rotation": [-1.7324, -4.4749, 38.8084]
+				},
+				"tentacleL4_a": {
+					"rotation": [-25.1018, 55.4438, -72.2213]
+				},
+				"tentacleL4_b": {
+					"rotation": [-0.2154, -1.6468, 11.4115]
+				},
+				"tentacleL4_c": {
+					"rotation": [0, 0, 15]
+				},
+				"tentacleL1_c2": {
+					"rotation": [-11.6798, -7.7443, 2.195],
+					"scale": [0.6, 1.7, 1]
+				}
+			}
+		},
+		"animation.mandom.idle": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"All": {
+					"rotation": [0, -9.5, 0],
+					"position": [-8.4, 10.5, 3.3],
+					"scale": 1
+				},
+				"BodyStand": {
+					"rotation": [-15.0628, -19.9532, 2.8631],
+					"position": [0.8, 0, -1.7],
+					"scale": 0.85
+				},
+				"rightWing": {
+					"rotation": [0, 0, -55]
+				},
+				"leftWing": {
+					"rotation": [0, 0, 60]
+				},
+				"tentacleR1_a": {
+					"rotation": [72.0069, 28.1313, -18.3594]
+				},
+				"tentacleR1_b": {
+					"rotation": [-0.8898, 4.5636, -22.0558]
+				},
+				"tentacleR2_a": {
+					"rotation": [71.1636, 8.1633, -5.4043]
+				},
+				"tentacleR2_b": {
+					"rotation": [-0.3212, 2.3021, -14.8221],
+					"scale": [1, 1.4, 1]
+				},
+				"tentacleR3_a": {
+					"rotation": [61.3438, -9.9449, -2.7128]
+				},
+				"tentacleR3_b": {
+					"rotation": [0, 0, 0],
+					"scale": [1, 1.7, 1]
+				},
+				"tentacleR4_a": {
+					"rotation": [27.6235, -43.5711, -50.6808]
+				},
+				"tentacleR4_b": {
+					"rotation": [0, 0, 0]
+				},
+				"tentacleL1_a": {
+					"rotation": [0.3318, 84.6323, -62.423],
+					"position": [0, -0.9, 1.6],
+					"scale": 1
+				},
+				"tentacleL1_b": {
+					"rotation": [0.012, -1.3827, 11.9863]
+				},
+				"tentacleL2_a": {
+					"rotation": [-81.9895, 96.4908, -77.9276]
+				},
+				"tentacleL2_b": {
+					"rotation": [-0.0361, -0.8406, 1.429]
+				},
+				"tentacleL3_a": {
+					"rotation": [40.0014, 56.6174, 1.4576]
+				},
+				"tentacleL3_b": {
+					"rotation": [-1.7324, -4.4749, 38.8084]
+				},
+				"tentacleL4_a": {
+					"rotation": [32.425, 67.8451, 9.9311]
+				},
+				"tentacleL4_b": {
+					"rotation": [-0.2154, -1.6468, 11.4115]
+				},
+				"tentacleR1_c": {
+					"rotation": [0, 0, 20]
+				},
+				"tentacleL1_c": {
+					"rotation": [-8.1938, -9.7067, -20.4864],
+					"scale": 1
+				},
+				"tentacleL2_c": {
+					"rotation": [0, 0, 30]
+				},
+				"tentacleL4_c": {
+					"rotation": [0, 0, 15]
+				},
+				"tentacleR2_c": {
+					"rotation": [0, 0, 37.5],
+					"scale": [0.9, 0.9, 1]
+				},
+				"tentacleR3_c": {
+					"rotation": [2.3705, -8.4264, 36.9562],
+					"scale": [0.6, 1, 1]
+				},
+				"HeadStand": {
+					"rotation": ["-10.9408+query.target_x_rotation", "8.2092+query.target_y_rotation", 3.5863]
+				},
+				"tentacleL1_c2": {
+					"rotation": [-10.4803, -11.0661, -35.6623]
+				}
+			}
+		},
+		"animation.mandom.revolver": {
+			"loop": true,
+			"override_previous_animation": true,
+			"bones": {
+				"All": {
+					"rotation": [0, -9.5, 0],
+					"position": [-8.4, 10.5, 3.3],
+					"scale": 1
+				},
+				"BodyStand": {
+					"rotation": [-15.0628, -19.9532, 2.8631],
+					"position": [0.8, 0, -1.7],
+					"scale": 0.85
+				},
+				"rightWing": {
+					"rotation": [0, 0, -55]
+				},
+				"leftWing": {
+					"rotation": [0, 0, 60]
+				},
+				"tentacleR1_a": {
+					"rotation": [72.0069, 28.1313, -18.3594]
+				},
+				"tentacleR1_b": {
+					"rotation": [-0.8898, 4.5636, -22.0558]
+				},
+				"tentacleR2_a": {
+					"rotation": [71.1636, 8.1633, -5.4043]
+				},
+				"tentacleR2_b": {
+					"rotation": [-0.3212, 2.3021, -14.8221],
+					"scale": [1, 1.4, 1]
+				},
+				"tentacleR3_a": {
+					"rotation": [61.3438, -9.9449, -2.7128]
+				},
+				"tentacleR3_b": {
+					"rotation": [0, 0, 0],
+					"scale": [1, 1.7, 1]
+				},
+				"tentacleR4_a": {
+					"rotation": [27.6235, -43.5711, -50.6808]
+				},
+				"tentacleR4_b": {
+					"rotation": [0, 0, 0]
+				},
+				"tentacleL1_a": {
+					"rotation": [0.3318, 84.6323, -62.423],
+					"position": [0, -0.9, 1.6],
+					"scale": 1
+				},
+				"tentacleL1_b": {
+					"rotation": [0.012, -1.3827, 11.9863]
+				},
+				"tentacleL2_a": {
+					"rotation": [-81.9895, 96.4908, -77.9276]
+				},
+				"tentacleL2_b": {
+					"rotation": [-0.0361, -0.8406, 1.429]
+				},
+				"tentacleL3_a": {
+					"rotation": [40.0014, 56.6174, 1.4576]
+				},
+				"tentacleL3_b": {
+					"rotation": [-1.7324, -4.4749, 38.8084]
+				},
+				"tentacleL4_a": {
+					"rotation": [32.425, 67.8451, 9.9311]
+				},
+				"tentacleL4_b": {
+					"rotation": [-0.2154, -1.6468, 11.4115]
+				},
+				"tentacleR1_c": {
+					"rotation": [0, 0, 20]
+				},
+				"tentacleL1_c": {
+					"rotation": [-8.1938, -9.7067, -20.4864],
+					"scale": 1
+				},
+				"tentacleL2_c": {
+					"rotation": [0, 0, 30]
+				},
+				"tentacleL4_c": {
+					"rotation": [0, 0, 15]
+				},
+				"tentacleR2_c": {
+					"rotation": [0, 0, 37.5],
+					"scale": [0.9, 0.9, 1]
+				},
+				"tentacleR3_c": {
+					"rotation": [2.3705, -8.4264, 36.9562],
+					"scale": [0.6, 1, 1]
+				},
+				"HeadStand": {
+					"rotation": ["-10.9408+query.target_x_rotation*0.5", "8.2092+query.target_y_rotation*0.5", 3.5863]
+				},
+				"tentacleL1_c2": {
+					"rotation": [-10.4803, -11.0661, -35.6623]
+				}
+			}
+		},
+		"animation.mandom.tp_watch_wind": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						"math.lerp(0.0, -68.0, v.ts_p)",
+						"math.lerp(0.0, 46.0, v.ts_p)",
+						"math.lerp(0.0, 52.0, v.ts_p)"
+					],
+					"position": [
+						0,
+						0,
+						"math.lerp(0.0, -1.5, v.ts_p)"
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						"math.lerp(0.0, -76.0, v.ts_p) + math.sin(query.anim_time * 900) * 5.0 * v.ts_p",
+						"math.lerp(0.0, -34.0, v.ts_p)",
+						"math.lerp(0.0, -12.0, v.ts_p)"
+					],
+					"position": [
+						"math.lerp(0.0, -1.0, v.ts_p)",
+						0,
+						"math.lerp(0.0, -1.8, v.ts_p)"
+					]
+				},
+				"head": {
+					"rotation": [
+						"math.lerp(query.target_x_rotation, 16.0, v.ts_p)",
+						"math.lerp(query.target_y_rotation, 8.0, v.ts_p)",
+						0
+					]
+				},
+				"watch_crown": {
+					"rotation": [0, "v.ts_p * 720.0", 0]
+				},
+				"watch_hand_minute": {
+					"rotation": ["-v.ts_p * 720.0", 0, 0]
+				},
+				"watch_hand_hour": {
+					"rotation": ["-v.ts_p * 180.0", 0, 0]
+				}
+			}
+		},
+		"animation.mandom.fp_watch_wind": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [
+						"math.lerp(45.0, 82.0, v.ts_p) + math.sin(query.anim_time * 900) * 0.6 * v.ts_p",
+						"math.lerp(20.0, 45.0, v.ts_p)",
+						"math.lerp(-35.0, -105.0, v.ts_p)"
+					],
+					"position": [
+						"math.lerp(-13.5, -10.5, v.ts_p)",
+						"math.lerp(-12.0, -6.5, v.ts_p)",
+						"math.lerp(12.0, 16.5, v.ts_p)"
+					],
+					"scale": 1.2
+				},
+				"rightArm": {
+					"rotation": [
+						"math.lerp(0.0, -14.0, v.ts_p) + math.sin(query.anim_time * 900) * 5.0 * v.ts_p",
+						"math.lerp(0.0, -18.0, v.ts_p)",
+						"math.lerp(0.0, -35.0, v.ts_p) + math.cos(query.anim_time * 900) * 6.0 * v.ts_p"
+					],
+					"position": [
+						"math.lerp(0.0, -7.5, v.ts_p) + math.sin(query.anim_time * 900) * 0.4 * v.ts_p",
+						"math.lerp(0.0, 2.5, v.ts_p) + math.cos(query.anim_time * 900) * 0.35 * v.ts_p",
+						"math.lerp(0.0, 3.5, v.ts_p)"
+					]
+				},
+				"watch_crown": {
+					"rotation": [0, "v.ts_p * 720.0", 0]
+				},
+				"watch_hand_minute": {
+					"rotation": ["-v.ts_p * 720.0", 0, 0]
+				},
+				"watch_hand_hour": {
+					"rotation": ["-v.ts_p * 180.0", 0, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "jjba:nail",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/entity/nail_bullet"
+      },
+      "geometry": {
+        "default": "geometry.nail_bullet"
+      },
+      "scripts": {
+        "animate": [
+          "spin"
+        ]
+      },
+      "animations": {
+        "spin": "controller.animation.nail.spin",
+        "spinning": "animation.nail.rotate",
+        "trail_act1": "animation.nail.trail_act1",
+        "trail_act2": "animation.nail.trail_act2",
+        "trail_act3": "animation.nail.trail_act3",
+        "trail_drill": "animation.nail.trail_drill"
+      },
+      "particle_effects": {
+        "trail_act1": "nail:trail_act1",
+        "trail_act2": "nail:trail_act2",
+        "trail_act3": "nail:trail_act3",
+        "trail_drill": "nail:trail_drill"
+      },
+      "render_controllers": [
+        "controller.render.xvoid"
+      ]
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.m1": {
+      "states": {
+        "default": {
+          "on_entry": [],
+          "transitions": [
+            {
+              "atk": "variable.attack_time > 0"
+            }
+          ]
+        },
+        "atk": {
+          "on_entry": [
+            "/scoreboard players set @s[scores={m1=0..100,sp1=0..13},tag=!stun,tag=!targeted] sp1 20"
+          ],
+          "transitions": [
+            {
+              "default": "!variable.attack_time > 0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

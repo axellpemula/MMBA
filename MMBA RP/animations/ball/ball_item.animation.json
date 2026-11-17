@@ -1,0 +1,114 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ball.hide": {
+			"loop": true,
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"rightItem": {
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.ball.spinItem": {
+			"loop": true,
+			"animation_length": 0.25,
+			"override_previous_animation": true,
+			"bones": {
+				"rightItem": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							-360
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							1.25,
+							-0.75,
+							0
+						],
+						"0.0833": [
+							1.25,
+							-2.25,
+							0
+						],
+						"0.125": [
+							0,
+							-2.75,
+							0
+						],
+						"0.1667": [
+							-1.25,
+							-2.25,
+							0
+						],
+						"0.2083": [
+							-1.25,
+							-0.75,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.ball.spinItem_stop": {
+			"loop": false,
+			"animation_length": 0.05,
+			"override_previous_animation": true,
+			"bones": {
+				"rightItem": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						]
+					}
+				}
+			}
+		}
+	}
+}

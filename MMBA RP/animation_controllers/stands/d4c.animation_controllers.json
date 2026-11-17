@@ -1,0 +1,129 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.d4c": {
+      "states": {
+        "default": {
+          "animations": [
+            "d4c_default"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "d4c_summon"
+          ],
+          "transitions": [
+            {
+              "idle": "q.all_animations_finished && q.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            },
+            {
+              "run": "q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "d4c_idle"
+          ],
+          "transitions": [
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "blocking": {
+          "animations": [
+            "stand_block"
+          ],
+          "transitions": [
+            {
+              "idle": "query.property('property:blocking') == 0"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.15,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "d4c_walk"
+          ],
+          "transitions": [
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && q.ground_speed < 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "run": {
+          "animations": [
+            "d4c_run"
+          ],
+          "transitions": [
+            {
+              "blocking": "query.property('property:blocking') == 1"
+            },
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && q.ground_speed < 0.5"
+            },
+            {
+              "idle": "(-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

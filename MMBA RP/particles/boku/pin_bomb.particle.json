@@ -1,0 +1,58 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "boku:pin_bomb",
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "textures/particle/boku/pin_bomb"
+      }
+    },
+    "components": {
+      "minecraft:emitter_initialization": {
+        "creation_expression": "v.dir; v.size; v.color; v.alpha; v.pulse;"
+      },
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 0.25
+      },
+      "minecraft:emitter_shape_point": {},
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": 0.22
+      },
+      "minecraft:particle_initial_speed": 0,
+      "minecraft:particle_motion_dynamic": {},
+      "minecraft:particle_appearance_billboard": {
+        "size": [
+          "(v.size ? v.size : 0.10) * (1 + (v.pulse ? v.pulse : 0) * math.sin(v.particle_age * 1800))",
+          "(v.size ? v.size : 0.10) * (1 + (v.pulse ? v.pulse : 0) * math.sin(v.particle_age * 1800))"
+        ],
+        "facing_camera_mode": "lookat_direction",
+        "direction": {
+          "mode": "custom",
+          "custom_direction": [
+            "v.dir.x",
+            "(v.dir.x == 0 && v.dir.y == 0 && v.dir.z == 0) ? -1 : v.dir.y",
+            "v.dir.z"
+          ]
+        },
+        "uv": {
+          "texture_width": 32,
+          "texture_height": 32,
+          "uv": [0, 0],
+          "uv_size": [32, 32]
+        }
+      },
+      "minecraft:particle_appearance_tinting": {
+        "color": [
+          "v.color.x ? v.color.x : 1.0",
+          "v.color.y ? v.color.y : 1.0",
+          "v.color.z ? v.color.z : 1.0",
+          "(v.alpha ? v.alpha : 1.0) * (v.particle_age > 0.17 ? ((0.22 - v.particle_age) / 0.05) : 1.0)"
+        ]
+      }
+    }
+  }
+}

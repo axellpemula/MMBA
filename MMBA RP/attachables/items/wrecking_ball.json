@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "jjba:wrecking_ball",
+			"render_controllers": ["controller.render.item_default"],
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/sbr/Wrecking_ball",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.wrecking_ball_item"
+			},
+			"animations": {
+				"spin": "animation.ball.spinItem"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"spin": "query.property('property:spin_item') == 1"
+					}
+				]
+			}
+		}
+	}
+}
+

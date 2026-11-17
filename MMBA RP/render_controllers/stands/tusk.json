@@ -1,0 +1,265 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.tusk": {
+      "textures": [
+        "Array.variants[variable.act_4 ? (3 + variable.stand_h_half) : query.property('property:act')]"
+      ],
+      "geometry": "Array.variants[query.property('property:act')]",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tusk_act_1_hue",
+            "Texture.tusk_act_2_hue",
+            "Texture.tusk_act_3_hue",
+            "Texture.tusk_act_4_hue_0",
+            "Texture.tusk_act_4_hue_1"
+          ]
+        },
+        "geometries": {
+          "Array.variants": [
+            "Geometry.tusk_act_1",
+            "Geometry.tusk_act_2",
+            "Geometry.tusk_act_3",
+            "Geometry.tusk_act_4"
+          ]
+        }
+      },
+      "uv_anim": {
+        "offset": [
+          "variable.act_4 ? variable.stand_u6_off : variable.stand_u_off",
+          "variable.act_4 ? variable.stand_v6_off : variable.stand_v_off"
+        ],
+        "scale": [
+          "variable.act_4 ? variable.stand_u6_sc : variable.stand_u_sc",
+          "variable.act_4 ? variable.stand_v6_sc : variable.stand_v_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.tusk_sat": {
+      "textures": [
+        "Array.variants[variable.act_4 ? (6 + variable.stand_t4_sat_tex) : (query.property('property:act') * 2 + variable.stand_sat_tex)]"
+      ],
+      "geometry": "Array.variants[query.property('property:act')]",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tusk_act_1_gray",
+            "Texture.tusk_act_1_vivid",
+            "Texture.tusk_act_2_gray",
+            "Texture.tusk_act_2_vivid",
+            "Texture.tusk_act_3_gray",
+            "Texture.tusk_act_3_vivid",
+            "Texture.tusk_act_4_gray",
+            "Texture.tusk_act_4_vivid_0",
+            "Texture.tusk_act_4_vivid_1"
+          ]
+        },
+        "geometries": {
+          "Array.variants": [
+            "Geometry.tusk_act_1",
+            "Geometry.tusk_act_2",
+            "Geometry.tusk_act_3",
+            "Geometry.tusk_act_4"
+          ]
+        }
+      },
+      "uv_anim": {
+        "offset": [
+          "variable.act_4 ? variable.stand_t4_su_off : variable.stand_su_off",
+          "variable.act_4 ? variable.stand_t4_sv_off : variable.stand_sv_off"
+        ],
+        "scale": [
+          "variable.act_4 ? variable.stand_t4_su_sc : variable.stand_su_sc",
+          "variable.act_4 ? variable.stand_t4_sv_sc : variable.stand_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.tusk_add": {
+      "textures": [
+        "Array.variants[variable.act_4 ? (9 + variable.stand_t4_add_tex) : (query.property('property:act') * 3 + variable.stand_add_tex)]"
+      ],
+      "geometry": "Array.variants[query.property('property:act')]",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tusk_act_1_gray",
+            "Texture.tusk_act_1_hue",
+            "Texture.tusk_act_1_vivid",
+            "Texture.tusk_act_2_gray",
+            "Texture.tusk_act_2_hue",
+            "Texture.tusk_act_2_vivid",
+            "Texture.tusk_act_3_gray",
+            "Texture.tusk_act_3_hue",
+            "Texture.tusk_act_3_vivid",
+            "Texture.tusk_act_4_gray",
+            "Texture.tusk_act_4_hue_0",
+            "Texture.tusk_act_4_hue_1",
+            "Texture.tusk_act_4_vivid_0",
+            "Texture.tusk_act_4_vivid_1"
+          ]
+        },
+        "geometries": {
+          "Array.variants": [
+            "Geometry.tusk_act_1",
+            "Geometry.tusk_act_2",
+            "Geometry.tusk_act_3",
+            "Geometry.tusk_act_4"
+          ]
+        }
+      },
+      "uv_anim": {
+        "offset": [
+          "variable.act_4 ? variable.stand_t4_bu_off : variable.stand_bu_off",
+          "variable.act_4 ? variable.stand_t4_bv_off : variable.stand_bv_off"
+        ],
+        "scale": [
+          "variable.act_4 ? variable.stand_t4_bu_sc : variable.stand_bu_sc",
+          "variable.act_4 ? variable.stand_t4_bv_sc : variable.stand_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    },
+    "controller.render.tusk_fpp": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tusk_act_4_hue_0",
+            "Texture.tusk_act_4_hue_1"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_h_half]"
+      ],
+      "geometry": "geometry.tusk_act_4_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color"
+        }
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_u6_off",
+          "variable.stand_v6_off"
+        ],
+        "scale": [
+          "variable.stand_u6_sc",
+          "variable.stand_v6_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_base_dark"
+      }
+    },
+    "controller.render.tusk_fpp_sat": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tusk_act_4_gray",
+            "Texture.tusk_act_4_vivid_0",
+            "Texture.tusk_act_4_vivid_1"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_t4_sat_tex]"
+      ],
+      "geometry": "geometry.tusk_act_4_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color_sat"
+        }
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_t4_su_off",
+          "variable.stand_t4_sv_off"
+        ],
+        "scale": [
+          "variable.stand_t4_su_sc",
+          "variable.stand_t4_sv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_sat_dark"
+      }
+    },
+    "controller.render.tusk_fpp_add": {
+      "arrays": {
+        "textures": {
+          "Array.variants": [
+            "Texture.tusk_act_4_gray",
+            "Texture.tusk_act_4_hue_0",
+            "Texture.tusk_act_4_hue_1",
+            "Texture.tusk_act_4_vivid_0",
+            "Texture.tusk_act_4_vivid_1"
+          ]
+        }
+      },
+      "textures": [
+        "Array.variants[variable.stand_t4_add_tex]"
+      ],
+      "geometry": "geometry.tusk_act_4_fpp",
+      "materials": [
+        {
+          "*": "Material.stand_color_add"
+        }
+      ],
+      "uv_anim": {
+        "offset": [
+          "variable.stand_t4_bu_off",
+          "variable.stand_t4_bv_off"
+        ],
+        "scale": [
+          "variable.stand_t4_bu_sc",
+          "variable.stand_t4_bv_sc"
+        ]
+      },
+      "overlay_color": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": "variable.stand_add_dark"
+      }
+    }
+  }
+}

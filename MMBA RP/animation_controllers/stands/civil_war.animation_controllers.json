@@ -1,0 +1,105 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.civil_war": {
+      "states": {
+        "default": {
+          "animations": [
+            "civil_war_default"
+          ],
+          "transitions": [
+            {
+              "idle": "variable.stand_ui_preview"
+            },
+            {
+              "summon": "variable.stand"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "summon": {
+          "animations": [
+            "civil_war_summon"
+          ],
+          "transitions": [
+            {
+              "idle": "q.all_animations_finished && q.ground_speed < 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            },
+            {
+              "run": "q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.all_animations_finished && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            }
+          ],
+          "blend_transition": 0.2,
+          "blend_via_shortest_path": true
+        },
+        "idle": {
+          "animations": [
+            "civil_war_idle"
+          ],
+          "transitions": [
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "walk": {
+          "animations": [
+            "civil_war_walk"
+          ],
+          "transitions": [
+            {
+              "run": "q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && q.ground_speed < 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        },
+        "run": {
+          "animations": [
+            "civil_war_run"
+          ],
+          "transitions": [
+            {
+              "walk": "!q.is_sprinting && q.ground_speed > 0.5 && (-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) > 0.5"
+            },
+            {
+              "idle": "!q.is_sprinting && q.ground_speed < 0.5"
+            },
+            {
+              "idle": "(-math.sin(q.body_y_rotation) * query.movement_direction(0) + math.cos(q.body_y_rotation) * query.movement_direction(2)) <= 0.5"
+            },
+            {
+              "default": "!variable.stand"
+            }
+          ],
+          "blend_transition": 0.3,
+          "blend_via_shortest_path": true
+        }
+      }
+    }
+  }
+}

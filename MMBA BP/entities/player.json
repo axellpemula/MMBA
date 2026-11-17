@@ -1,0 +1,3821 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:player",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"snek",
+					"m1",
+					"sprint",
+					"jump"
+				]
+			},
+			"animations": {
+				"jump": "controller.animation.jump",
+				"snek": "controller.animation.snek",
+				"m1": "controller.animation.m1",
+				"sprint": "controller.animation.sprint"
+			},
+			"properties": {
+				"property:stand": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:act": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:attack": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:blocking": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:gun_shot": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:gun_reload": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:spin_item": {
+					"type": "int",
+					"range": [
+						0,
+						1
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:tim_limb": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						0,
+						4
+					],
+					"client_sync": true
+				},
+				"property:tim_dx": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_dy": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_dz": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_dir_x": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-1.0,
+						1.0
+					],
+					"client_sync": true
+				},
+				"property:tim_dir_y": {
+					"type": "float",
+					"default": -1.0,
+					"range": [
+						-1.0,
+						1.0
+					],
+					"client_sync": true
+				},
+				"property:tim_dir_z": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-1.0,
+						1.0
+					],
+					"client_sync": true
+				},
+				"property:tim_detach": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						0.0,
+						5.0
+					],
+					"client_sync": true
+				},
+				"property:tim_m1x": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_m1y": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_m1z": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_m2x": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_m2y": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:tim_m2z": {
+					"type": "float",
+					"default": 0.0,
+					"range": [
+						-64.0,
+						64.0
+					],
+					"client_sync": true
+				},
+				"property:m1": {
+					"type": "int",
+					"range": [
+						0,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:stand_rainbow": {
+					"type": "int",
+					"range": [
+						0,
+						1
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:stand_hue": {
+					"type": "int",
+					"range": [
+						-180,
+						180
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:stand_sat": {
+					"type": "int",
+					"range": [
+						-100,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:stand_bri": {
+					"type": "int",
+					"range": [
+						-100,
+						100
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:stand_preview": {
+					"type": "int",
+					"range": [
+						0,
+						1
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:ts_fx": {
+					"type": "int",
+					"range": [
+						0,
+						2
+					],
+					"default": 0,
+					"client_sync": true
+				},
+				"property:boku_smoke": {
+					"type": "int",
+					"range": [
+						0,
+						1
+					],
+					"default": 0,
+					"client_sync": true
+				}
+			}
+		},
+		"component_groups": {
+			"xvoid_parry": {
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "nofall"
+										},
+										{
+											"test": "has_damage",
+											"value": "fall"
+										}
+									]
+								}
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "nofall2"
+										},
+										{
+											"test": "has_damage",
+											"value": "fall"
+										}
+									]
+								}
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "ultimate"
+										},
+										{
+											"test": "has_damage",
+											"value": "any"
+										}
+									]
+								}
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_tag",
+											"value": "tusk_rotation"
+										},
+										{
+											"test": "has_damage",
+											"value": "any"
+										}
+									]
+								}
+							},
+							"deals_damage": false
+						}
+					]
+				}
+			},
+			"xvoid_blocking": {
+				"minecraft:knockback_resistance": {
+					"value": 0.0,
+					"max": 1.0
+				}
+			},
+			"xvoid:ng": {
+				"minecraft:physics": {
+					"has_gravity": false
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0.0,
+					"max": 1.0
+				}
+			},
+			"xvoid:g": {
+				"minecraft:physics": {
+					"has_gravity": true
+				},
+				"minecraft:knockback_resistance": {
+					"value": 0.0,
+					"max": 1.0
+				}
+			},
+			"xvoid:kb_immune": {
+				"minecraft:knockback_resistance": {
+					"value": 1.0,
+					"max": 1.0
+				}
+			},
+			"xvoid:hitbox_normal": {
+				"minecraft:collision_box": {
+					"width": 0.6,
+					"height": 1.8
+				}
+			},
+			"xvoid:hitbox_small": {
+				"minecraft:collision_box": {
+					"width": 0.42,
+					"height": 0.78
+				}
+			},
+			"xvoid:hitbox_tiny": {
+				"minecraft:collision_box": {
+					"width": 0.36,
+					"height": 0.56
+				}
+			},
+			"xvoid:hp.1": {
+				"minecraft:health": {
+					"value": 20,
+					"max": 20
+				}
+			},
+			"xvoid:hp.2": {
+				"minecraft:health": {
+					"value": 25,
+					"max": 25
+				}
+			},
+			"xvoid:hp.3": {
+				"minecraft:health": {
+					"value": 30,
+					"max": 30
+				}
+			},
+			"xvoid:hp.4": {
+				"minecraft:health": {
+					"value": 40,
+					"max": 40
+				}
+			},
+			"xvoid:hp.5": {
+				"minecraft:health": {
+					"value": 50,
+					"max": 50
+				}
+			},
+			"xvoid:hp.6": {
+				"minecraft:health": {
+					"value": 60,
+					"max": 60
+				}
+			},
+			"xvoid:hp.7": {
+				"minecraft:health": {
+					"value": 70,
+					"max": 70
+				}
+			},
+			"xvoid:hp.8": {
+				"minecraft:health": {
+					"value": 80,
+					"max": 80
+				}
+			},
+			"xvoid:hp.9": {
+				"minecraft:health": {
+					"value": 90,
+					"max": 90
+				}
+			},
+			"xvoid:hp.10": {
+				"minecraft:health": {
+					"value": 100,
+					"max": 100
+				}
+			},
+			"minecraft:add_bad_omen": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "bad_omen",
+							"duration": 6000,
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:timer": {
+					"time": [
+						0,
+						0
+					],
+					"looping": false,
+					"time_down_event": {
+						"event": "minecraft:clear_add_bad_omen",
+						"target": "self"
+					}
+				}
+			},
+			"minecraft:clear_bad_omen_spell_effect": {
+				"minecraft:spell_effects": {}
+			},
+			"minecraft:raid_trigger": {
+				"minecraft:raid_trigger": {
+					"triggered_event": {
+						"event": "minecraft:remove_raid_trigger",
+						"target": "self"
+					}
+				},
+				"minecraft:spell_effects": {
+					"remove_effects": "bad_omen"
+				}
+			},
+			"xvoid:vit.0": {
+				"minecraft:health": {
+					"value": 20,
+					"max": 20
+				}
+			},
+			"xvoid:vit.1": {
+				"minecraft:health": {
+					"value": 25,
+					"max": 25
+				}
+			},
+			"xvoid:vit.2": {
+				"minecraft:health": {
+					"value": 30,
+					"max": 30
+				}
+			},
+			"xvoid:vit.3": {
+				"minecraft:health": {
+					"value": 35,
+					"max": 35
+				}
+			},
+			"xvoid:vit.4": {
+				"minecraft:health": {
+					"value": 40,
+					"max": 40
+				}
+			},
+			"xvoid:vit.5": {
+				"minecraft:health": {
+					"value": 45,
+					"max": 45
+				}
+			},
+			"xvoid:vit.6": {
+				"minecraft:health": {
+					"value": 50,
+					"max": 50
+				}
+			},
+			"xvoid:vit.7": {
+				"minecraft:health": {
+					"value": 55,
+					"max": 55
+				}
+			},
+			"xvoid:vit.8": {
+				"minecraft:health": {
+					"value": 60,
+					"max": 60
+				}
+			},
+			"xvoid:vit.9": {
+				"minecraft:health": {
+					"value": 65,
+					"max": 65
+				}
+			},
+			"xvoid:vit.10": {
+				"minecraft:health": {
+					"value": 70,
+					"max": 70
+				}
+			},
+			"xvoid:vit.11": {
+				"minecraft:health": {
+					"value": 75,
+					"max": 75
+				}
+			},
+			"xvoid:vit.12": {
+				"minecraft:health": {
+					"value": 80,
+					"max": 80
+				}
+			},
+			"xvoid:vit.13": {
+				"minecraft:health": {
+					"value": 85,
+					"max": 85
+				}
+			},
+			"xvoid:vit.14": {
+				"minecraft:health": {
+					"value": 90,
+					"max": 90
+				}
+			},
+			"xvoid:vit.15": {
+				"minecraft:health": {
+					"value": 95,
+					"max": 95
+				}
+			},
+			"xvoid:vit.16": {
+				"minecraft:health": {
+					"value": 100,
+					"max": 100
+				}
+			},
+			"xvoid:vit.17": {
+				"minecraft:health": {
+					"value": 105,
+					"max": 105
+				}
+			},
+			"xvoid:vit.18": {
+				"minecraft:health": {
+					"value": 110,
+					"max": 110
+				}
+			},
+			"xvoid:vit.19": {
+				"minecraft:health": {
+					"value": 115,
+					"max": 115
+				}
+			},
+			"xvoid:vit.20": {
+				"minecraft:health": {
+					"value": 120,
+					"max": 120
+				}
+			},
+			"xvoid:vit.21": {
+				"minecraft:health": {
+					"value": 125,
+					"max": 125
+				}
+			},
+			"xvoid:vit.22": {
+				"minecraft:health": {
+					"value": 130,
+					"max": 130
+				}
+			},
+			"xvoid:vit.23": {
+				"minecraft:health": {
+					"value": 135,
+					"max": 135
+				}
+			},
+			"xvoid:vit.24": {
+				"minecraft:health": {
+					"value": 140,
+					"max": 140
+				}
+			},
+			"xvoid:vit.25": {
+				"minecraft:health": {
+					"value": 145,
+					"max": 145
+				}
+			},
+			"xvoid:vit.26": {
+				"minecraft:health": {
+					"value": 150,
+					"max": 150
+				}
+			},
+			"xvoid:vit.27": {
+				"minecraft:health": {
+					"value": 155,
+					"max": 155
+				}
+			},
+			"xvoid:vit.28": {
+				"minecraft:health": {
+					"value": 160,
+					"max": 160
+				}
+			},
+			"xvoid:vit.29": {
+				"minecraft:health": {
+					"value": 165,
+					"max": 165
+				}
+			},
+			"xvoid:vit.30": {
+				"minecraft:health": {
+					"value": 170,
+					"max": 170
+				}
+			},
+			"xvoid:vit.31": {
+				"minecraft:health": {
+					"value": 175,
+					"max": 175
+				}
+			},
+			"xvoid:vit.32": {
+				"minecraft:health": {
+					"value": 180,
+					"max": 180
+				}
+			},
+			"xvoid:vit.33": {
+				"minecraft:health": {
+					"value": 185,
+					"max": 185
+				}
+			},
+			"xvoid:vit.34": {
+				"minecraft:health": {
+					"value": 190,
+					"max": 190
+				}
+			},
+			"xvoid:vit.35": {
+				"minecraft:health": {
+					"value": 195,
+					"max": 195
+				}
+			},
+			"xvoid:vit.36": {
+				"minecraft:health": {
+					"value": 200,
+					"max": 200
+				}
+			},
+			"xvoid:vit.37": {
+				"minecraft:health": {
+					"value": 205,
+					"max": 205
+				}
+			},
+			"xvoid:vit.38": {
+				"minecraft:health": {
+					"value": 210,
+					"max": 210
+				}
+			},
+			"xvoid:vit.39": {
+				"minecraft:health": {
+					"value": 215,
+					"max": 215
+				}
+			},
+			"xvoid:vit.40": {
+				"minecraft:health": {
+					"value": 220,
+					"max": 220
+				}
+			},
+			"xvoid:vit.41": {
+				"minecraft:health": {
+					"value": 225,
+					"max": 225
+				}
+			},
+			"xvoid:vit.42": {
+				"minecraft:health": {
+					"value": 230,
+					"max": 230
+				}
+			},
+			"xvoid:vit.43": {
+				"minecraft:health": {
+					"value": 235,
+					"max": 235
+				}
+			},
+			"xvoid:vit.44": {
+				"minecraft:health": {
+					"value": 240,
+					"max": 240
+				}
+			},
+			"xvoid:vit.45": {
+				"minecraft:health": {
+					"value": 245,
+					"max": 245
+				}
+			},
+			"xvoid:vit.46": {
+				"minecraft:health": {
+					"value": 250,
+					"max": 250
+				}
+			},
+			"xvoid:vit.47": {
+				"minecraft:health": {
+					"value": 255,
+					"max": 255
+				}
+			},
+			"xvoid:vit.48": {
+				"minecraft:health": {
+					"value": 260,
+					"max": 260
+				}
+			},
+			"xvoid:vit.49": {
+				"minecraft:health": {
+					"value": 265,
+					"max": 265
+				}
+			},
+			"xvoid:vit.50": {
+				"minecraft:health": {
+					"value": 270,
+					"max": 270
+				}
+			},
+			"xvoid:vit.51": {
+				"minecraft:health": {
+					"value": 275,
+					"max": 275
+				}
+			},
+			"xvoid:vit.52": {
+				"minecraft:health": {
+					"value": 280,
+					"max": 280
+				}
+			},
+			"xvoid:vit.53": {
+				"minecraft:health": {
+					"value": 285,
+					"max": 285
+				}
+			},
+			"xvoid:vit.54": {
+				"minecraft:health": {
+					"value": 290,
+					"max": 290
+				}
+			},
+			"xvoid:vit.55": {
+				"minecraft:health": {
+					"value": 295,
+					"max": 295
+				}
+			},
+			"xvoid:vit.56": {
+				"minecraft:health": {
+					"value": 300,
+					"max": 300
+				}
+			},
+			"xvoid:vit.57": {
+				"minecraft:health": {
+					"value": 305,
+					"max": 305
+				}
+			},
+			"xvoid:vit.58": {
+				"minecraft:health": {
+					"value": 310,
+					"max": 310
+				}
+			},
+			"xvoid:vit.59": {
+				"minecraft:health": {
+					"value": 315,
+					"max": 315
+				}
+			},
+			"xvoid:vit.60": {
+				"minecraft:health": {
+					"value": 320,
+					"max": 320
+				}
+			},
+			"xvoid:vit.61": {
+				"minecraft:health": {
+					"value": 325,
+					"max": 325
+				}
+			},
+			"xvoid:vit.62": {
+				"minecraft:health": {
+					"value": 330,
+					"max": 330
+				}
+			},
+			"xvoid:vit.63": {
+				"minecraft:health": {
+					"value": 335,
+					"max": 335
+				}
+			},
+			"xvoid:vit.64": {
+				"minecraft:health": {
+					"value": 340,
+					"max": 340
+				}
+			},
+			"xvoid:vit.65": {
+				"minecraft:health": {
+					"value": 345,
+					"max": 345
+				}
+			},
+			"xvoid:vit.66": {
+				"minecraft:health": {
+					"value": 350,
+					"max": 350
+				}
+			},
+			"xvoid:vit.67": {
+				"minecraft:health": {
+					"value": 355,
+					"max": 355
+				}
+			},
+			"xvoid:vit.68": {
+				"minecraft:health": {
+					"value": 360,
+					"max": 360
+				}
+			},
+			"xvoid:vit.69": {
+				"minecraft:health": {
+					"value": 365,
+					"max": 365
+				}
+			},
+			"xvoid:vit.70": {
+				"minecraft:health": {
+					"value": 370,
+					"max": 370
+				}
+			},
+			"xvoid:vit.71": {
+				"minecraft:health": {
+					"value": 375,
+					"max": 375
+				}
+			},
+			"xvoid:vit.72": {
+				"minecraft:health": {
+					"value": 380,
+					"max": 380
+				}
+			},
+			"xvoid:vit.73": {
+				"minecraft:health": {
+					"value": 385,
+					"max": 385
+				}
+			},
+			"xvoid:vit.74": {
+				"minecraft:health": {
+					"value": 390,
+					"max": 390
+				}
+			},
+			"xvoid:vit.75": {
+				"minecraft:health": {
+					"value": 395,
+					"max": 395
+				}
+			},
+			"xvoid:vit.76": {
+				"minecraft:health": {
+					"value": 400,
+					"max": 400
+				}
+			},
+			"xvoid:vit.77": {
+				"minecraft:health": {
+					"value": 405,
+					"max": 405
+				}
+			},
+			"xvoid:vit.78": {
+				"minecraft:health": {
+					"value": 410,
+					"max": 410
+				}
+			},
+			"xvoid:vit.79": {
+				"minecraft:health": {
+					"value": 415,
+					"max": 415
+				}
+			},
+			"xvoid:vit.80": {
+				"minecraft:health": {
+					"value": 420,
+					"max": 420
+				}
+			},
+			"xvoid:vit.81": {
+				"minecraft:health": {
+					"value": 425,
+					"max": 425
+				}
+			},
+			"xvoid:vit.82": {
+				"minecraft:health": {
+					"value": 430,
+					"max": 430
+				}
+			},
+			"xvoid:vit.83": {
+				"minecraft:health": {
+					"value": 435,
+					"max": 435
+				}
+			},
+			"xvoid:vit.84": {
+				"minecraft:health": {
+					"value": 440,
+					"max": 440
+				}
+			},
+			"xvoid:vit.85": {
+				"minecraft:health": {
+					"value": 445,
+					"max": 445
+				}
+			},
+			"xvoid:vit.86": {
+				"minecraft:health": {
+					"value": 450,
+					"max": 450
+				}
+			},
+			"xvoid:vit.87": {
+				"minecraft:health": {
+					"value": 455,
+					"max": 455
+				}
+			},
+			"xvoid:vit.88": {
+				"minecraft:health": {
+					"value": 460,
+					"max": 460
+				}
+			},
+			"xvoid:vit.89": {
+				"minecraft:health": {
+					"value": 465,
+					"max": 465
+				}
+			},
+			"xvoid:vit.90": {
+				"minecraft:health": {
+					"value": 470,
+					"max": 470
+				}
+			},
+			"xvoid:vit.91": {
+				"minecraft:health": {
+					"value": 475,
+					"max": 475
+				}
+			},
+			"xvoid:vit.92": {
+				"minecraft:health": {
+					"value": 480,
+					"max": 480
+				}
+			},
+			"xvoid:vit.93": {
+				"minecraft:health": {
+					"value": 485,
+					"max": 485
+				}
+			},
+			"xvoid:vit.94": {
+				"minecraft:health": {
+					"value": 490,
+					"max": 490
+				}
+			},
+			"xvoid:vit.95": {
+				"minecraft:health": {
+					"value": 495,
+					"max": 495
+				}
+			},
+			"xvoid:vit.96": {
+				"minecraft:health": {
+					"value": 500,
+					"max": 500
+				}
+			},
+			"xvoid:vit.97": {
+				"minecraft:health": {
+					"value": 505,
+					"max": 505
+				}
+			},
+			"xvoid:vit.98": {
+				"minecraft:health": {
+					"value": 510,
+					"max": 510
+				}
+			},
+			"xvoid:vit.99": {
+				"minecraft:health": {
+					"value": 515,
+					"max": 515
+				}
+			},
+			"xvoid:vit.100": {
+				"minecraft:health": {
+					"value": 520,
+					"max": 520
+				}
+			},
+			"xvoid:vit.101": {
+				"minecraft:health": {
+					"value": 525,
+					"max": 525
+				}
+			},
+			"xvoid:vit.102": {
+				"minecraft:health": {
+					"value": 530,
+					"max": 530
+				}
+			},
+			"xvoid:vit.103": {
+				"minecraft:health": {
+					"value": 535,
+					"max": 535
+				}
+			},
+			"xvoid:vit.104": {
+				"minecraft:health": {
+					"value": 540,
+					"max": 540
+				}
+			},
+			"xvoid:vit.105": {
+				"minecraft:health": {
+					"value": 545,
+					"max": 545
+				}
+			},
+			"xvoid:vit.106": {
+				"minecraft:health": {
+					"value": 550,
+					"max": 550
+				}
+			},
+			"xvoid:vit.107": {
+				"minecraft:health": {
+					"value": 555,
+					"max": 555
+				}
+			},
+			"xvoid:vit.108": {
+				"minecraft:health": {
+					"value": 560,
+					"max": 560
+				}
+			},
+			"xvoid:vit.109": {
+				"minecraft:health": {
+					"value": 565,
+					"max": 565
+				}
+			},
+			"xvoid:vit.110": {
+				"minecraft:health": {
+					"value": 570,
+					"max": 570
+				}
+			},
+			"xvoid:vit.111": {
+				"minecraft:health": {
+					"value": 575,
+					"max": 575
+				}
+			},
+			"xvoid:vit.112": {
+				"minecraft:health": {
+					"value": 580,
+					"max": 580
+				}
+			},
+			"xvoid:vit.113": {
+				"minecraft:health": {
+					"value": 585,
+					"max": 585
+				}
+			},
+			"xvoid:vit.114": {
+				"minecraft:health": {
+					"value": 590,
+					"max": 590
+				}
+			},
+			"xvoid:vit.115": {
+				"minecraft:health": {
+					"value": 595,
+					"max": 595
+				}
+			},
+			"xvoid:vit.116": {
+				"minecraft:health": {
+					"value": 600,
+					"max": 600
+				}
+			},
+			"xvoid:vit.117": {
+				"minecraft:health": {
+					"value": 605,
+					"max": 605
+				}
+			},
+			"xvoid:vit.118": {
+				"minecraft:health": {
+					"value": 610,
+					"max": 610
+				}
+			},
+			"xvoid:vit.119": {
+				"minecraft:health": {
+					"value": 615,
+					"max": 615
+				}
+			},
+			"xvoid:vit.120": {
+				"minecraft:health": {
+					"value": 620,
+					"max": 620
+				}
+			},
+			"xvoid:vit.121": {
+				"minecraft:health": {
+					"value": 625,
+					"max": 625
+				}
+			},
+			"xvoid:vit.122": {
+				"minecraft:health": {
+					"value": 630,
+					"max": 630
+				}
+			},
+			"xvoid:vit.123": {
+				"minecraft:health": {
+					"value": 635,
+					"max": 635
+				}
+			},
+			"xvoid:vit.124": {
+				"minecraft:health": {
+					"value": 640,
+					"max": 640
+				}
+			},
+			"xvoid:vit.125": {
+				"minecraft:health": {
+					"value": 645,
+					"max": 645
+				}
+			},
+			"xvoid:vit.126": {
+				"minecraft:health": {
+					"value": 650,
+					"max": 650
+				}
+			},
+			"xvoid:vit.127": {
+				"minecraft:health": {
+					"value": 655,
+					"max": 655
+				}
+			},
+			"xvoid:vit.128": {
+				"minecraft:health": {
+					"value": 660,
+					"max": 660
+				}
+			},
+			"xvoid:vit.129": {
+				"minecraft:health": {
+					"value": 665,
+					"max": 665
+				}
+			},
+			"xvoid:vit.130": {
+				"minecraft:health": {
+					"value": 670,
+					"max": 670
+				}
+			},
+			"xvoid:vit.131": {
+				"minecraft:health": {
+					"value": 675,
+					"max": 675
+				}
+			},
+			"xvoid:vit.132": {
+				"minecraft:health": {
+					"value": 680,
+					"max": 680
+				}
+			},
+			"xvoid:vit.133": {
+				"minecraft:health": {
+					"value": 685,
+					"max": 685
+				}
+			},
+			"xvoid:vit.134": {
+				"minecraft:health": {
+					"value": 690,
+					"max": 690
+				}
+			},
+			"xvoid:vit.135": {
+				"minecraft:health": {
+					"value": 695,
+					"max": 695
+				}
+			},
+			"xvoid:vit.136": {
+				"minecraft:health": {
+					"value": 700,
+					"max": 700
+				}
+			},
+			"xvoid:vit.137": {
+				"minecraft:health": {
+					"value": 705,
+					"max": 705
+				}
+			},
+			"xvoid:vit.138": {
+				"minecraft:health": {
+					"value": 710,
+					"max": 710
+				}
+			},
+			"xvoid:vit.139": {
+				"minecraft:health": {
+					"value": 715,
+					"max": 715
+				}
+			},
+			"xvoid:vit.140": {
+				"minecraft:health": {
+					"value": 720,
+					"max": 720
+				}
+			},
+			"xvoid:vit.141": {
+				"minecraft:health": {
+					"value": 725,
+					"max": 725
+				}
+			},
+			"xvoid:vit.142": {
+				"minecraft:health": {
+					"value": 730,
+					"max": 730
+				}
+			},
+			"xvoid:vit.143": {
+				"minecraft:health": {
+					"value": 735,
+					"max": 735
+				}
+			},
+			"xvoid:vit.144": {
+				"minecraft:health": {
+					"value": 740,
+					"max": 740
+				}
+			},
+			"xvoid:vit.145": {
+				"minecraft:health": {
+					"value": 745,
+					"max": 745
+				}
+			},
+			"xvoid:vit.146": {
+				"minecraft:health": {
+					"value": 750,
+					"max": 750
+				}
+			},
+			"xvoid:vit.147": {
+				"minecraft:health": {
+					"value": 755,
+					"max": 755
+				}
+			},
+			"xvoid:vit.148": {
+				"minecraft:health": {
+					"value": 760,
+					"max": 760
+				}
+			},
+			"xvoid:vit.149": {
+				"minecraft:health": {
+					"value": 765,
+					"max": 765
+				}
+			},
+			"xvoid:vit.150": {
+				"minecraft:health": {
+					"value": 770,
+					"max": 770
+				}
+			},
+			"xvoid:vit.151": {
+				"minecraft:health": {
+					"value": 775,
+					"max": 775
+				}
+			},
+			"xvoid:vit.152": {
+				"minecraft:health": {
+					"value": 780,
+					"max": 780
+				}
+			},
+			"xvoid:vit.153": {
+				"minecraft:health": {
+					"value": 785,
+					"max": 785
+				}
+			},
+			"xvoid:vit.154": {
+				"minecraft:health": {
+					"value": 790,
+					"max": 790
+				}
+			},
+			"xvoid:vit.155": {
+				"minecraft:health": {
+					"value": 795,
+					"max": 795
+				}
+			},
+			"xvoid:vit.156": {
+				"minecraft:health": {
+					"value": 800,
+					"max": 800
+				}
+			},
+			"xvoid:vit.157": {
+				"minecraft:health": {
+					"value": 805,
+					"max": 805
+				}
+			},
+			"xvoid:vit.158": {
+				"minecraft:health": {
+					"value": 810,
+					"max": 810
+				}
+			},
+			"xvoid:vit.159": {
+				"minecraft:health": {
+					"value": 815,
+					"max": 815
+				}
+			},
+			"xvoid:vit.160": {
+				"minecraft:health": {
+					"value": 820,
+					"max": 820
+				}
+			},
+			"xvoid:vit.161": {
+				"minecraft:health": {
+					"value": 825,
+					"max": 825
+				}
+			},
+			"xvoid:vit.162": {
+				"minecraft:health": {
+					"value": 830,
+					"max": 830
+				}
+			},
+			"xvoid:vit.163": {
+				"minecraft:health": {
+					"value": 835,
+					"max": 835
+				}
+			},
+			"xvoid:vit.164": {
+				"minecraft:health": {
+					"value": 840,
+					"max": 840
+				}
+			},
+			"xvoid:vit.165": {
+				"minecraft:health": {
+					"value": 845,
+					"max": 845
+				}
+			},
+			"xvoid:vit.166": {
+				"minecraft:health": {
+					"value": 850,
+					"max": 850
+				}
+			},
+			"xvoid:vit.167": {
+				"minecraft:health": {
+					"value": 855,
+					"max": 855
+				}
+			},
+			"xvoid:vit.168": {
+				"minecraft:health": {
+					"value": 860,
+					"max": 860
+				}
+			},
+			"xvoid:vit.169": {
+				"minecraft:health": {
+					"value": 865,
+					"max": 865
+				}
+			},
+			"xvoid:vit.170": {
+				"minecraft:health": {
+					"value": 870,
+					"max": 870
+				}
+			},
+			"xvoid:vit.171": {
+				"minecraft:health": {
+					"value": 875,
+					"max": 875
+				}
+			},
+			"xvoid:vit.172": {
+				"minecraft:health": {
+					"value": 880,
+					"max": 880
+				}
+			},
+			"xvoid:vit.173": {
+				"minecraft:health": {
+					"value": 885,
+					"max": 885
+				}
+			},
+			"xvoid:vit.174": {
+				"minecraft:health": {
+					"value": 890,
+					"max": 890
+				}
+			},
+			"xvoid:vit.175": {
+				"minecraft:health": {
+					"value": 895,
+					"max": 895
+				}
+			},
+			"xvoid:vit.176": {
+				"minecraft:health": {
+					"value": 900,
+					"max": 900
+				}
+			},
+			"xvoid:vit.177": {
+				"minecraft:health": {
+					"value": 905,
+					"max": 905
+				}
+			},
+			"xvoid:vit.178": {
+				"minecraft:health": {
+					"value": 910,
+					"max": 910
+				}
+			},
+			"xvoid:vit.179": {
+				"minecraft:health": {
+					"value": 915,
+					"max": 915
+				}
+			},
+			"xvoid:vit.180": {
+				"minecraft:health": {
+					"value": 920,
+					"max": 920
+				}
+			},
+			"xvoid:vit.181": {
+				"minecraft:health": {
+					"value": 925,
+					"max": 925
+				}
+			},
+			"xvoid:vit.182": {
+				"minecraft:health": {
+					"value": 930,
+					"max": 930
+				}
+			},
+			"xvoid:vit.183": {
+				"minecraft:health": {
+					"value": 935,
+					"max": 935
+				}
+			},
+			"xvoid:vit.184": {
+				"minecraft:health": {
+					"value": 940,
+					"max": 940
+				}
+			},
+			"xvoid:vit.185": {
+				"minecraft:health": {
+					"value": 945,
+					"max": 945
+				}
+			},
+			"xvoid:vit.186": {
+				"minecraft:health": {
+					"value": 950,
+					"max": 950
+				}
+			},
+			"xvoid:vit.187": {
+				"minecraft:health": {
+					"value": 955,
+					"max": 955
+				}
+			},
+			"xvoid:vit.188": {
+				"minecraft:health": {
+					"value": 960,
+					"max": 960
+				}
+			},
+			"xvoid:vit.189": {
+				"minecraft:health": {
+					"value": 965,
+					"max": 965
+				}
+			},
+			"xvoid:vit.190": {
+				"minecraft:health": {
+					"value": 970,
+					"max": 970
+				}
+			},
+			"xvoid:vit.191": {
+				"minecraft:health": {
+					"value": 975,
+					"max": 975
+				}
+			},
+			"xvoid:vit.192": {
+				"minecraft:health": {
+					"value": 980,
+					"max": 980
+				}
+			},
+			"xvoid:vit.193": {
+				"minecraft:health": {
+					"value": 985,
+					"max": 985
+				}
+			},
+			"xvoid:vit.194": {
+				"minecraft:health": {
+					"value": 990,
+					"max": 990
+				}
+			},
+			"xvoid:vit.195": {
+				"minecraft:health": {
+					"value": 995,
+					"max": 995
+				}
+			},
+			"xvoid:vit.196": {
+				"minecraft:health": {
+					"value": 1000,
+					"max": 1000
+				}
+			},
+			"xvoid:vit.197": {
+				"minecraft:health": {
+					"value": 1005,
+					"max": 1005
+				}
+			},
+			"xvoid:vit.198": {
+				"minecraft:health": {
+					"value": 1010,
+					"max": 1010
+				}
+			},
+			"xvoid:vit.199": {
+				"minecraft:health": {
+					"value": 1015,
+					"max": 1015
+				}
+			},
+			"xvoid:vit.200": {
+				"minecraft:health": {
+					"value": 1020,
+					"max": 1020
+				}
+			}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 0.0,
+				"max": 1.0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"value": "tusk_rotation"
+									},
+									{
+										"test": "has_damage",
+										"value": "any"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"event": "xvoid:damaged",
+							"target": "self"
+						}
+					}
+				]
+			},
+			"minecraft:experience_reward": {
+				"on_death": "math.min(query.player_level*7,100)"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"player"
+				]
+			},
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:can_climb": {},
+			"minecraft:movement": {
+				"value": 0.1
+			},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:player.saturation": {
+				"value": 20
+			},
+			"minecraft:player.exhaustion": {
+				"value": 0,
+				"max": 4
+			},
+			"minecraft:player.level": {
+				"value": 0,
+				"max": 24791
+			},
+			"minecraft:player.experience": {
+				"value": 0,
+				"max": 1
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": -1,
+				"inhale_time": 3.75,
+				"generates_bubbles": false
+			},
+			"minecraft:nameable": {
+				"always_show": true,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:insomnia": {
+				"days_until_insomnia": 3
+			},
+			"minecraft:rideable": {
+				"seat_count": 2,
+				"family_types": [
+					"parrot_tame"
+				],
+				"pull_in_entities": true,
+				"seats": [
+					{
+						"position": [
+							0.4,
+							-0.2,
+							-0.1
+						],
+						"min_rider_count": 0,
+						"max_rider_count": 0,
+						"lock_rider_rotation": 0
+					},
+					{
+						"position": [
+							-0.4,
+							-0.2,
+							-0.1
+						],
+						"min_rider_count": 1,
+						"max_rider_count": 2,
+						"lock_rider_rotation": 0
+					}
+				]
+			},
+			"minecraft:scaffolding_climber": {},
+			"minecraft:environment_sensor": [
+				{
+					"triggers": {
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_mob_effect",
+									"subject": "self",
+									"value": "bad_omen"
+								},
+								{
+									"test": "is_in_village",
+									"subject": "self",
+									"value": true
+								}
+							]
+						},
+						"event": "minecraft:trigger_raid"
+					}
+				}
+			]
+		},
+		"events": {
+			"stand:reset": {
+				"set_property": {
+					"property:stand": 0
+				}
+			},
+			"block:no": {
+				"set_property": {
+					"property:blocking": 0
+				}
+			},
+			"block:yes": {
+				"set_property": {
+					"property:blocking": 1
+				}
+			},
+			"attack:reset": {
+				"set_property": {
+					"property:attack": 0
+				}
+			},
+			"attack:charge": {
+				"set_property": {
+					"property:attack": 1
+				}
+			},
+			"attack:charge_sneak": {
+				"set_property": {
+					"property:attack": 2
+				}
+			},
+			"stand:tusk": {
+				"set_property": {
+					"property:stand": 1
+				}
+			},
+			"stand:twau": {
+				"set_property": {
+					"property:stand": 2
+				}
+			},
+			"tusk:act_1": {
+				"set_property": {
+					"property:act": 0
+				}
+			},
+			"tusk:act_2": {
+				"set_property": {
+					"property:act": 1
+				}
+			},
+			"tusk:act_3": {
+				"set_property": {
+					"property:act": 2
+				}
+			},
+			"tusk:act_4": {
+				"set_property": {
+					"property:act": 3
+				}
+			},
+			"sm:transform": {
+				"set_property": {
+					"property:act": 1
+				}
+			},
+			"sm:untransform": {
+				"set_property": {
+					"property:act": 0
+				}
+			},
+			"xvoid:terbang": {
+				"add": {
+					"component_groups": [
+						"xvoid:ng"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"xvoid:g"
+					]
+				}
+			},
+			"xvoid:ng": {
+				"add": {
+					"component_groups": [
+						"xvoid:ng"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"xvoid:g"
+					]
+				}
+			},
+			"xvoid:g": {
+				"remove": {
+					"component_groups": [
+						"xvoid:ng"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:g"
+					]
+				}
+			},
+			"xvoid:jatuh": {
+				"remove": {
+					"component_groups": [
+						"xvoid:ng"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:g"
+					]
+				}
+			},
+			"xvoid:kb_immune": {
+				"add": {
+					"component_groups": [
+						"xvoid:kb_immune"
+					]
+				}
+			},
+			"xvoid:kb_normal": {
+				"remove": {
+					"component_groups": [
+						"xvoid:kb_immune"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:g"
+					]
+				}
+			},
+			"xvoid:hp.1": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.1"
+					]
+				}
+			},
+			"xvoid:hp.2": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.2"
+					]
+				}
+			},
+			"xvoid:hp.3": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.3"
+					]
+				}
+			},
+			"xvoid:hp.4": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.4"
+					]
+				}
+			},
+			"xvoid:hp.5": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.5"
+					]
+				}
+			},
+			"xvoid:hp.6": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.6"
+					]
+				}
+			},
+			"xvoid:hp.7": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.7"
+					]
+				}
+			},
+			"xvoid:hp.8": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.8"
+					]
+				}
+			},
+			"xvoid:hp.9": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.9"
+					]
+				}
+			},
+			"xvoid:hp.10": {
+				"add": {
+					"component_groups": [
+						"xvoid:hp.10"
+					]
+				}
+			},
+			"xvoid:damaged": {
+				"queue_command": {
+					"command": [
+						"tag @s add damaged"
+					]
+				}
+			},
+			"parried": {
+				"queue_command": {
+					"command": [
+						"scriptevent xvoid:parry"
+					]
+				}
+			},
+			"blocked": {
+				"queue_command": {
+					"command": [
+						"scriptevent xvoid:block"
+					]
+				}
+			},
+			"xvoid:parry": {
+				"add": {
+					"component_groups": [
+						"xvoid_parry"
+					]
+				}
+			},
+			"xvoid:blocking": {
+				"add": {
+					"component_groups": [
+						"xvoid_blocking"
+					]
+				}
+			},
+			"xvoid:remove_damage_blocking": {
+				"remove": {
+					"component_groups": [
+						"xvoid_parry",
+						"xvoid_blocking",
+						"xvoid:hitbox_small",
+						"xvoid:hitbox_tiny"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:g",
+						"xvoid:hitbox_normal"
+					]
+				}
+			},
+			"xvoid:hitbox_normal": {
+				"remove": {
+					"component_groups": [
+						"xvoid:hitbox_small",
+						"xvoid:hitbox_tiny"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:hitbox_normal"
+					]
+				}
+			},
+			"xvoid:hitbox_small": {
+				"remove": {
+					"component_groups": [
+						"xvoid:hitbox_normal",
+						"xvoid:hitbox_tiny"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:hitbox_small"
+					]
+				}
+			},
+			"xvoid:hitbox_tiny": {
+				"remove": {
+					"component_groups": [
+						"xvoid:hitbox_normal",
+						"xvoid:hitbox_small"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"xvoid:hitbox_tiny"
+					]
+				}
+			},
+			"minecraft:gain_bad_omen": {
+				"add": {
+					"component_groups": [
+						"minecraft:add_bad_omen"
+					]
+				}
+			},
+			"minecraft:clear_add_bad_omen": {
+				"remove": {
+					"component_groups": [
+						"minecraft:add_bad_omen"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:clear_bad_omen_spell_effect"
+					]
+				}
+			},
+			"minecraft:trigger_raid": {
+				"add": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"minecraft:remove_raid_trigger": {
+				"remove": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"xvoid:vit.0": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.0"
+					]
+				}
+			},
+			"xvoid:vit.1": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.1"
+					]
+				}
+			},
+			"xvoid:vit.2": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.2"
+					]
+				}
+			},
+			"xvoid:vit.3": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.3"
+					]
+				}
+			},
+			"xvoid:vit.4": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.4"
+					]
+				}
+			},
+			"xvoid:vit.5": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.5"
+					]
+				}
+			},
+			"xvoid:vit.6": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.6"
+					]
+				}
+			},
+			"xvoid:vit.7": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.7"
+					]
+				}
+			},
+			"xvoid:vit.8": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.8"
+					]
+				}
+			},
+			"xvoid:vit.9": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.9"
+					]
+				}
+			},
+			"xvoid:vit.10": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.10"
+					]
+				}
+			},
+			"xvoid:vit.11": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.11"
+					]
+				}
+			},
+			"xvoid:vit.12": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.12"
+					]
+				}
+			},
+			"xvoid:vit.13": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.13"
+					]
+				}
+			},
+			"xvoid:vit.14": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.14"
+					]
+				}
+			},
+			"xvoid:vit.15": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.15"
+					]
+				}
+			},
+			"xvoid:vit.16": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.16"
+					]
+				}
+			},
+			"xvoid:vit.17": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.17"
+					]
+				}
+			},
+			"xvoid:vit.18": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.18"
+					]
+				}
+			},
+			"xvoid:vit.19": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.19"
+					]
+				}
+			},
+			"xvoid:vit.20": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.20"
+					]
+				}
+			},
+			"xvoid:vit.21": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.21"
+					]
+				}
+			},
+			"xvoid:vit.22": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.22"
+					]
+				}
+			},
+			"xvoid:vit.23": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.23"
+					]
+				}
+			},
+			"xvoid:vit.24": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.24"
+					]
+				}
+			},
+			"xvoid:vit.25": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.25"
+					]
+				}
+			},
+			"xvoid:vit.26": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.26"
+					]
+				}
+			},
+			"xvoid:vit.27": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.27"
+					]
+				}
+			},
+			"xvoid:vit.28": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.28"
+					]
+				}
+			},
+			"xvoid:vit.29": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.29"
+					]
+				}
+			},
+			"xvoid:vit.30": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.30"
+					]
+				}
+			},
+			"xvoid:vit.31": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.31"
+					]
+				}
+			},
+			"xvoid:vit.32": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.32"
+					]
+				}
+			},
+			"xvoid:vit.33": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.33"
+					]
+				}
+			},
+			"xvoid:vit.34": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.34"
+					]
+				}
+			},
+			"xvoid:vit.35": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.35"
+					]
+				}
+			},
+			"xvoid:vit.36": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.36"
+					]
+				}
+			},
+			"xvoid:vit.37": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.37"
+					]
+				}
+			},
+			"xvoid:vit.38": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.38"
+					]
+				}
+			},
+			"xvoid:vit.39": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.39"
+					]
+				}
+			},
+			"xvoid:vit.40": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.40"
+					]
+				}
+			},
+			"xvoid:vit.41": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.41"
+					]
+				}
+			},
+			"xvoid:vit.42": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.42"
+					]
+				}
+			},
+			"xvoid:vit.43": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.43"
+					]
+				}
+			},
+			"xvoid:vit.44": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.44"
+					]
+				}
+			},
+			"xvoid:vit.45": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.45"
+					]
+				}
+			},
+			"xvoid:vit.46": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.46"
+					]
+				}
+			},
+			"xvoid:vit.47": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.47"
+					]
+				}
+			},
+			"xvoid:vit.48": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.48"
+					]
+				}
+			},
+			"xvoid:vit.49": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.49"
+					]
+				}
+			},
+			"xvoid:vit.50": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.50"
+					]
+				}
+			},
+			"xvoid:vit.51": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.51"
+					]
+				}
+			},
+			"xvoid:vit.52": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.52"
+					]
+				}
+			},
+			"xvoid:vit.53": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.53"
+					]
+				}
+			},
+			"xvoid:vit.54": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.54"
+					]
+				}
+			},
+			"xvoid:vit.55": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.55"
+					]
+				}
+			},
+			"xvoid:vit.56": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.56"
+					]
+				}
+			},
+			"xvoid:vit.57": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.57"
+					]
+				}
+			},
+			"xvoid:vit.58": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.58"
+					]
+				}
+			},
+			"xvoid:vit.59": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.59"
+					]
+				}
+			},
+			"xvoid:vit.60": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.60"
+					]
+				}
+			},
+			"xvoid:vit.61": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.61"
+					]
+				}
+			},
+			"xvoid:vit.62": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.62"
+					]
+				}
+			},
+			"xvoid:vit.63": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.63"
+					]
+				}
+			},
+			"xvoid:vit.64": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.64"
+					]
+				}
+			},
+			"xvoid:vit.65": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.65"
+					]
+				}
+			},
+			"xvoid:vit.66": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.66"
+					]
+				}
+			},
+			"xvoid:vit.67": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.67"
+					]
+				}
+			},
+			"xvoid:vit.68": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.68"
+					]
+				}
+			},
+			"xvoid:vit.69": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.69"
+					]
+				}
+			},
+			"xvoid:vit.70": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.70"
+					]
+				}
+			},
+			"xvoid:vit.71": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.71"
+					]
+				}
+			},
+			"xvoid:vit.72": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.72"
+					]
+				}
+			},
+			"xvoid:vit.73": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.73"
+					]
+				}
+			},
+			"xvoid:vit.74": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.74"
+					]
+				}
+			},
+			"xvoid:vit.75": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.75"
+					]
+				}
+			},
+			"xvoid:vit.76": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.76"
+					]
+				}
+			},
+			"xvoid:vit.77": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.77"
+					]
+				}
+			},
+			"xvoid:vit.78": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.78"
+					]
+				}
+			},
+			"xvoid:vit.79": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.79"
+					]
+				}
+			},
+			"xvoid:vit.80": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.80"
+					]
+				}
+			},
+			"xvoid:vit.81": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.81"
+					]
+				}
+			},
+			"xvoid:vit.82": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.82"
+					]
+				}
+			},
+			"xvoid:vit.83": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.83"
+					]
+				}
+			},
+			"xvoid:vit.84": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.84"
+					]
+				}
+			},
+			"xvoid:vit.85": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.85"
+					]
+				}
+			},
+			"xvoid:vit.86": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.86"
+					]
+				}
+			},
+			"xvoid:vit.87": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.87"
+					]
+				}
+			},
+			"xvoid:vit.88": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.88"
+					]
+				}
+			},
+			"xvoid:vit.89": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.89"
+					]
+				}
+			},
+			"xvoid:vit.90": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.90"
+					]
+				}
+			},
+			"xvoid:vit.91": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.91"
+					]
+				}
+			},
+			"xvoid:vit.92": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.92"
+					]
+				}
+			},
+			"xvoid:vit.93": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.93"
+					]
+				}
+			},
+			"xvoid:vit.94": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.94"
+					]
+				}
+			},
+			"xvoid:vit.95": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.95"
+					]
+				}
+			},
+			"xvoid:vit.96": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.96"
+					]
+				}
+			},
+			"xvoid:vit.97": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.97"
+					]
+				}
+			},
+			"xvoid:vit.98": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.98"
+					]
+				}
+			},
+			"xvoid:vit.99": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.99"
+					]
+				}
+			},
+			"xvoid:vit.100": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.100"
+					]
+				}
+			},
+			"xvoid:vit.101": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.101"
+					]
+				}
+			},
+			"xvoid:vit.102": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.102"
+					]
+				}
+			},
+			"xvoid:vit.103": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.103"
+					]
+				}
+			},
+			"xvoid:vit.104": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.104"
+					]
+				}
+			},
+			"xvoid:vit.105": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.105"
+					]
+				}
+			},
+			"xvoid:vit.106": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.106"
+					]
+				}
+			},
+			"xvoid:vit.107": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.107"
+					]
+				}
+			},
+			"xvoid:vit.108": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.108"
+					]
+				}
+			},
+			"xvoid:vit.109": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.109"
+					]
+				}
+			},
+			"xvoid:vit.110": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.110"
+					]
+				}
+			},
+			"xvoid:vit.111": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.111"
+					]
+				}
+			},
+			"xvoid:vit.112": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.112"
+					]
+				}
+			},
+			"xvoid:vit.113": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.113"
+					]
+				}
+			},
+			"xvoid:vit.114": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.114"
+					]
+				}
+			},
+			"xvoid:vit.115": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.115"
+					]
+				}
+			},
+			"xvoid:vit.116": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.116"
+					]
+				}
+			},
+			"xvoid:vit.117": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.117"
+					]
+				}
+			},
+			"xvoid:vit.118": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.118"
+					]
+				}
+			},
+			"xvoid:vit.119": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.119"
+					]
+				}
+			},
+			"xvoid:vit.120": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.120"
+					]
+				}
+			},
+			"xvoid:vit.121": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.121"
+					]
+				}
+			},
+			"xvoid:vit.122": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.122"
+					]
+				}
+			},
+			"xvoid:vit.123": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.123"
+					]
+				}
+			},
+			"xvoid:vit.124": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.124"
+					]
+				}
+			},
+			"xvoid:vit.125": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.125"
+					]
+				}
+			},
+			"xvoid:vit.126": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.126"
+					]
+				}
+			},
+			"xvoid:vit.127": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.127"
+					]
+				}
+			},
+			"xvoid:vit.128": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.128"
+					]
+				}
+			},
+			"xvoid:vit.129": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.129"
+					]
+				}
+			},
+			"xvoid:vit.130": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.130"
+					]
+				}
+			},
+			"xvoid:vit.131": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.131"
+					]
+				}
+			},
+			"xvoid:vit.132": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.132"
+					]
+				}
+			},
+			"xvoid:vit.133": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.133"
+					]
+				}
+			},
+			"xvoid:vit.134": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.134"
+					]
+				}
+			},
+			"xvoid:vit.135": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.135"
+					]
+				}
+			},
+			"xvoid:vit.136": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.136"
+					]
+				}
+			},
+			"xvoid:vit.137": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.137"
+					]
+				}
+			},
+			"xvoid:vit.138": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.138"
+					]
+				}
+			},
+			"xvoid:vit.139": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.139"
+					]
+				}
+			},
+			"xvoid:vit.140": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.140"
+					]
+				}
+			},
+			"xvoid:vit.141": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.141"
+					]
+				}
+			},
+			"xvoid:vit.142": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.142"
+					]
+				}
+			},
+			"xvoid:vit.143": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.143"
+					]
+				}
+			},
+			"xvoid:vit.144": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.144"
+					]
+				}
+			},
+			"xvoid:vit.145": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.145"
+					]
+				}
+			},
+			"xvoid:vit.146": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.146"
+					]
+				}
+			},
+			"xvoid:vit.147": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.147"
+					]
+				}
+			},
+			"xvoid:vit.148": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.148"
+					]
+				}
+			},
+			"xvoid:vit.149": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.149"
+					]
+				}
+			},
+			"xvoid:vit.150": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.150"
+					]
+				}
+			},
+			"xvoid:vit.151": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.151"
+					]
+				}
+			},
+			"xvoid:vit.152": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.152"
+					]
+				}
+			},
+			"xvoid:vit.153": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.153"
+					]
+				}
+			},
+			"xvoid:vit.154": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.154"
+					]
+				}
+			},
+			"xvoid:vit.155": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.155"
+					]
+				}
+			},
+			"xvoid:vit.156": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.156"
+					]
+				}
+			},
+			"xvoid:vit.157": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.157"
+					]
+				}
+			},
+			"xvoid:vit.158": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.158"
+					]
+				}
+			},
+			"xvoid:vit.159": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.159"
+					]
+				}
+			},
+			"xvoid:vit.160": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.160"
+					]
+				}
+			},
+			"xvoid:vit.161": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.161"
+					]
+				}
+			},
+			"xvoid:vit.162": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.162"
+					]
+				}
+			},
+			"xvoid:vit.163": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.163"
+					]
+				}
+			},
+			"xvoid:vit.164": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.164"
+					]
+				}
+			},
+			"xvoid:vit.165": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.165"
+					]
+				}
+			},
+			"xvoid:vit.166": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.166"
+					]
+				}
+			},
+			"xvoid:vit.167": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.167"
+					]
+				}
+			},
+			"xvoid:vit.168": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.168"
+					]
+				}
+			},
+			"xvoid:vit.169": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.169"
+					]
+				}
+			},
+			"xvoid:vit.170": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.170"
+					]
+				}
+			},
+			"xvoid:vit.171": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.171"
+					]
+				}
+			},
+			"xvoid:vit.172": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.172"
+					]
+				}
+			},
+			"xvoid:vit.173": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.173"
+					]
+				}
+			},
+			"xvoid:vit.174": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.174"
+					]
+				}
+			},
+			"xvoid:vit.175": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.175"
+					]
+				}
+			},
+			"xvoid:vit.176": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.176"
+					]
+				}
+			},
+			"xvoid:vit.177": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.177"
+					]
+				}
+			},
+			"xvoid:vit.178": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.178"
+					]
+				}
+			},
+			"xvoid:vit.179": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.179"
+					]
+				}
+			},
+			"xvoid:vit.180": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.180"
+					]
+				}
+			},
+			"xvoid:vit.181": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.181"
+					]
+				}
+			},
+			"xvoid:vit.182": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.182"
+					]
+				}
+			},
+			"xvoid:vit.183": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.183"
+					]
+				}
+			},
+			"xvoid:vit.184": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.184"
+					]
+				}
+			},
+			"xvoid:vit.185": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.185"
+					]
+				}
+			},
+			"xvoid:vit.186": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.186"
+					]
+				}
+			},
+			"xvoid:vit.187": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.187"
+					]
+				}
+			},
+			"xvoid:vit.188": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.188"
+					]
+				}
+			},
+			"xvoid:vit.189": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.189"
+					]
+				}
+			},
+			"xvoid:vit.190": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.190"
+					]
+				}
+			},
+			"xvoid:vit.191": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.191"
+					]
+				}
+			},
+			"xvoid:vit.192": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.192"
+					]
+				}
+			},
+			"xvoid:vit.193": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.193"
+					]
+				}
+			},
+			"xvoid:vit.194": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.194"
+					]
+				}
+			},
+			"xvoid:vit.195": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.195"
+					]
+				}
+			},
+			"xvoid:vit.196": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.196"
+					]
+				}
+			},
+			"xvoid:vit.197": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.197"
+					]
+				}
+			},
+			"xvoid:vit.198": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.198"
+					]
+				}
+			},
+			"xvoid:vit.199": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.199"
+					]
+				}
+			},
+			"xvoid:vit.200": {
+				"add": {
+					"component_groups": [
+						"xvoid:vit.200"
+					]
+				}
+			},
+			"xvoid:vit_clear": {
+				"remove": {
+					"component_groups": [
+						"xvoid:hp.1",
+						"xvoid:hp.2",
+						"xvoid:hp.3",
+						"xvoid:hp.4",
+						"xvoid:hp.5",
+						"xvoid:hp.6",
+						"xvoid:hp.7",
+						"xvoid:hp.8",
+						"xvoid:hp.9",
+						"xvoid:hp.10",
+						"xvoid:vit.0",
+						"xvoid:vit.1",
+						"xvoid:vit.2",
+						"xvoid:vit.3",
+						"xvoid:vit.4",
+						"xvoid:vit.5",
+						"xvoid:vit.6",
+						"xvoid:vit.7",
+						"xvoid:vit.8",
+						"xvoid:vit.9",
+						"xvoid:vit.10",
+						"xvoid:vit.11",
+						"xvoid:vit.12",
+						"xvoid:vit.13",
+						"xvoid:vit.14",
+						"xvoid:vit.15",
+						"xvoid:vit.16",
+						"xvoid:vit.17",
+						"xvoid:vit.18",
+						"xvoid:vit.19",
+						"xvoid:vit.20",
+						"xvoid:vit.21",
+						"xvoid:vit.22",
+						"xvoid:vit.23",
+						"xvoid:vit.24",
+						"xvoid:vit.25",
+						"xvoid:vit.26",
+						"xvoid:vit.27",
+						"xvoid:vit.28",
+						"xvoid:vit.29",
+						"xvoid:vit.30",
+						"xvoid:vit.31",
+						"xvoid:vit.32",
+						"xvoid:vit.33",
+						"xvoid:vit.34",
+						"xvoid:vit.35",
+						"xvoid:vit.36",
+						"xvoid:vit.37",
+						"xvoid:vit.38",
+						"xvoid:vit.39",
+						"xvoid:vit.40",
+						"xvoid:vit.41",
+						"xvoid:vit.42",
+						"xvoid:vit.43",
+						"xvoid:vit.44",
+						"xvoid:vit.45",
+						"xvoid:vit.46",
+						"xvoid:vit.47",
+						"xvoid:vit.48",
+						"xvoid:vit.49",
+						"xvoid:vit.50",
+						"xvoid:vit.51",
+						"xvoid:vit.52",
+						"xvoid:vit.53",
+						"xvoid:vit.54",
+						"xvoid:vit.55",
+						"xvoid:vit.56",
+						"xvoid:vit.57",
+						"xvoid:vit.58",
+						"xvoid:vit.59",
+						"xvoid:vit.60",
+						"xvoid:vit.61",
+						"xvoid:vit.62",
+						"xvoid:vit.63",
+						"xvoid:vit.64",
+						"xvoid:vit.65",
+						"xvoid:vit.66",
+						"xvoid:vit.67",
+						"xvoid:vit.68",
+						"xvoid:vit.69",
+						"xvoid:vit.70",
+						"xvoid:vit.71",
+						"xvoid:vit.72",
+						"xvoid:vit.73",
+						"xvoid:vit.74",
+						"xvoid:vit.75",
+						"xvoid:vit.76",
+						"xvoid:vit.77",
+						"xvoid:vit.78",
+						"xvoid:vit.79",
+						"xvoid:vit.80",
+						"xvoid:vit.81",
+						"xvoid:vit.82",
+						"xvoid:vit.83",
+						"xvoid:vit.84",
+						"xvoid:vit.85",
+						"xvoid:vit.86",
+						"xvoid:vit.87",
+						"xvoid:vit.88",
+						"xvoid:vit.89",
+						"xvoid:vit.90",
+						"xvoid:vit.91",
+						"xvoid:vit.92",
+						"xvoid:vit.93",
+						"xvoid:vit.94",
+						"xvoid:vit.95",
+						"xvoid:vit.96",
+						"xvoid:vit.97",
+						"xvoid:vit.98",
+						"xvoid:vit.99",
+						"xvoid:vit.100",
+						"xvoid:vit.101",
+						"xvoid:vit.102",
+						"xvoid:vit.103",
+						"xvoid:vit.104",
+						"xvoid:vit.105",
+						"xvoid:vit.106",
+						"xvoid:vit.107",
+						"xvoid:vit.108",
+						"xvoid:vit.109",
+						"xvoid:vit.110",
+						"xvoid:vit.111",
+						"xvoid:vit.112",
+						"xvoid:vit.113",
+						"xvoid:vit.114",
+						"xvoid:vit.115",
+						"xvoid:vit.116",
+						"xvoid:vit.117",
+						"xvoid:vit.118",
+						"xvoid:vit.119",
+						"xvoid:vit.120",
+						"xvoid:vit.121",
+						"xvoid:vit.122",
+						"xvoid:vit.123",
+						"xvoid:vit.124",
+						"xvoid:vit.125",
+						"xvoid:vit.126",
+						"xvoid:vit.127",
+						"xvoid:vit.128",
+						"xvoid:vit.129",
+						"xvoid:vit.130",
+						"xvoid:vit.131",
+						"xvoid:vit.132",
+						"xvoid:vit.133",
+						"xvoid:vit.134",
+						"xvoid:vit.135",
+						"xvoid:vit.136",
+						"xvoid:vit.137",
+						"xvoid:vit.138",
+						"xvoid:vit.139",
+						"xvoid:vit.140",
+						"xvoid:vit.141",
+						"xvoid:vit.142",
+						"xvoid:vit.143",
+						"xvoid:vit.144",
+						"xvoid:vit.145",
+						"xvoid:vit.146",
+						"xvoid:vit.147",
+						"xvoid:vit.148",
+						"xvoid:vit.149",
+						"xvoid:vit.150",
+						"xvoid:vit.151",
+						"xvoid:vit.152",
+						"xvoid:vit.153",
+						"xvoid:vit.154",
+						"xvoid:vit.155",
+						"xvoid:vit.156",
+						"xvoid:vit.157",
+						"xvoid:vit.158",
+						"xvoid:vit.159",
+						"xvoid:vit.160",
+						"xvoid:vit.161",
+						"xvoid:vit.162",
+						"xvoid:vit.163",
+						"xvoid:vit.164",
+						"xvoid:vit.165",
+						"xvoid:vit.166",
+						"xvoid:vit.167",
+						"xvoid:vit.168",
+						"xvoid:vit.169",
+						"xvoid:vit.170",
+						"xvoid:vit.171",
+						"xvoid:vit.172",
+						"xvoid:vit.173",
+						"xvoid:vit.174",
+						"xvoid:vit.175",
+						"xvoid:vit.176",
+						"xvoid:vit.177",
+						"xvoid:vit.178",
+						"xvoid:vit.179",
+						"xvoid:vit.180",
+						"xvoid:vit.181",
+						"xvoid:vit.182",
+						"xvoid:vit.183",
+						"xvoid:vit.184",
+						"xvoid:vit.185",
+						"xvoid:vit.186",
+						"xvoid:vit.187",
+						"xvoid:vit.188",
+						"xvoid:vit.189",
+						"xvoid:vit.190",
+						"xvoid:vit.191",
+						"xvoid:vit.192",
+						"xvoid:vit.193",
+						"xvoid:vit.194",
+						"xvoid:vit.195",
+						"xvoid:vit.196",
+						"xvoid:vit.197",
+						"xvoid:vit.198",
+						"xvoid:vit.199",
+						"xvoid:vit.200"
+					]
+				}
+			}
+		}
+	}
+}

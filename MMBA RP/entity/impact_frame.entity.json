@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "xvoid:impact_frame",
+      "materials": {
+        "white": "impact_frame1",
+        "black": "impact_frame2"
+      },
+      "textures": {
+        "white": "textures/entity/impact_white",
+        "black": "textures/entity/impact_black"
+      },
+      "geometry": {
+        "white": "geometry.xvoid_impact_white",
+        "black": "geometry.xvoid_impact_black"
+      },
+      "render_controllers": [
+        "controller.render.xvoid_impact_white",
+        "controller.render.xvoid_impact_black"
+      ]
+    }
+  }
+}
+
